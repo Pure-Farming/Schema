@@ -1,0 +1,77 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/soil/sample-plan",
+    "description": "A general soil sampling schema for planned sampling",
+    "allOf": [
+        {
+            "$ref": "sample.json"
+        }
+    ],
+    "properties": {
+        "status": {
+            "enum": [
+                "cancelled",
+                "scheduled",
+                "inProgress",
+                "completed",
+                "paused",
+                "partiallyCompleted"
+            ]
+        },
+        "operation": {
+            "const": "SoilSample",
+            "type": "string"
+        }
+    },
+    "required": ["status", "operation"],
+    "examples": [
+        {
+            "id": "3772c0e4-f3a6-4fbf-b6cb-38c21316cf83",
+            "identifiers": [
+                {
+                    "scheme": "pureFarmingEntity",
+                    "id": "3772c0e4-f3a6-4fbf-b6cb-38c21316cf83"
+                }
+            ],
+            "name": "Soil Sampling for vineyard XX on date YY?",
+            "meta": {
+                "sourceId": {
+                    "scheme": "pureFarmingDataSource",
+                    "id": "indevin.api"
+                },
+                "modified": "2021-09-10T12:34:56.000Z"
+            },
+            "links": [
+                {
+                    "relationship": "actual",
+                    "contentType": "vineyard/soilSampleAnalysis",
+                    "related": "some uri to the actual results of this planned sample?"
+                }
+            ],
+            "observationDate": "2021-02-23T21:00:00.000Z",
+            "holding": {
+                "contentType": "vineyard",
+                "identifier": {
+                    "scheme": "SWNZ",
+                    "id": "NL015"
+                },
+                "name": "Golden Hills",
+                "uri": ""
+            },
+            "feature": {
+                "contentType": "subBlock",
+                "identifier": {
+                    "scheme": "indevinSublockId",
+                    "id": "6120"
+                },
+                "name": "59PG-THOMGH2",
+                "uri": ""
+            },
+            "responsible": "Grower",
+            "priority": null,
+            "status": "scheduled",
+            "operation": "SoilSample",
+            "remark": "samplingMethod, phenomenonTime is not provided. Where is the vineyard id put? It is 273?. What is the purpose of name. I'm not sure if links would work like this, more likely the link would be in reverse "
+        }
+    ]
+}

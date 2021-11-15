@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/core/site",
+    "description": "A resource type for a site",
+    "allOf": [
+        {
+            "$ref": "../types/landUseResource.json"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/types/resource",
+    "description": "Abstract class for any resource that you might independently GET or update.",
+    "type": "object",
+    "properties": {
+        "internalId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "A single immutable internal PureFarming identifier for the entity associated with this resource. Could be a holding/organisation/enterprise"
+        }
+    },
+    "required": [
+        "id",
+        "meta"
+    ],
+    "allOf": [
+        {
+            "not": {
+                "allOf": [
+                    {
+                        "required": [
+                            "identifiers"
+                        ]
+                    },
+                    {
+                        "required": [
+                            "internalId"
+                        ]
+                    }
+                ]
+            }
+        },
+        {"$ref":"https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ResourceType.json"}
+    ]
+}

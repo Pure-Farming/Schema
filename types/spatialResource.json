@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/types/spatialResource",
+    "type": "object",
+    "allOf": [
+        {"$ref": "./resource.json"}
+    ],
+    "properties": {
+        "totalArea": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/AreaMeasureType.json",
+            "description": "Area of the spatial resource"
+        },
+        "spatialFeature": {
+            "$ref": "https://geojson.org/schema/Feature.json",
+            "description":"The geojson feature, with its geometry"
+        },
+        "centroid":{
+            "$ref": "https://geojson.org/schema/Point.json",
+            "description":"The centroid of the spatial resource. If the spatial feature is not convex, the centroid may lie outside the bounds of the spatial feature"
+
+        }
+    }
+}

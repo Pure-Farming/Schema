@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/soil/sample",
+    "description": "A general soil sampling schema.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/observation.json"
+        }
+    ],
+    "properties": {
+        "priority": {
+            "enum": [
+                "immediately",
+                "soonAsPossible",
+                "high",
+                "medium",
+                "low",
+                null
+            ]
+        },
+        "samplingMethod": {
+            "type": "string",
+            "description": "Citation or other URI to page describing the sampling method"
+        },
+        "samplingGeometry": {
+            "$ref": "https://geojson.org/schema/Geometry.json",
+            "description": "Geometry indicating where the soil sample is taken"
+        },
+        "depth": {
+            "$ref": "../types/profileDepth.json",
+            "description": "The soil sampling depth"
+        }
+    },
+    "required": [
+        "id",
+        "meta",
+        "observationDate"
+    ]
+}

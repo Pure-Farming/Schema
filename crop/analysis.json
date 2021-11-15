@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/crop/analysis",
+    "description": "The analyis result for plant sampling",
+    "properties": {
+        "analysis": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "laboratory"
+                ],
+                "properties": {
+                    "laboratory": {
+                        "allOf": [
+                            {
+                                "$ref": "../types/laboratory.json"
+                            }
+                        ]
+                    },
+                    "laboratoryIdentifier": {
+                        "type": "string",
+                        "description": "Unique identifier for the sample analysis within the laboratory"
+                    },
+                    "sessionIdentifier": {
+                        "type": "string",
+                        "description": "Identifies the analytical session within the lab"
+                    },
+                    "responsible": {
+                        "type": "string",
+                        "description": "Identifiers the person responsible for the analysis"
+                    },
+                    "results": {
+                        "type": "array",
+                        "description": "Provides the results of the analysis - really hoping this doesn't actually inherit all of Observation type",
+                        "items": {
+                            "$ref": "../types/analysisResult.json"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
