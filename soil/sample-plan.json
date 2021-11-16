@@ -33,18 +33,18 @@
                     "id": "3772c0e4-f3a6-4fbf-b6cb-38c21316cf83"
                 }
             ],
-            "name": "Soil Sampling for vineyard XX on date YY?",
+            "name": "Soil Sampling for holding 12/123/1234 on date 12/12/2021",
             "meta": {
                 "sourceId": {
                     "scheme": "pureFarmingDataSource",
-                    "id": "indevin.api"
+                    "id": "mifarm.api"
                 },
                 "modified": "2021-09-10T12:34:56.000Z"
             },
             "links": [
                 {
                     "relationship": "actual",
-                    "contentType": "vineyard/soilSampleAnalysis",
+                    "contentType": "holding/soilSampleAnalysis",
                     "related": "some uri to the actual results of this planned sample?"
                 }
             ],
@@ -61,7 +61,7 @@
             "feature": {
                 "contentType": "subBlock",
                 "identifier": {
-                    "scheme": "indevinSublockId",
+                    "scheme": "mifarmPaddockId",
                     "id": "6120"
                 },
                 "name": "59PG-THOMGH2",
