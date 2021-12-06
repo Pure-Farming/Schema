@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/core/plot-zone",
+    "description": "A resource type for a plot",
+    "allOf": [
+        {
+            "$ref": "../types/croppedResource.json"
+        }
+    ]
+}

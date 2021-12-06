@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/types/landUseResource",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./spatialResource.json"
+        }
+    ],
+    "properties": {
+        "activities":{
+            "type":"array",
+            "items":{
+                "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/LandUseActivityType.json"
+            }
+        },
+        "classifications":{
+            "type":"array",
+            "items":{
+                "$ref": "./classification.json"
+            }
+        }
+    }
+}

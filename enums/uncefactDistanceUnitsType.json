@@ -1,0 +1,14 @@
+{
+    "description": "Units for length from UN/CEFACT trade facilitation recommendation 20. In order: Kilometre, Centimetre, Metre, Millimetre, Statute Mile, Nautical Mile, Inch and Foot.",
+    "type": "string",
+    "enum": [
+        "KMT",
+        "CMT",
+        "MTR",
+        "MMT",
+        "SMI",
+        "NMI",
+        "INH",
+        "FOT"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/soil/sample-analysis",
+    "description": "A general soil sampling schema for actual analysis",
+    "allOf": [
+        {
+            "$ref": "sample.json"
+        },
+        {
+            "$ref": "analysis.json"
+        }
+    ],
+    "properties": {
+        "status": {
+            "enum": [
+                "inProgress",
+                "completed",
+                "paused",
+                "partiallyCompleted"
+            ]
+        },
+        "operation": {
+            "const": "SoilSample",
+            "type": "string"
+        }
+    },
+    "required": [
+        "analysis",
+        "status",
+        "operation"
+    ]
+}

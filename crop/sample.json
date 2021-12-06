@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/crop/sample",
+    "description": "A general plant sampling schema - a combination of WorkItemType and AnalysisSampleResource given we can't actually override in a json schema.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/observation.json"
+        }
+    ],
+    "properties": {
+        "priority": {
+            "enum": [
+                "immediately",
+                "soonAsPossible",
+                "high",
+                "medium",
+                "low",
+                null
+            ]
+        },
+        "sampledOrganism": {
+            "type": "string",
+            "description": "Name or identifier of the plant or organism sampled"
+        },
+        "samplingMethod": {
+            "type": "string",
+            "description": "Citation or other URI to page describing the sampling method"
+        }
+    },
+    "required": [
+        "id",
+        "meta",
+        "observationDate"
+    ]
+}

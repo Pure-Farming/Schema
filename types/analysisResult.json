@@ -1,0 +1,60 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "types/analysisResult",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Human readable description of the test result"
+        },
+        "status": {
+            "enum": [
+                "completed",
+                "notDetected",
+                "outOfBounds",
+                "inProgress",
+                "scheduled"
+            ],
+            "description": "One of a set of enumerated values"
+        },
+        "abbreviation": {},
+        "metric": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI to the test"
+        },
+        "method": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI to the method employed"
+        },
+        "rawValue": {
+            "type": "number",
+            "description": "Value of the test result as supplied from the lab"
+        },
+        "rawUnit": {
+            "type": "string",
+            "description": "Units of the test result"
+        },
+        "value": {
+            "type": "number",
+            "description": "Value of the test result converted to standard units"
+        },
+        "unit": {
+            "type": "string",
+            "description": "Units of the test result"
+        },
+        "resolution": {
+            "type": "number",
+            "description": "Resolution of numeric metrics"
+        },
+        "errorStatistic": {
+            "type": "number",
+            "description": "Error statistics (see OGC QR)"
+        }
+    },
+    "required": [
+        "name",
+        "status"
+    ]
+}

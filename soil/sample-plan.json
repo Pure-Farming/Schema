@@ -1,0 +1,77 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/soil/sample-plan",
+    "description": "A general soil sampling schema for planned sampling",
+    "allOf": [
+        {
+            "$ref": "sample.json"
+        }
+    ],
+    "properties": {
+        "status": {
+            "enum": [
+                "cancelled",
+                "scheduled",
+                "inProgress",
+                "completed",
+                "paused",
+                "partiallyCompleted"
+            ]
+        },
+        "operation": {
+            "const": "SoilSample",
+            "type": "string"
+        }
+    },
+    "required": ["status", "operation"],
+    "examples": [
+        {
+            "id": "3772c0e4-f3a6-4fbf-b6cb-38c21316cf83",
+            "identifiers": [
+                {
+                    "scheme": "pureFarmingEntity",
+                    "id": "3772c0e4-f3a6-4fbf-b6cb-38c21316cf83"
+                }
+            ],
+            "name": "Soil Sampling for holding 12/123/1234 on date 12/12/2021",
+            "meta": {
+                "sourceId": {
+                    "scheme": "pureFarmingDataSource",
+                    "id": "soils.api"
+                },
+                "modified": "2021-09-10T12:34:56.000Z"
+            },
+            "links": [
+                {
+                    "relationship": "actual",
+                    "contentType": "holding/soilSampleAnalysis",
+                    "related": "some uri to the actual results of this planned sample?"
+                }
+            ],
+            "observationDate": "2021-02-23T21:00:00.000Z",
+            "holding": {
+                "contentType": "farm",
+                "identifier": {
+                    "scheme": "CPH",
+                    "id": "12/764/0871"
+                },
+                "name": "Deben Mill Farm",
+                "uri": ""
+            },
+            "feature": {
+                "contentType": "plot",
+                "identifier": {
+                    "scheme": "mifarmPaddockId",
+                    "id": "6120"
+                },
+                "name": "west-gladden-paddock-846",
+                "uri": ""
+            },
+            "responsible": "Grower",
+            "priority": null,
+            "status": "scheduled",
+            "operation": "SoilSample",
+            "remark": "samplingMethod, phenomenonTime is not provided."
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/types/featureReference",
+    "type": "object",
+    "properties": {
+        "contentType": {
+            "type": "string",
+            "description": "Identifies the type of feature referenced"
+        },
+        "identifier": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/IdentifierType.json"
+        },
+        "name": {
+            "type": "string",
+            "description": "Provides a human-readable name"
+        },
+        "uri": {
+            "type": "string",
+            "format": "uri",
+            "description": "Provides a URI link to the feature"
+        }
+    },
+    "required": [
+        "contentType",
+        "identifier"
+    ]
+}
