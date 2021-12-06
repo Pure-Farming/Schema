@@ -19,7 +19,7 @@
             ]
         },
         "operation": {
-            "const": "MaturitySample",
+            "const": "PotatoSample",
             "type": "string"
         }
     },
@@ -33,46 +33,46 @@
                     "id": "3772c0e4-f3a6-4fbf-b6cb-38c21316cf83"
                 }
             ],
-            "name": "Maturity Sampling for vineyard XX on date YY?",
+            "name": "Sampling Potatoes Mid Emergence",
             "meta": {
                 "sourceId": {
                     "scheme": "pureFarmingDataSource",
-                    "id": "indevin.api"
+                    "id": "potatoes.api"
                 },
                 "modified": "2021-09-10T12:34:56.000Z"
             },
             "links": [
                 {
                     "relationship": "actual",
-                    "contentType": "vineyard/fruitSampleAnalysis",
+                    "contentType": "potatoes/cropSampleAnalysis",
                     "related": "some uri to the actual results of this planned sample?"
                 }
             ],
             "observationDate": "2021-02-23T21:00:00.000Z",
             "holding": {
-                "contentType": "vineyard",
+                "contentType": "farm",
                 "identifier": {
-                    "scheme": "SWNZ",
-                    "id": "NL015"
+                    "scheme": "CPH",
+                    "id": "12/1234/10363"
                 },
-                "name": "Golden Hills",
+                "name": "Deben Mill Farm",
                 "uri": ""
             },
             "feature": {
-                "contentType": "subBlock",
+                "contentType": "plot",
                 "identifier": {
-                    "scheme": "indevinSublockId",
+                    "scheme": "plotId",
                     "id": "6120"
                 },
-                "name": "59PG-THOMGH2",
+                "name": "west-fold-62",
                 "uri": ""
             },
             "responsible": "Grower",
             "priority": null,
-            "sampledOrganism": "Pinot Gris",
+            "sampledOrganism": "",
             "status": "scheduled",
             "operation": "MaturitySample",
-            "remark": "samplingMethod, phenomenonTime is not provided. Where is the vineyard id put? It is 273?. What is the purpose of name. I'm not sure if links would work like this, more likely the link would be in reverse "
+            "remark": "samplingMethod, phenomenonTime is not provided."
         }
     ]
 }

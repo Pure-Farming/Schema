@@ -37,7 +37,7 @@
             "meta": {
                 "sourceId": {
                     "scheme": "pureFarmingDataSource",
-                    "id": "mifarm.api"
+                    "id": "soils.api"
                 },
                 "modified": "2021-09-10T12:34:56.000Z"
             },
@@ -50,28 +50,28 @@
             ],
             "observationDate": "2021-02-23T21:00:00.000Z",
             "holding": {
-                "contentType": "vineyard",
+                "contentType": "farm",
                 "identifier": {
-                    "scheme": "SWNZ",
-                    "id": "NL015"
+                    "scheme": "CPH",
+                    "id": "12/764/0871"
                 },
-                "name": "Golden Hills",
+                "name": "Deben Mill Farm",
                 "uri": ""
             },
             "feature": {
-                "contentType": "subBlock",
+                "contentType": "plot",
                 "identifier": {
                     "scheme": "mifarmPaddockId",
                     "id": "6120"
                 },
-                "name": "59PG-THOMGH2",
+                "name": "west-gladden-paddock-846",
                 "uri": ""
             },
             "responsible": "Grower",
             "priority": null,
             "status": "scheduled",
             "operation": "SoilSample",
-            "remark": "samplingMethod, phenomenonTime is not provided. Where is the vineyard id put? It is 273?. What is the purpose of name. I'm not sure if links would work like this, more likely the link would be in reverse "
+            "remark": "samplingMethod, phenomenonTime is not provided."
         }
     ]
 }
