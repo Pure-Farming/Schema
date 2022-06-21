@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "consignmentDate":{
+            "type":"string",
+            "format":"date-time",
+            "description":"The date the load/consignment was sent or received by the party"
+        },
+        "organisation":{
+            "$ref": "./organisationReference.json",
+            "description":"Reference or identification of the organisation or organisation point"
+        },
+        "feature":{
+            "$ref": "./featureReference.json",
+            "description":"Reference or identification of the feature (if the source or destination is a feature)."
+        }
+    }
+}

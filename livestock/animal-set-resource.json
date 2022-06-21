@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/livestock/animal-set-resource",
+    "description": "This is the simplest design of a mob/session livestock treatment record, based entirely on the ICAR icarTreatmentEventResource and its accompanying data types. There's no allowance for diagnoses, multiple treatments in a programme, planned treatments, etc. ",
+    "allOf": [
+        {
+            "$ref": "../types/resource.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "purpose": {
+                    "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarSetPurposeType.json",
+                    "description": "Purpose of the animal set"
+                },
+                "quantity":{
+                    "type": "number",
+                    "description": "The number of animal set members."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Human readable name of the set (for example, mob or group name)."
+                },
+                "class": {
+                    "$ref": "inventory-classification.json",
+                    "description": "An inventory classification for the animals in the set (if they are the same class)."
+                },
+                "member": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarAnimalIdentifierType.json"
+                    },
+                    "description": "As per JSON-LD Hydra syntax, member provides the array of objects, in this case animals assigned to the set."
+                }                
+            }
+        }
+    ]
+}

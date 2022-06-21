@@ -1,0 +1,12 @@
+{
+    "type": "string",
+    "enum": [
+        "Unknown",
+        "Tank",
+        "Field",
+        "Truck",
+        "Bale",
+        "Module"
+    ],
+    "description": "Enumerated value of logistic units"
+}

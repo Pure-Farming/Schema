@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/livestock/sessions/inventory-classification",
+    "description": "Provides a structured method for classifying animals by species, sex, age, and other characteristics (e.g. a 'stock class').",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "A localised name for this classification (e.g. 'Ewe lambs')."
+        }, 
+        "species": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarAnimalSpecieType.json",
+            "description": "The species of animal."
+        },
+        "sex": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarAnimalGenderType.json",
+            "description": "The sex of animal."
+        },
+        "lactationStatus": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarAnimalLactationStatusType.json",
+            "description": "The lactation status of animal."           
+        },
+        "reproductionStatus": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarAnimalReproductionStatusType.json",
+            "description": "The reproduction status of animal."          
+        },
+        "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The UTC date of birth according to ISO 8601. Note that the date MAY contain a partial date (such as a year of birth)."
+        },
+        "birthDateConfidence": {
+            "type": "string",
+            "description": "A three-character accuracy indicator of A (actual), E (estimated) or U (unknown) representing Year/Month/Day. See https://meteor.aihw.gov.au/content/index.phtml/itemId/294429."
+        },
+        "breedAssessed": {
+            "type": "string",
+            "description": "Animal breed"
+        },
+        "productionPurposes": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarProductionPurposeType.json"
+            },
+            "description": "One or more production purposes for the animal(s)."
+        }       
+    }
+}

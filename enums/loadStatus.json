@@ -1,0 +1,12 @@
+{
+    "description": "Consignment statuses",
+    "type": "string",
+    "enum": [
+        "Loading",
+        "ReadyForTransportation",
+        "Received",
+        "Waiting",
+        "InTransit",
+        "Refused"
+    ]
+}
