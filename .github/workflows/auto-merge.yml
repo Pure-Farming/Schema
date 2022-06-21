@@ -14,4 +14,8 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - run: gh pr merge github.event.review.pull_request_url --auto
+      - name: Merge PR
+        run: |
+          echo "PR Uri: ${{ github.event.review.pull_request_url }}"
+          gh pr merge ${{ github.event.review.pull_request_url }} --auto
+          
