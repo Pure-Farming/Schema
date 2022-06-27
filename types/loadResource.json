@@ -1,0 +1,54 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/types/loadResource",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./resource.json"
+        }
+    ],
+    "properties": {
+        "source": {
+            "$ref": "./consignmentEndPoint.json",
+            "description": "Source endpoint of the load"
+        },
+        "destination": {
+            "$ref": "./consignmentEndPoint.json",
+            "description": "Destination endpoint of the load"
+        },
+        "crops": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/CropType.json"
+            }
+        },
+        "logisticUnit": {
+            "$ref": "../enums/logisticsUnit.json"
+        },
+        "quantity": {
+            "type": "number",
+            "description": "Quantity in the load"
+        },
+        "units": {
+            "type": "string",
+            "description": "Units for the quantity metric"
+        },
+        "rawQuantity": {
+            "type": "number",
+            "description": "Raw quantity before standardisation"
+        },
+        "rawUnits": {
+            "type": "string",
+            "description": "Units for the raw quantity before standardisation"
+        },
+        "analysis": {
+            "type": "array",
+            "items": {
+                "$ref": "./laboratoryAnalysis.json"
+            }
+        },
+        "status": {
+            "$ref": "../enums/loadStatus.json"
+        }
+    }
+}

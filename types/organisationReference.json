@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "types/organisationReference",
+    "type": "object",
+    "description":"This is a linking object that is easier to understand than incorporating an entire Organization. It lets you identify and name the organisation, and provide a URI to it if needed.",
+    "properties": {
+        "leiCode": {
+            "type": "string",
+            "description": "Provides a unique ID for the organisation"
+        },
+        "name": {
+            "type": "string",
+            "description": "Provides a human-readable name for the organisation"
+        },
+        "uri": {
+            "type": "string",
+            "format": "uri",
+            "description": "Provides a URI link to the organisation"
+        },
+        "registration": {
+            "$ref":"https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/IdentifierType.json"
+        },
+        "gln": {
+            "type": "string",
+            "description": "Global Location Number"
+        }
+    },
+    "required": []
+}

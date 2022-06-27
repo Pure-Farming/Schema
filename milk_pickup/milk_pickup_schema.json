@@ -1,0 +1,98 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "some-identifier",
+	"title": "milk-pickups",
+	"description": "Daily milk pickup from an single farm, and associated attributes of the milk collected",
+	"type": "object",
+	"properties": {
+		"entity_id": {
+			"description": "unique identifier of the farm/herd/shed etc entity to which the milk is associated",
+			"type": "string"
+		},
+		"data_source_entity_identifier": {
+			"description": "Identifier used by the data originator to describe this particular entity from which milk originated. Otherwise known as supply number, member code etc",
+			"type": "string"
+		},
+		"data_source_entity_name": {
+			"description": "Name used by the data originator to describe this particular entity from which milk originated. Could be farm name etc, but does not necessarily match with farm name used in platform",
+			"type": "string"
+		},
+		"extracted_at": {
+			"description": "ISO 8601 formatted datetime string with timezone of when the source data was extracted",
+			"type": "string",
+			"format": "date-time"
+		},
+		"pickup_datetime": {
+			"description": "ISO 8601 formatted datetime string with timezone of when the milk was collected",
+			"type": "string",
+			"format": "date-time"
+		},
+		"volume": {
+			"description": "Volume of milk collected at this time in litres. Hopefully present but not required?",
+			"type": ["number", "null"],
+			"minimum": 0
+		},
+		"milk_solids": {
+			"description": "Quantity of milk solids in kg. Equivalent to fat + protein",
+			"type": ["number", "null"],
+			"minimum": 0
+		},
+		"milk_solids_percent": {
+			"description": "kg of milk_solids / volume (L)",
+			"type": ["number", "null"],
+			"minimum": 0,
+			"maximum": 100
+		},
+		"fat": {
+			"description": "Quantity of fat/butterfat in collected milk",
+			"type": ["number", "null"],
+			"minimum": 0
+		},
+		"protein": {
+			"description": "Quantity of protein in collected milk",
+			"type": ["number", "null"],
+			"minimum": 0
+		},
+		"lactose": {
+			"description": "Quantity of lactose in collected milk",
+			"type": ["number", "null"],
+			"minimum": 0
+		},
+		"fat_percent": {
+			"description": "Percentage of fat in collected milk. Equivalent to fat/volume*100",
+			"type": ["number", "null"],
+			"minimum": 0,
+			"maximum": 100
+		},
+		"protein_percent": {
+			"description": "Percentage of protein in collected milk. Equivalent to protein/volume*100",
+			"type": ["number", "null"],
+			"minimum": 0,
+			"maximum": 100
+		},
+		"lactose_percent": {
+			"description": "Percentage of protein in collected milk. Equivalent to protein/volume*100",
+			"type": ["number", "null"],
+			"minimum": 0,
+			"maximum": 100
+		},
+		"protein_fat_ratio": {
+			"description": "Ratio of amount of protein to amount of fat. Typically around 0.8 ",
+			"type": ["number", "null"]
+		},
+		"somatic_cell_count": {
+			"description": "SCC. Result of tested SCC in milk. Units of 000 cells/mL",
+			"type": ["number", "null"],
+			"minimum": 0
+		},
+		"urea": {
+			"description": "Concentration of urea in milk",
+			"type": ["number", "null"]
+		},
+		"bactoscan": {
+			"description:": "Results of bactoscan test on this milk collection ",
+			"type": ["number", "null"]
+		}
+	},
+	"required": ["entity_id", "pickup_datetime"]
+}

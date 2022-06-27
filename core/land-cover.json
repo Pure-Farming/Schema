@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/core/land-cover",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/landUseResource.json"
+        }
+    ],
+    "properties": {
+        "complianceEligibility" :{
+            "type": "string",
+            "description": "Eligibility for e.g. a government complicance scheme"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/livestock/session-observation",
+    "description": "Defines a type of observation that can be recorded on a session of animals",
+    "allOf": [
+        {
+            "$ref": "../types/observation.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "animals": {
+                    "$ref": "./animal-set-resource.json",
+                    "description": "The set of animals observed."
+                }
+            }
+        }
+    ]
+}

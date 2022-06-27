@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/types/workItem",
+    "description": "Abstract class that represents a work item - an activity that is planned, scheduled, or carried out.",
+    "type": "object",
+    "required": [
+        "operation",
+        "status"
+    ],
+    "allOf": [
+        {
+            "$ref": "../types/observation.json"
+        }
+    ],
+    "properties": {
+        "operation":{
+            "type":"string",
+            "description":"Constant value in any concrete class for the operation type"
+        },
+        "status":{
+            "$ref":"../enums/workItemStatus.json"
+        },
+        "priority":
+        {
+            "$ref":"../enums/workItemPriority.json"
+        }
+    }
+}
