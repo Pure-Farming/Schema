@@ -4,7 +4,7 @@
     "description": "A general soil sampling schema for planned sampling",
     "allOf": [
         {
-            "$ref": "sample.json"
+            "$ref": "../soil/sample.json"
         }
     ],
     "properties": {
