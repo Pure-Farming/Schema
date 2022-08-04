@@ -20,7 +20,7 @@
             ]
         },
         "operation": {
-            "const": "MaturitySample",
+            "const": "PlantSamplingAnalysis",
             "type": "string"
         }
     },

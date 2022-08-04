@@ -8,9 +8,12 @@
         }
     ],
     "properties": {
-        "complianceEligibility" :{
-            "type": "string",
-            "description": "Eligibility for e.g. a government complicance scheme"
+        "landCoverClass": {
+            "description": "Defines the class of land cover object (e.g., scheme: 'nz.lcdb.5.classes', primary: 'helipad_pnt').",
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ClassificationType.json"
+          },
+        "eligibility" :{
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ComplianceEligibilityType.json"
         }
     }
 }

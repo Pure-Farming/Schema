@@ -3,7 +3,7 @@
     "$id": "/types/spatialResource",
     "type": "object",
     "allOf": [
-        {"$ref": "./resource.json"}
+        {"$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ResourceType.json"}
     ],
     "properties": {
         "totalArea": {
@@ -18,6 +18,10 @@
             "$ref": "https://geojson.org/schema/Point.json",
             "description":"The centroid of the spatial resource. If the spatial feature is not convex, the centroid may lie outside the bounds of the spatial feature"
 
+        },
+        "totalLength": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/LengthMeasureType.json",
+            "description": "The total length of a hedge / perimeter or other spatial resource"
         }
     }
 }

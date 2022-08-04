@@ -4,7 +4,7 @@
     "description": "This is the simplest design of a mob/session livestock treatment record, based entirely on the ICAR icarTreatmentEventResource and its accompanying data types. There's no allowance for diagnoses, multiple treatments in a programme, planned treatments, etc. ",
     "allOf": [
         {
-            "$ref": "../types/resource.json"
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ResourceType.json"
         },
         {
             "type": "object",

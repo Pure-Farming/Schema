@@ -4,7 +4,7 @@
     "description": "A general plant sampling schema for planned sampling",
     "allOf": [
         {
-            "$ref": "sample.json"
+            "$ref": "../crop/sample.json"
         }
     ],
     "properties": {
@@ -19,7 +19,7 @@
             ]
         },
         "operation": {
-            "const": "PotatoSample",
+            "const": "PlantSampling",
             "type": "string"
         }
     },

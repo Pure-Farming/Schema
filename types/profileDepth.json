@@ -4,34 +4,12 @@
     "type": "object",
     "properties": {
         "lower": {
-            "$ref": "#/$defs/distanceMeasureType",
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/LengthMeasureType.json",
             "description": "The lower bound"
         },
         "upper": {
-            "$ref": "#/$defs/distanceMeasureType",
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/LengthMeasureType.json",
             "description": "The upper bound"
-        },
-        "unit": {
-            "$ref": "#/$defs/distanceMeasureType"
-        }
-    },
-    "$defs": {
-        "distanceMeasureType": {
-            "description": "Specifies a distance, including units (default is centimetre).",
-            "type": "object",
-            "required": [],
-            "properties": {
-                "measurement": {
-                    "type": "number",
-                    "description": "The distance measurement"
-                },
-                "unit": {
-                    "$ref": "../enums/uncefactDistanceUnitsType.json",
-                    "nullable": true,
-                    "default": "CMT",
-                    "description": "Defines the unit of measure for the depth. Prefered units are MTK (UN-CEFACT for square metre)."
-                }
-            }
         }
     }
 }

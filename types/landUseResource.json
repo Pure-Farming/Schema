@@ -17,7 +17,7 @@
         "classifications":{
             "type":"array",
             "items":{
-                "$ref": "./classification.json"
+                "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ClassificationType.json"
             }
         }
     }

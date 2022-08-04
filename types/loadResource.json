@@ -4,7 +4,7 @@
     "type": "object",
     "allOf": [
         {
-            "$ref": "./resource.json"
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ResourceType.json"
         }
     ],
     "properties": {
