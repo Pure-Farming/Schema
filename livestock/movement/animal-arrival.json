@@ -1,0 +1,9 @@
+{
+    "description": "Event for recording animal arrival - uses ICAR schema",
+    "$id": "/livestock/movement/animal-arrival",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementArrivalEventResource.json"
+        }
+    ]
+}
