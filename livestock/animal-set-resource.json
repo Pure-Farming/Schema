@@ -13,7 +13,7 @@
                     "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarSetPurposeType.json",
                     "description": "Purpose of the animal set"
                 },
-                "quantity":{
+                "quantity": {
                     "type": "number",
                     "description": "The number of animal set members."
                 },
@@ -28,10 +28,10 @@
                 "member": {
                     "type": "array",
                     "items": {
-                      "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarAnimalIdentifierType.json"
+                        "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarAnimalIdentifierType.json"
                     },
                     "description": "As per JSON-LD Hydra syntax, member provides the array of objects, in this case animals assigned to the set."
-                }                
+                }
             }
         }
     ]

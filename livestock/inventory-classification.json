@@ -7,7 +7,7 @@
         "name": {
             "type": "string",
             "description": "A localised name for this classification (e.g. 'Ewe lambs')."
-        }, 
+        },
         "species": {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarAnimalSpecieType.json",
             "description": "The species of animal."
@@ -18,11 +18,11 @@
         },
         "lactationStatus": {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarAnimalLactationStatusType.json",
-            "description": "The lactation status of animal."           
+            "description": "The lactation status of animal."
         },
         "reproductionStatus": {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarAnimalReproductionStatusType.json",
-            "description": "The reproduction status of animal."          
+            "description": "The reproduction status of animal."
         },
         "birthDate": {
             "type": "string",
@@ -43,6 +43,6 @@
                 "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarProductionPurposeType.json"
             },
             "description": "One or more production purposes for the animal(s)."
-        }       
+        }
     }
 }

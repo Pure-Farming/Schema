@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/livestock/animal",
+    "type": "object",
+    "description": "Core schema for representing animal - uses ICAR schema",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarAnimalCoreResource.json"
+        }
+    ]
+}

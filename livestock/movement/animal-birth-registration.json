@@ -1,0 +1,9 @@
+{
+    "description": "Event for recording animal birth or registration - uses ICAR schema",
+    "$id": "/livestock/movement/animal-birth-registration",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementBirthEventResource.json"
+        }
+    ]
+}
