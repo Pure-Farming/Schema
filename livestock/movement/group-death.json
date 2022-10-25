@@ -1,0 +1,9 @@
+{
+    "description": "Event for recording group deaths - uses ICAR schema",
+    "$id": "/livestock/movement/group-death",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarGroupMovementDeathEventResource.json"
+        }
+    ]
+}

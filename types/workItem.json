@@ -18,11 +18,11 @@
             "description":"Constant value in any concrete class for the operation type"
         },
         "status":{
-            "$ref":"../enums/workItemStatus.json"
+            "$ref":"https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/enums/WorkItemStatusType.json"
         },
         "priority":
         {
-            "$ref":"../enums/workItemPriority.json"
+            "$ref":"https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/enums/WorkItemPriorityType.json"
         }
     }
 }
