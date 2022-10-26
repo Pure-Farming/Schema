@@ -10,14 +10,7 @@
     ],
     "properties": {
         "priority": {
-            "enum": [
-                "immediately",
-                "soonAsPossible",
-                "high",
-                "medium",
-                "low",
-                null
-            ]
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/enums/WorkItemPriorityType.json"
         },
         "samplingMethod": {
             "type": "string",

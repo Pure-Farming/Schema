@@ -1,0 +1,9 @@
+{
+    "description": "Event for recording group movement departure - uses ICAR schema",
+    "$id": "/livestock/movement/group-departure",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarGroupMovementDepartureEventResource.json"
+        }
+    ]
+}

@@ -6,6 +6,18 @@
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarAnimalCoreResource.json"
+        },
+        {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier in the source system for this animal."
+                }
+            }
         }
     ]
 }

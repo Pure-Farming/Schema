@@ -1,0 +1,20 @@
+{
+    "description": "Event for recording group animal registrations (named Birth for consistency only) - uses ICAR schema extended to include details of individual animals in the group",
+    "$id": "/livestock/movement/group-birth-registration",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarGroupMovementBirthEventResource.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "individuals": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarAnimalCoreResource.json"
+                    }
+                }
+            }
+        }
+    ]
+}

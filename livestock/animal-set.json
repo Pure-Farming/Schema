@@ -1,0 +1,9 @@
+{
+    "description": "Represents animal sets (often called groups or sessions).  Created because embbeddedAnimalSet in icarGroupEventCoreResource requires a resourceType.",
+    "$id": "/livestock/animal-set",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarAnimalSetResource.json"
+        }
+    ]
+}

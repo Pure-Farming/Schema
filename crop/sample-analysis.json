@@ -12,12 +12,7 @@
     ],
     "properties": {
         "status": {
-            "enum": [
-                "inProgress",
-                "completed",
-                "paused",
-                "partiallyCompleted"
-            ]
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/enums/WorkItemStatusType.json"
         },
         "operation": {
             "const": "PlantSamplingAnalysis",
