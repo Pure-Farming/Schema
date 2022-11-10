@@ -1,10 +1,268 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "/crop/work-record",
-    "description": "Record of work done on a crop",
-    "allOf": [
-        {
-            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/resources/WorkRecordResource.json"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/crop/work-record",
+  "description": "Record of work done on a crop",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/resources/WorkRecordResource.json"
+    }
+  ],
+  "examples": [
+    {
+      "resourceType": "/crop/work-record",
+      "operation": "Spraying Product and Spreading Fertiliser",
+      "status": "Complete",
+      "id": "ae08267d-7fa2-4abb-8ae1-c84b1eb19348",
+      "meta": {
+        "sourceId": {
+          "scheme": "muddyBoots.glfm",
+          "id": "7239888c-ad3c-49bb-a045-bd309fcfb5c3"
+        },
+        "modified": "2022-08-16T10:18:02:000Z",
+        "creator": "purefarming.glfm.ingestor",
+        "created": "2022-08-16T10:18:02:000Z"
+      },
+      "observationDate": "2022-07-16T10:18:02:000Z",
+      "feature": {
+        "contentType": "plot",
+        "identifier": {
+          "scheme": "purefarming.plotId",
+          "id": "af8a3f52-8bd4-47dd-aba4-850d8a884703"
         }
-    ]
+      },
+      "priority": "Low",
+      "holding": {
+        "contentType": "holding",
+        "identifier": {
+          "scheme": "purefarming.holdingId",
+          "id": "bf35ccbc-621f-4c2d-9035-318c504686d6"
+        }
+      },
+      "nonOverlapWorkedArea": {
+        "measurement": 864,
+        "resolution": 1,
+        "units": "MTK"
+      },
+      "phenomenonStartTime": "2022-07-16T08:28:02:000Z",
+      "remark": "spray prod and spreading fert on back field",
+      "phenomenonEndTime": "2022-07-16T10:18:02:000Z",
+      "workedArea": {
+        "measurement": 864,
+        "resolution": 1,
+        "units": "MTK"
+      },
+      "responsible": "Dave Peterson",
+      "loggedOperations": [
+        {
+          "resourceType": "/crop/operation-record",
+          "operation": "Spraying",
+          "id": "1dd25755-692a-480e-b8fd-8d63ef20f004",
+          "meta": {
+            "sourceId": {
+              "scheme": "muddyBoots.glfm",
+              "id": "7239888c-ad3c-49bb-a045-bd309fcfb5c3"
+            },
+            "modified": "2022-08-16T10:18:02:000Z",
+            "creator": "purefarming.glfm.ingestor",
+            "created": "2022-08-16T10:18:02:000Z"
+          },
+          "observationDate": "2022-07-16T10:18:02:000Z",
+          "feature": {
+            "contentType": "plot",
+            "identifier": {
+              "scheme": "purefarming.plotId",
+              "id": "af8a3f52-8bd4-47dd-aba4-850d8a884703"
+            }
+          },
+          "phenomenonStartTime": "2022-07-16T08:28:02:000Z",
+          "holding": {
+            "contentType": "holding",
+            "identifier": {
+              "scheme": "purefarming.holdingId",
+              "id": "bf35ccbc-621f-4c2d-9035-318c504686d6"
+            }
+          },
+          "remark": "this is the spraying operation",
+          "products": [
+            {
+              "components": [
+                {
+                  "product": {
+                    "specificGravity": 1.1,
+                    "manufacturer": "Mitsui AgriScience International S.A/B.V",
+                    "type": "Pesticide",
+                    "form": "Granules",
+                    "registrations": [
+                      {
+                        "scheme": "mapp",
+                        "id": "20177"
+                      }
+                    ],
+                    "withdrawals": [
+                      {
+                        "scheme": "uk.hse",
+                        "hours": 400
+                      }
+                    ],
+                    "crop": {
+                      "establishmentDate": "2022-03-14T00:00:00:000Z",
+                      "maturityDate": "2022-08-10T00:00:00:000Z",
+                      "taxonomicName": "Triticum aestivum",
+                      "name": "Wheat",
+                      "variety": "Extase",
+                      "harvestDate": "2022-09-10T00:00:00:000Z"
+                    }
+                  },
+                  "mixSequence": 1,
+                  "percent": 100
+                }
+              ],
+                "spatialMetric": {
+                  "measurement": 60,
+                  "units": "SMI",
+                  "resolution": 0.5
+                },
+                "waterVolume": {
+                  "units": "LTR",
+                  "measurement": 100
+                },
+                "applicationRate": {
+                  "units": "LTR",
+                  "measurement": 10
+                },
+                "applicationTotal": {
+                  "units": "LTR",
+                  "measurement": 50,
+                  "resolution": 1
+                }
+            }
+          ],
+          "responsible": "Daniel Peterson",
+          "name": "labore commodo sunt"
+        },
+        {
+          "resourceType": "operationRecord",
+          "operation": "Fertiliser Spreading",
+          "id": "52bb8cb5-90d9-4308-bb0f-6f050ba93bc2",
+          "meta": {
+            "sourceId": {
+              "scheme": "muddyBoots.glfm",
+              "id": "7239888c-ad3c-49bb-a045-bd309fcfb5c3"
+            },
+            "modified": "2022-08-16T10:18:02:00000Z",
+            "creator": "purefarming.glfm.ingestor",
+            "created": "2022-08-16T10:18:02:00000Z"
+          },
+          "observationDate": "2022-07-16T10:18:02:00000Z",
+          "feature": {
+            "contentType": "plot",
+            "identifier": {
+              "scheme": "purefarming.plotId",
+              "id": "af8a3f52-8bd4-47dd-aba4-850d8a884703"
+            }
+          },
+          "phenomenonStartTime": "2022-07-16T10:18:02:00000Z",
+          "products": [
+            {
+              "spatialMetric": {
+                "resolution": 0.5,
+                "measurement": 46,
+                "units": "LY"
+              },
+              "components": [
+                {
+                  "mixSequence": 1,
+                  "percent": 100,
+                  "product": {
+                    "manufacturer": "Fert MFR Inc",
+                    "type": "Fertiliser",
+                    "form": "Granules",
+                    "analysis": [
+                      {
+                        "name": "N",
+                        "percent": 20
+                      },
+                      {
+                        "name": "P",
+                        "percent": 20
+                      },
+                      {
+                        "name": "K",
+                        "percent": 20
+                      }
+                    ],
+                    "claims": [
+                      {
+                        "scheme": "organic",
+                        "id": "2828282"
+                      }
+                    ],
+                    "brand": "minim cupidatat sed in dolore",
+                    "crop": {
+                      "establishmentDate": "2022-03-14T00:00:00:00000Z",
+                      "maturityDate": "2022-08-10T00:00:00:00000Z",
+                      "taxonomicName": "Triticum aestivum",
+                      "name": "Wheat",
+                      "variety": "Extase",
+                      "harvestDate": "2022-09-10T00:00:00:00000Z"
+                    },
+                    "matterState": "Solid"
+                  }
+                }
+              ],
+              "applicationTotal": {
+                "units": "KGM",
+                "resolution": 0.1,
+                "measurement": 10
+              },
+              "applicationRate": {
+                "measurement": 1,
+                "resolution": 0.01,
+                "units": "KGM"
+              }
+            }
+          ],
+          "loggedGeometry": {
+            "type": "Feature",
+            "properties": null,
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "urn:ogc:def:crs:EPSG::7405"
+              }
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [  [[1, 3], [2, 4], [4, 1], [3, 3], [1, 6]]
+
+              ]
+            },
+            "id": 63207589,
+            "bbox": [1, 1, 4, 6]
+          },
+          "phenomenonEndTime": "2022-07-16T18:20:02:00000Z",
+          "holding": {
+            "contentType": "holding",
+            "identifier": {
+              "scheme": "purefarming.holdingId",
+              "id": "bf35ccbc-621f-4c2d-9035-318c504686d6"
+            }
+          },
+          "operationName": "Fertilising",
+          "environment": {
+            "windSpeed": {
+              "measurement": 20,
+              "units": "M19"
+            },
+            "soilTemperature": {
+              "units": "FAH",
+              "resolution": 1,
+              "measurement": 30
+            },
+            "windDirectionCompass": "SE"
+          }
+        }
+      ]
+    }
+  ]
 }

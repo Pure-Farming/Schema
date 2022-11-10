@@ -5,5 +5,101 @@
         {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarGroupMovementArrivalEventResource.json"
         }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/movement/group-arrival",
+            "id": "acf66ad1-1e5e-4baa-9dbd-c4a2478a0bed",
+            "dataPointKey": "sample-data-movement-group-arrival-1",
+            "eventDateTime": "2022-09-13T12:46:00.000Z",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "98/444/5555"
+            },
+            "groupMethod": "EmbeddedAnimalSet",
+            "countObserved": 3,
+            "embeddedAnimalSet": {
+                "resourceType": "/livestock/animal-set",
+                "id": "0ZK684",
+                "name": "Fictitious LIS test arrival set",
+                "purpose": "Movement",
+                "member": [
+                    {
+                    "scheme": "uk.lis",
+                    "id": "UK1234220"
+                    },
+                    {
+                        "scheme": "uk.lis",
+                        "id": "UK1238227"
+                    },
+                    {
+                        "scheme": "uk.lis",
+                        "id": "UK1238231"
+                    }
+                ]
+            },
+            "arrivalReason": "Purchase",
+            "consignment": {
+                "id": {
+                    "scheme": "nz.nait.consign",
+                    "id": "PQY42427"
+                },
+                "originLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/443/55545"
+                },
+                "destinationLocation": {
+                    "scheme": "uk.cph",
+                    "id": "33/444/5555"
+                },
+                "loadingDateTime": "2022-09-13T09:14:00.000Z",
+                "unloadingDateTime": "2022-09-13T13:20:00.000Z",
+                "expectedDuration": 4.1,
+                "transportOperator": "Bob Trucks Ltd",
+                "vehicle": "ZKF343",
+                "transportReference": "BUC1248"
+            }
+        },
+        {
+            "resourceType": "/livestock/movement/group-arrival",
+            "id": "84005c4e-e5d8-4545-a699-98428c9d7945",
+            "dataPointKey": "sample-data-movement-group-arrival-2",
+            "eventDateTime": "2022-09-01T18:46:00.000Z",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "98/123/7831"
+            },
+            "groupMethod": "InventoryClassification",
+            "countObserved": 45,
+            "inventoryClassification": {
+                "name": "Wrexham autumn sale replacement ewes",
+                "species": "Sheep",
+                "sex": "Female",
+                "birthPeriod": "2021-03-01",
+                "reproductiveStatus": "Pregnant",
+                "count": 46
+            },
+            "arrivalReason": "Purchase",
+            "consignment": {
+                "id": {
+                    "scheme": "uk.lis.consign",
+                    "id": "LKM27451"
+                },
+                "originLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/284/66379"
+                },
+                "destinationLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/123/7831"
+                },
+                "loadingDateTime": "2022-09-01T07:00:00.000Z",
+                "unloadingDateTime": "2022-09-01T18:40:00.000Z",
+                "expectedDuration": 11.5,
+                "transportOperator": "Jeff Livestock Haulage",
+                "vehicle": "DA43XF",
+                "transportReference": "BJJ1293"
+            }
+        }
     ]
 }

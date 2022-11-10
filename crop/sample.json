@@ -18,7 +18,10 @@
         },
         "samplingMethod": {
             "type": "string",
-            "description": "Citation or other URI to page describing the sampling method"
+            "description": "Citation or other URI to page describing the sampling method - thing",
+            "examples": [
+                "my-example-sample-method"
+            ]
         }
     },
     "required": [

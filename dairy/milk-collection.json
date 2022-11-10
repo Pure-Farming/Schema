@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/dairy/milk-collection",
+    "description": "This is a very simple WorkItem derivative that captures a record of milk being collected.",
+    "allOf": [
+        {
+            "$ref": "../types/workItem.json"
+        }
+    ],
+    "properties": {
+        "operation": {
+            "const": "MilkCollection"
+        },
+        "collections": {
+            "$ref": "../types/loadResource.json"
+        }
+    },
+    "required": [
+        "operation"
+    ]
+}
