@@ -5,5 +5,95 @@
         {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementBirthEventResource.json"
         }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/movement/animal-birth-registration",
+            "id": "1ca6df64-4fec-4689-9176-a997a85e7969",
+            "dataPointKey": "sample-data-movement-birth-1",
+            "eventDateTime": "2022-09-06T07:22:00.000Z",
+            "location": {
+                "scheme": "nz.nait.pica-location",
+                "id": "11111"
+            },
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "931 578394765867"
+            },
+            "registrationReason": "Registered",
+            "animalDetail": {
+                "resourceType": "/livestock/animal",
+                "identifier": {
+                    "id": "ABC12345",
+                    "scheme": "nz.minda"
+                },
+                "location": {
+                    "scheme": "nz.nait.pica-location",
+                    "id": "11111"
+                },
+                "alternativeIdentifiers": [
+                    {
+                        "scheme": "nz.nait.visual",
+                        "id": "NZ0244220"
+                    }
+                ],
+                "specie": "Cattle",
+                "gender": "Female",
+                "birthDate": "2022-08-04T00:00:00Z",
+                "primaryBreed": {
+                    "scheme": "nz.digad3",
+                    "id": "JER"
+                },
+                "productionPurpose": "Milk",
+                "status": "Alive"
+            }
+        },
+        {
+            "resourceType": "/livestock/movement/animal-birth-registration",
+            "id": "e27b569b-4c7b-43cb-8b74-436f1c39a934",
+            "dataPointKey": "sample-data-movement-birth-4",
+            "eventDateTime": "2022-03-27T00:00:00.000Z",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "98/675/0020"
+            },
+            "animal": {
+                "scheme": "uk.cts.eartag",
+                "id": "UK123456201160"
+            },
+            "registrationReason": "Born",
+            "animalDetail": {
+                "resourceType": "/livestock/animal",
+                "identifier": {
+                    "scheme": "uk.cts.eartag",
+                    "id": "UK123456201160"
+                },
+                "location": {
+                    "scheme": "uk.cph",
+                    "id": "98/675/0020"
+                },
+                "specie": "Cattle",
+                "gender": "Female",
+                "birthDate": "2022-03-27T00:00:00.000Z",
+                "primaryBreed": {
+                    "scheme": "uk.cts.breed",
+                    "id": "AAX"
+                },
+                "parentage": [
+                    {
+                        "parentOf": {
+                            "id": "UK123456201160",
+                            "scheme": "uk.cts.eartag"
+                        },
+                        "gender": "Female",
+                        "relation": "Genetic",
+                        "identifier": {
+                            "id": "UK123456100872",
+                            "scheme": "uk.cts.eartag"
+                        }
+                    }
+                ]
+            }
+        }
     ]
 }

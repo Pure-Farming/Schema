@@ -5,5 +5,70 @@
         {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementDepartureEventResource.json"
         }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/movement/animal-departure",
+            "id": "42f082d2-f8cd-4903-a876-8d034da6e216",
+            "dataPointKey": "sample-data-movement-departure-1",
+            "eventDateTime": "2022-09-14T08:42:00.000Z",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "417 754394779335"
+            },
+            "departureKind": "Sale",
+            "consignment": {
+                "id": {
+                    "scheme": "nz.nait.consign",
+                    "id": "VVF37581"
+                },
+                "originLocation": {
+                    "scheme": "nz.nait.pica-location",
+                    "id": "11111"
+                },
+                "destinationLocation": {
+                    "scheme": "nz.nait.pica-location",
+                    "id": "42424"
+                },
+                "loadingDateTime": "2022-09-14T07:12:00.000Z",
+                "unloadingDateTime": "2022-09-14T13:24:00.000Z",
+                "expectedDuration": 6.2,
+                "transportOperator": "Pink Transport Ltd",
+                "vehicle": "JWL387",
+                "transportReference": "OT55-782"
+            }
+        },
+        {
+            "resourceType": "/livestock/movement/animal-departure",
+            "id": "96ecab57-856d-443d-b313-50cc5afa5fac",
+            "dataPointKey": "sample-data-movement-departure-4",
+            "eventDateTime": "2022-09-06T15:22:00.000Z",
+            "animal": {
+                "scheme": "au.nlis",
+                "id": "931 123477466011"
+            },
+            "departureKind": "Sale",
+            "departureReason": "Sale",
+            "consignment": {
+                "id": {
+                    "scheme": "au.nlis.consign",
+                    "id": "ABC12345"
+                },
+                "originLocation": {
+                    "scheme": "au.nlis.pic",
+                    "id": "3ABAB111"
+                },
+                "destinationLocation": {
+                    "scheme": "au.nlis.pic",
+                    "id": "3ABCD666"
+                },
+                "loadingDateTime": "2022-09-13T09:14:00.000Z",
+                "unloadingDateTime": "2022-09-13T14:43:00.000Z",
+                "expectedDuration": 5.4,
+                "transportOperator": "Pink Livestock Transport",
+                "vehicle": "AX71ZA",
+                "transportReference": "FLT991"
+            }
+        }
     ]
 }

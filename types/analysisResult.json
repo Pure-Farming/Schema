@@ -51,6 +51,10 @@
         "errorStatistic": {
             "type": "number",
             "description": "Error statistics (see OGC QR)"
+        },
+        "qualitativeGrade": {
+            "type": "string",
+            "description": "A textual or descriptive grade for the result."
         }
     },
     "required": [
