@@ -5,5 +5,93 @@
         {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementArrivalEventResource.json"
         }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/movement/animal-arrival",
+            "id": "44a8eab0-5a81-4a60-9508-5820a55d6dad",
+            "dataPointKey": "sample-data-movement-arrival-1",
+            "eventDateTime": "2022-09-13T12:46:00.000Z",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "931 754394765380"
+            },
+            "arrivalReason": "StudService",
+            "animalDetail": {
+                "resourceType": "/livestock/animal",
+                "specie": "Cattle",
+                "gender": "Female",
+                "identifier": {
+                    "id": "ABK779345",
+                    "scheme": "nz.minda"
+                },
+                "alternativeIdentifiers": [
+                    {
+                        "scheme": "nz.nait.visual",
+                        "id": "UK0766220"
+                    }
+                ]
+            },
+            "consignment": {
+                "id": {
+                    "scheme": "nz.nait.consign",
+                    "id": "ZHP55888"
+                },
+                "originLocation": {
+                    "scheme": "nz.nait.pica-location",
+                    "id": "12345"
+                },
+                "destinationLocation": {
+                    "scheme": "nz.nait.pica-location",
+                    "id": "11111"
+                },
+                "loadingDateTime": "2022-09-13T09:14:00.000Z",
+                "unloadingDateTime": "2022-09-13T13:20:00.000Z",
+                "expectedDuration": 4.1,
+                "transportOperator": "Bob's Livestock Transport Ltd.",
+                "vehicle": "NPP345",
+                "transportReference": "ELT1248"
+            }
+        },
+        {
+            "resourceType": "/livestock/movement/animal-arrival",
+            "id": "c3ce6f4b-ee66-48d1-aaf7-bfc8e8bc3838",
+            "dataPointKey": "sample-data-movement-arrival-3",
+            "eventDateTime": "2022-09-08T13:16:00.000Z",
+            "animal": {
+                "scheme": "au.nlis",
+                "id": "641 123477466062"
+            },
+            "arrivalReason": "Purchase",
+            "animalDetail": {
+                "resourceType": "/livestock/animal",
+                "specie": "Cattle",
+                "identifier": {
+                    "scheme": "au.nlis",
+                    "id": "641 123477466062"
+                },
+                "gender": "Female"
+            },
+            "consignment": {
+                "id": {
+                    "scheme": "au.nlis.consign",
+                    "id": "ABC67890"
+                },
+                "originLocation": {
+                    "scheme": "au.nlis.pic",
+                    "id": "3ABZF222"
+                },
+                "destinationLocation": {
+                    "scheme": "au.nlis.pic",
+                    "id": "3ABCD666"
+                },
+                "loadingDateTime": "2022-09-08T09:14:00.000Z",
+                "unloadingDateTime": "2022-09-08T13:43:00.000Z",
+                "expectedDuration": 4.5,
+                "transportOperator": "Big Livestock Transport",
+                "vehicle": "KK31ZA",
+                "transportReference": "A4723"
+            }
+        }
     ]
 }

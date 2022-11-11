@@ -5,5 +5,71 @@
         {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementDeathEventResource.json"
         }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/movement/animal-death",
+            "id": "52cfa3dd-dbb5-4285-89b4-7d2e59a4563c",
+            "dataPointKey": "sample-data-movement-death-1",
+            "eventDateTime": "2022-09-07T11:05:00.000Z",
+            "animal": {
+                "scheme": "au.nlis",
+                "id": "982 123477466062"
+            },
+            "deathReason": "Fertility",
+            "explanation": "Not in calf",
+            "disposalMethod": "ApprovedService",
+            "disposalReference": "KH3457-2",
+            "deathMethod": "Culled",
+            "consignment": {
+                "id": {
+                    "scheme": "au.nlis.consign",
+                    "id": "DEF1234"
+                },
+                "originLocation": {
+                    "scheme": "au.nlis.pic",
+                    "id": "3ABAB111"
+                },
+                "destinationLocation": {
+                    "scheme": "au.nlis.pic",
+                    "id": "DECEASED"
+                }
+            }
+        },
+        {
+            "resourceType": "/livestock/movement/animal-death",
+            "id": "134d711f-9f22-4eb0-aa69-99df3dcb7d04",
+            "dataPointKey": "sample-data-movement-death-4",
+            "eventDateTime": "2022-09-11T15:42:00.000Z",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "641 754394579737"
+            },
+            "deathReason": "Accident",
+            "explanation": "Fell over a bluff",
+            "disposalMethod": "ApprovedService",
+            "disposalOperator": "Jeff Corporation Limited",
+            "disposalReference": "WC37X-7821",
+            "deathMethod": "Accident",
+            "consignment": {
+                "id": {
+                    "scheme": "nz.nait.consign",
+                    "id": "DTH398529"
+                },
+                "originLocation": {
+                    "scheme": "nz.nait.pica-location",
+                    "id": "11111"
+                },
+                "destinationLocation": {
+                    "scheme": "nz.nait.pica-location",
+                    "id": "597392"
+                },
+                "loadingDateTime": "2022-09-12T11:45:00.000Z",
+                "unloadingDateTime": "2022-09-12T15:24:00.000Z",
+                "transportOperator": "Jeff Corporation Limited",
+                "vehicle": "KKM384",
+                "transportReference": "WCL22-9148"
+            }
+        }
     ]
 }
