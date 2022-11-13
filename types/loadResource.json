@@ -16,12 +16,6 @@
             "$ref": "./consignmentEndPoint.json",
             "description": "Destination endpoint of the load"
         },
-        "crops": {
-            "type": "array",
-            "items": {
-                "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/CropType.json"
-            }
-        },
         "logisticUnit": {
             "$ref": "../enums/logisticsUnit.json"
         },
