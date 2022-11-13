@@ -14,7 +14,7 @@
         "loads": {
             "type": "array",
             "items": {
-                "$ref": "../types/loadResource.json"
+                "$ref": "../types/cropLoadResource.json"
             }
         }
     },
