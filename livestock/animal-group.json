@@ -4,17 +4,21 @@
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarResource.json"
-        },
-        {
-            "type": "object",
-            "properties": {
-                "classification": {
-                    "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarInventoryClassificationType.json",
-                    "description": "The set of shared characteristics that defines the group of animals"
-                }
-            }
         }
     ],
+    "required": [
+        "id"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier (UUID) used within the current server to identify the resource."
+        },
+        "classification": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "description": "The set of shared characteristics that defines the group of animals"
+        }
+    },
     "examples": [
         {
             "resourceType": "/livestock/animal-group",
