@@ -4,18 +4,10 @@
     "description": "This is a very simple WorkItem derivative that captures a record of milk being collected.",
     "allOf": [
         {
-            "$ref": "../types/workItem.json"
-        }
-    ],
-    "properties": {
-        "operation": {
-            "const": "MilkCollection"
+            "$ref": "../types/observation.json"
         },
-        "collection": {
+        {
             "$ref": "../types/loadResource.json"
         }
-    },
-    "required": [
-        "operation"
     ]
 }
