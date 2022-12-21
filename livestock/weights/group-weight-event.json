@@ -293,7 +293,7 @@
             "eventDateTime": "2015-07-22T00:00:00.000Z",
             "groupMethod": "InventoryClassification",
             "countObserved": 10,
-            "InventoryClassification": {
+            "inventoryClassification": {
                 "name": "MA ewes session 72-IC",
                 "count": 10,
                 "species": "Sheep",
@@ -371,101 +371,101 @@
             "eventDateTime": "2015-07-22T11:00:00.000Z",
             "groupMethod": "InventoryClassification",
             "countObserved": 10,
-            "InventoryClassification": {
+            "inventoryClassification": {
                 "name": "MA ewes ids only -IC",
                 "count": 10,
                 "species": "Sheep",
-                "sex": "Female",
-                "animalWeights": [
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003034"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003035"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003036"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003049"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003051"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003054"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003055"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003058"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003060"
-                        }
-                    },
-                    {
-                        "animal": {
-                            "scheme": "iso.std.11785",
-                            "id": "300 A6696C9B9004010003062"
-                        }
+                "sex": "Female"
+            },
+            "animalWeights": [
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003034"
                     }
-                ],
-                "statistics": [
-                    {
-                        "metric": {
-                            "scheme": "org.icar",
-                            "id": "Liveweight"
-                        },
-                        "unit": "KGM",
-                        "aggregation": "Average",
-                        "value": 55.8
-                    },
-                    {
-                        "metric": {
-                            "scheme": "org.icar",
-                            "id": "Liveweight"
-                        },
-                        "aggregation": "Count",
-                        "value": 10
-                    }
-                ],
-                "device": {
-                    "identifier": {
-                        "scheme": "iso.std.9001",
-                        "id": "TT3"
-                    },
-                    "model": "Tru-test 3000"
                 },
-                "timeOffFeed": 0
-            }
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003035"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003036"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003049"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003051"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003054"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003055"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003058"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003060"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003062"
+                    }
+                }
+            ],
+            "statistics": [
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "unit": "KGM",
+                    "aggregation": "Average",
+                    "value": 55.8
+                },
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "aggregation": "Count",
+                    "value": 10
+                }
+            ],
+            "device": {
+                "identifier": {
+                    "scheme": "iso.std.9001",
+                    "id": "TT3"
+                },
+                "model": "Tru-test 3000"
+            },
+            "timeOffFeed": 0
         }
     ]
 }
