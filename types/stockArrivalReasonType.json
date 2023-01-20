@@ -1,0 +1,18 @@
+{
+    "description": "Defines the number of stock that arrived for a specified arrival reason.",
+    "type": "object",
+    "$id": "/types/icarStockArrivalReasonType",
+    "required": [
+        "reason"
+    ],
+    "properties": {
+        "reason": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarArrivalReasonType.json",
+            "description": "The reason for the arrival of the stock"
+        },
+        "count": {
+            "type": "integer",
+            "description": "The number of stock that arrived for the specified reason"
+        }
+    }
+}

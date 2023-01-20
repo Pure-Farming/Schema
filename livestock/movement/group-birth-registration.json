@@ -117,7 +117,7 @@
                     "status": "Alive",
                     "lactationStatus": "Dry",
                     "reproductionStatus": "NotPregnant",
-                    "healthStatus": "Healthy",
+                    "healthStatus": "Healthy"
                 },
                 {
                     "resourceType": "/livestock/animal",
@@ -148,7 +148,7 @@
                     "status": "Alive",
                     "lactationStatus": "Dry",
                     "reproductionStatus": "NotPregnant",
-                    "healthStatus": "Healthy",
+                    "healthStatus": "Healthy"
                 }
             ]
         }

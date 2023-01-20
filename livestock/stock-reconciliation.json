@@ -1,0 +1,121 @@
+{
+    "description": "The summary stock reconciliation for the specified period for a group of livestock defined by an inventory classification.",
+    "$id": "/livestock/stock-reconciliation",
+    "required": [
+        "startDate",
+        "endDate"
+    ],
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarResource.json"
+        }
+    ],
+    "properties": {
+        "startDate": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Date of the start of the period"
+        },
+        "endDate": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Date of the end of the period"
+        },
+        "duration": {
+            "$ref": "../enums/durationUnitsType.json",
+            "description": "Defines the duration that the reconciliation applies to: week, month or year"
+        },
+        "inventoryClassification": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "description": "Defines the group of animals by their characteristics to which the reconciliation refers"
+        },
+        "open": {
+            "type": "integer",
+            "description": "The number of animals in the group at the start of the period"
+        },
+        "arrivalsTotal": {
+            "type": "integer",
+            "description": "The total number of animals that arrived during the period"
+        },
+        "arrivals": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/stockArrivalReasonType.json"
+            },
+            "description": "The array of numbers of stock that arrived and the corresponding arrival reasons."
+        },
+        "departuresTotal": {
+            "type": "integer",
+            "description": "The total number of animals that departed during the period"
+        },
+        "departures": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/stockDepartureKindType.json"
+            },
+            "description": "The array of numbers of stock that departed and the corresponding departure kinds."
+        },
+        "births": {
+            "type": "integer",
+            "description": "The number of births in the group during the period."
+        },
+        "deaths": {
+            "type": "integer",
+            "description": "The number of deaths in the group during the period."
+        },
+        "agedIn": {
+            "type": "integer",
+            "description": "The number of livestock that became members of the group during the period through their increase in age."
+        },
+        "agedOut": {
+            "type": "integer",
+            "description": "The number of livestock that ceased being members of the group during the period through their increase in age."
+        },
+        "close": {
+            "type": "integer",
+            "description": "The number of animals in the group at the end of the period"
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/livestock/icarStockReconciliationResource",
+            "id": "53d69761-0ed3-4e95-9a49-77804f1dea57",
+            "dataPointKey": "sample-stockrec-1",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "33/444/5555"
+            },
+            "startDate": "2022-09-01T00:00:00.000Z",
+            "endDate": "2022-09-30T23:59:00.000Z",
+            "duration": "M",
+            "inventoryClassification": {
+                "name": "Breeding ewes",
+                "species": "Sheep",
+                "sex": "Female",
+                "birthPeriod": "2016-01-01/2021-12-31",
+                "count": 375
+            },
+            "open": 375,
+            "arrivalsTotal": 17,
+            "arrivals": [
+                {
+                    "reason": "Purchase",
+                    "count": 15
+                },
+                {
+                    "reason": "Imported",
+                    "count": 2
+                }
+            ],
+            "departuresTotal": 4,
+            "departures": [
+                {
+                    "kind": "Sale",
+                    "count": 4
+                }
+            ],
+            "births": 10,
+            "deaths": 3,
+            "agedIn": 33,
+            "close": 428
+        }
+    ]
+}
