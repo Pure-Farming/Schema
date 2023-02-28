@@ -1,0 +1,123 @@
+{
+    "description": "The Pasture Cover event records a pasture cover observation for a geospatial feature such as a plot.",
+    "$id": "/crop/pasture-cover-event",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ObservationType.json"
+        }
+    ],
+    "properties": {
+        "dryMatter": {
+            "$ref": "../types/dryMatterMeasureType.json",
+            "description": "Pasture dry matter yield calculated or estimated."
+        },
+        "pastureHeight": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/LengthMeasureType.json",
+            "description": "Average pasture height of the feature."
+        },
+        "pastureArea": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/AreaMeasureType.json",
+            "description": "Area of the feature in pasture."
+        },
+        "methodUsed": {
+            "type": "string",
+            "description": "Method used to determine pasture cover including: Visual, PlateMeter, PastureProbe, SwardStick, C-Dax."
+        },
+        "device": {
+            "$ref": "../types/deviceType.json",
+            "description": "Device used to determine pasture cover."
+        },
+        "equationIntercept": {
+            "type": "number",
+            "description": "Intercept in linear equation to calculate DM from pasture height."
+        },
+        "equationSlope": {
+            "type": "number",
+            "description": "Slope in linear equation to calculate DM from pasture height."
+        },
+        "metabolisableEnergy": {
+            "type": "number",
+            "description": "Metabolisable energy specified as Megajoules per unit of dry matter (i.e. MJ/kgDM)."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/crop/pasture-cover-event",
+            "id": "2111f1ef-e78c-4a08-bdb5-8501f53fb1e3",
+            "meta": {
+                "sourceId": {
+                    "scheme": "nz.zaxfarm.pasture",
+                    "id": "4243e3f4-de19-4289-a3e7-ad1814766b0f"
+                },
+                "modified": "2022-04-03T08:00:00Z",
+                "created": "2022-04-03T08:00:00Z",
+                "creator": "zaxfarm.co.nz"
+            },
+            "identifiers": [
+                {
+                    "scheme": "nz.zaxfarm.pasture-yield",
+                    "id": "UD034/JG/2022-04"
+                }
+            ],
+            "name": "Pasture D. Hartley - Oak Reach, Apr 2022",
+            "observationDate": "2022-04-03T00:00:00Z",
+            "feature": {
+                "contentType": "plot",
+                "identifier": {
+                    "scheme": "com.purefarming.plotId",
+                    "id": "c8e3cf30-b616-4f9d-b6b9-ef10308d6721"
+                },
+                "name": "Oak Reach"
+            },
+            "holding": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "9a75829f-91c6-4483-baed-a93f6e74716f"
+                },
+                "name": "Bliss Farm"
+            },
+            "phenomenonStartTime": "2022-03-03T09:40:00Z",
+            "phenomenonEndTime": "2022-04-03T08:00:00Z",
+            "responsible": "Jane Smart",
+            "remark": "Pasture cover Apr 22: Oak Reach: C-Dax",
+            "methodUsed": "PastureProbe",
+            "dryMatter": {
+                "measure":  { 
+                    "measurement":  1635,
+                    "resolution": 5,
+                    "units": "KGM"
+                },
+                "spatialMetric": {
+                    "measurement": 1,
+                    "resolution": 0.01,
+                    "units": "HAR"
+                }          
+            },
+            "pastureHeight": {
+                "measurement": 6.1,
+                "resolution": 0.1,
+                "units": "CMT"
+            },
+            "pastureArea": {
+                "measurement": 1.4,
+                "resolution": 0.1,
+                "units": "HAR"
+            },
+            "equationIntercept": 826,
+            "equationSlope": 158,
+            "metabolisableEnergy": 10.6,
+            "device": {
+                "id": "JHP03",
+                "serial": "4321-GD81-1234",
+                "name": "JayHigh Pasture Probe",
+                "description": "JayHigh capacitance pasture meter",
+                "softwareVersion": "4.7",
+                "hardwareVersion": "6.23",
+                "manufacturer": "JayHigh.nz",
+                "deviceCategory": "PastureAssessment"
+            }
+        }
+    ]
+}

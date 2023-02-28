@@ -1,0 +1,9 @@
+{
+    "description": "The animal set join event is to record the addition of an animal to an animal set.",
+    "$id": "/livestock/animal-set-join",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarAnimalSetJoinEventResource.json"
+        }
+    ]
+}

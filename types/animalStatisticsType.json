@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "types/animalStatisticsType",
+    "type": "object",
+    "properties": {
+        "metric": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/types/icarMetricType.json",
+            "description": "The metric the stat relates to, e.g. anitbiotic.udder."
+        },
+        "qualifier": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/IdentifierType.json",
+            "description": "The measurement standard or process used to create the statistic."
+        },
+        "units": {
+            "type": "string",
+            "description": "The units of the statistic."
+        },
+        "value": {
+            "type": "number",
+            "description": "The value of the statistic."
+        },
+        "lastKnownValue": {
+            "type": "number",
+            "description": "The last known value for this statistics point - i.e. if no new data this is the last known data."
+        },
+        "lastKnownValueDate": {
+            "type": "string",
+            "format": "date",
+            "description": "UTC Date the last known value was observed."
+        },
+        "aggregation": {
+            "type": "string",
+            "description": "The type of statistic - min, max, mean etc."
+        }
+    },
+    "required": [
+        "metric"
+    ],
+    "oneOf": [
+        {
+            "required": [
+                "value"
+            ]
+        },
+        {
+            "required": [
+                "lastKnownValue"
+            ]
+        }
+    ]
+
+}
