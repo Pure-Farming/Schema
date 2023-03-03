@@ -1,0 +1,20 @@
+{
+    "description": "Specifies a mass, including units (default is kilogram).",
+
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/MeasurementType.json" 
+        },
+        {    
+            "type": "object",
+            "properties": {
+                "units": {
+                    "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/enums/uncefactMassUnits.json",
+                    "nullable": true,
+                    "default": "KGM",
+                    "description": "Defines the unit of measure for weight quantities. Prefered units are KGM (UN-CEFACT for kilogram)."
+                }
+            }
+        }
+    ]
+}

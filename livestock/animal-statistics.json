@@ -1,0 +1,82 @@
+{
+    "description": "Holds animal statistics for the specified period for a group of livestock defined by an inventory classification.",
+    "$id": "/livestock/animal-statistics",
+    "required": [
+        "startDate",
+        "endDate",
+        "duration",
+        "id"
+    ],
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarResource.json"
+        }
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier (UUID) used within the current server to identify the resource."
+        },
+        "startDate": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Date of the start of the period"
+        },
+        "endDate": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Date of the end of the period"
+        },
+        "duration": {
+            "$ref": "../enums/durationUnitsType.json",
+            "description": "Defines the duration that the statistics apply to: week, month or year"
+        },
+        "inventoryClassification": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "description": "Defines the group of animals by their characteristics to which the statistics refer"
+        },
+
+        "statistics": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/animalStatisticsType.json"
+            },
+            "description": "The array of statistics."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/livestock/animal-statistics",
+            "id": "53d69761-0ed3-4e95-9a49-77804f1dea57",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "33/444/5555"
+            },
+            "startDate": "2022-09-01T00:00:00.000Z",
+            "endDate": "2022-09-30T23:59:00.000Z",
+            "duration": "M",
+            "inventoryClassification": {
+                "name": "Breeding ewes",
+                "species": "Sheep",
+                "sex": "Female",
+                "birthPeriod": "2016-01-01/2021-12-31",
+                "count": 375
+            },
+            "statistics": [
+                {
+                    "metric": {
+                        "scheme": "antibioticUsage",
+                        "id": "udder"
+                    },
+                    "qualifier": {
+                        "scheme": "eu.ema",
+                        "id":"DDDVet"
+                    },
+                    "units": "DDDVet",
+                    "value": 12,
+                    "lastKnownValue": 2,
+                    "lastKnownValueDate": "2022-08-01",
+                    "aggregation": "COUNT"
+                }
+            ]
+        }
+    ]
+}

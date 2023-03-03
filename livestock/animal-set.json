@@ -1,5 +1,5 @@
 {
-    "description": "Represents animal sets (often called groups or sessions).  Created because embbeddedAnimalSet in icarGroupEventCoreResource requires a resourceType.",
+    "description": "Defines a set of identified animals which may be created for a particular purpose.",
     "$id": "/livestock/animal-set",
     "allOf": [
         {
