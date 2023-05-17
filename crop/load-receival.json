@@ -1,5 +1,4 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "/crop/load-receival",
     "description": "This is a very simple WorkItem derivative that captures a record of a load being received.",
     "allOf": [

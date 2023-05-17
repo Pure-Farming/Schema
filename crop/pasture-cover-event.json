@@ -21,7 +21,7 @@
             "description": "Area of the feature in pasture."
         },
         "methodUsed": {
-            "type": "string",
+            "$ref": "../enums/pastureDmAssessmentMethod.json",
             "description": "Method used to determine pasture cover including: Visual, PlateMeter, PastureProbe, SwardStick, C-Dax."
         },
         "device": {
@@ -89,7 +89,7 @@
                     "resolution": 5,
                     "units": "KGM"
                 },
-                "spatialMetric": {
+                "areaMetric": {
                     "measurement": 1,
                     "resolution": 0.01,
                     "units": "HAR"

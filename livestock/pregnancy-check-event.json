@@ -3,16 +3,16 @@
     "$id": "/livestock/pregnancy-check-event",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarReproPregnancyCheckEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarReproPregnancyCheckEventResource.json"
         }
     ],
     "properties": {
         "expectedParturitionDate": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
             "description": "Date parturition is expected."
         },
         "impliedInseminationDate": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
             "description": "Insemination date implied by foetal age."
         }
     },

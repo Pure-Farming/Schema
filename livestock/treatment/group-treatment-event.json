@@ -3,7 +3,7 @@
     "description": "Event for recording treatment of a group of animals.  Uses ICAR schema.",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarGroupTreatmentEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupTreatmentEventResource.json"
         }
     ],
     "examples": [

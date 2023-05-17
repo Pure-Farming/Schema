@@ -3,7 +3,7 @@
     "$id": "/livestock/movement/animal-arrival",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementArrivalEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarMovementArrivalEventResource.json"
         }
     ],
     "examples": [

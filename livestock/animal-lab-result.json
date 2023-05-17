@@ -1,0 +1,29 @@
+{
+    "$id": "/livestock/animal-lab-result",
+    "description": "A general lab result schema for animal lab tests. observationDate is the date sample taken, dateTested is the date of the test.",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarAnimalEventCoreResource.json"
+        }
+    ],
+    "properties": {
+        "dateTested": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "RFC3339 UTC date and time (see https://ijmacd.github.io/rfc3339-iso8601/)."
+          },
+               
+        "analysis": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/laboratoryAnalysis.json"
+            }
+        },
+        "sampleType": {
+            "type": "string",
+            "description": "The type of sample taken e.g. Milk, Blood"
+        }
+    },
+    "required": [
+        "analysis"
+    ]
+}

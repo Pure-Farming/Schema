@@ -1,0 +1,54 @@
+{
+    "description": "Inventory Transaction based on Geospatial defines a transaction on a product inventory where the transaction may be a receipt, disposal, on hand, stocktake, use",
+    "type": "object",
+    "$id": "types/inventoryTransactionType",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ObservationType.json"
+        }
+    ],
+    "required": [
+        "transactionKind",
+        "quantity",
+        "units"
+    ],
+    "properties": {
+        "transactionKind": {
+            "$ref": "../enums/inventoryTransactionKindType.json",
+            "description": "Identifies the transaction kind."
+        },
+        "quantity": {
+            "type": "number",
+            "description": "The overall volume, weight or count of the product in the transaction in the units defined."
+        },
+        "units": {
+            "description": "The units of the quantity specified.  Where applicable it is recommended that uncefact mass and volume units are used.",
+            "type": "string"
+        },
+        "supplierName": {
+            "type": "string",
+            "description": "The supplier of the product in this transaction.  This is particularly relevant if the transaction is a receipt"
+        },
+        "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The expiry date of the product supplied in the transaction; ISO UTC DateTime."
+        },
+        "totalCost": {
+            "type": "number",
+            "description": "Total cost applied to this transaction"
+        },
+        "currency": {
+            "type": "string",
+            "description": "The currency of the cost expressed using the ISO 4217 3-character code such as AUD, GBP, USD, NZD."
+        },
+        "packSize": {
+            "type": "number",
+            "description": "The volume or weight of the product in a pack in the units defined."
+        },
+        "numberOfPacks": {
+            "type": "number",
+            "description": "The number of packs of the product in the transaction. Could be a decimal number for a part-pack."
+        }
+    }
+}

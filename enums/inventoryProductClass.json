@@ -1,0 +1,12 @@
+{
+    "description": "Defines the broad category of inventory product",
+    "type": "string",
+    "enum": [
+        "Fertiliser",
+        "Fuel",
+        "Herbicide",
+        "Semen",
+        "StockFood",
+        "VetMedicine"
+    ]
+}

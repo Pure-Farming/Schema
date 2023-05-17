@@ -1,0 +1,210 @@
+{
+    "description": "An event in which a set of observations on a carcass, side or primal are recorded by an operator at a specified date-time.",
+    "$id": "/livestock/carcass/carcass-observations-event",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/add-carcass-schemas/resources/icarCarcassObservationsEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/carcass/carcass-observations-event",
+            "meta": {
+                "source": "au.meatco.carcass",
+                "modified": "2023-01-25T11:00:00Z"
+            },
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABAB111"
+            },
+            "id": "00a8e8d9-c14c-43cf-b9d4-7fffbde24061",
+            "eventDateTime": "2023-01-25T10:32:00Z",
+            "responsible": "Alex Smith",
+            "remark": "Hot observations",
+            "animal": {
+                "id": "3FRPI065XBCD0071",
+                "scheme": "au.nlis.animal"
+            },
+            "carcass": {
+                "killDateTime": "2023-01-25T09:45:00Z",
+                "bodyNo": 379,
+                "identifiers": [
+                    {
+                        "scheme": "au.kbl.id",
+                        "id": "380/547/38"
+                    }
+                ],
+                "sex": "Male",
+                "processingLot": {
+                    "name": "025-017",
+                    "chain": {
+                        "chainId": "B03",
+                        "plant": {
+                            "name": "KBL Meat Processors",
+                            "leiCode": "123456L00AB00ABC0A00"
+                        },
+                        "chainProcess": "PostMortem"
+                    },
+                    "species": "Cattle"
+                },
+                "plantBoningRun": 17,
+                "destinationCode": "ABC12"
+            },
+            "side": "Left",
+            "carcassState": "Hot",
+            "observations": [
+                {
+                    "metric": {
+                        "id": {
+                            "scheme": "au.ausmeat.metric",
+                            "id": "hotCarcaseWt"
+                        },
+                        "method": "Weigh"
+                    },
+                    "value": 241.2,
+                    "units": "KGM",
+                    "observationStatus": "Measured"
+                },
+                {
+                    "metric": {
+                        "id": {
+                            "scheme": "au.ausmeat.metric",
+                            "id": "marbling"
+                        },
+                        "method": "Visual"
+                    },
+                    "value": 3.1,
+                    "observationStatus": "Calculated"
+                }
+            ],
+            "device": {
+                "id": "WS41",
+                "serial": "TR546-973-7",
+                "manufacturer":{
+                    "id": "thematicdevices.com",
+                    "deviceType": "Scales",
+                    "deviceName": "TR546"
+                }
+            }
+        },
+        {
+            "resourceType": "/livestock/carcass/carcass-observations-event",
+            "meta": {
+                "source": "au.meatco.carcass",
+                "modified": "2023-01-25T11:00:00Z",
+                "creator": "au.com.meatco"
+            },
+            "@self": "https://meatco.com.au/operations",
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABAB111"
+            },
+            "id": "e7c06257-1f68-4a0e-bdc7-f04d932dc82a",
+            "eventDateTime": "2022-10-13T07:58:00Z",
+            "responsible": "Jimmy Brown",
+            "remark": "Cold observations",
+            "animal": {
+                "id": "5XPOR065JDWQ6789",
+                "scheme": "au.nlis.animal"
+            },
+            "carcass": {
+                "killDateTime": "2022-10-13T07:27:00Z",
+                "bodyNo": 22,
+                "identifiers": [
+                    {
+                        "scheme": "au.xyz.id",
+                        "id": "K678-32"
+                    }
+                ],
+                "sex": "MaleNeuter",
+                "birthDate": "2020-07-16T00:00:00Z",
+                "birthDateConfidence": "AAU",
+                "primaryBreed": {
+                    "scheme": "au.abri.breed",
+                    "id": "ANG"
+                },
+                "processingLot": {
+                    "name": "10-13-17",
+                    "id": "0b5c7959-e0f5-4b8c-b46d-7b1b25469721",
+                    "killDateTime": "2023-01-25T09:45:00Z",
+                    "chain": {
+                        "chainId": "05",
+                        "plant": {
+                            "name": "Meatco Processors",
+                            "leiCode": "654321PPPAB00ABC0A99"
+                        },
+                        "chainProcess": "PostMortem"
+                    },
+                    "species": "Cattle",
+                    "startBodyNumber": 1,
+                    "endBodyNumber": 80,
+                    "lotCount": 80,
+                    "targetMarket": "Export",
+                    "killType": "K7",
+                    "consignment": {
+                        "id": {
+                            "scheme": "au.nlis.consign",
+                            "id": "GB470"
+                        },
+                        "destinationLocation": {
+                            "scheme": "au.nlis.pic",
+                            "id": "ND250250"
+                        },
+                        "originLocation": {
+                            "scheme": "au.nlis.pic",
+                            "id": "NS444999"
+                        },
+                        "countConsigned": 80,
+                        "countReceived": 80,
+                        "loadingDateTime": "2022-10-12T08:15:00Z",
+                        "unloadingDateTime": "2022-10-12T14:27:00Z",
+                        "hoursOffFeed": 6,
+                        "hoursOffWater": 6,
+                        "expectedDuration": 6,
+                        "transportOperator": "Gene Transport Pty Ltd",
+                        "farmAssuranceReference": {
+                            "id": "368HH",
+                            "scheme": "au.lpa.member"
+                        }
+                    }
+                },
+                "plantBoningRun": 4,
+                "plantBoningRunTemplate": "ABC444",
+                "destinationCode": "LY03",
+                "refProcessorGrid": "XYZ-02"
+            },
+            "side": "Right",
+            "carcassState": "Cold",
+            "observations": [
+                {
+                    "metric": {
+                        "id": {
+                            "scheme": "au.msa.metric",
+                            "id": "eyeMuscleArea"
+                        },
+                        "method": "Grid",
+                        "qualifier": "12th Rib"
+                    },
+                    "value": 77,
+                    "units": "CMK",
+                    "qualitativeValue": "AA+",
+                    "observationStatus": "Measured"
+                },
+                {
+                    "metric": {
+                        "id": {
+                            "scheme": "au.msa.metric",
+                            "id": "loinTemp"
+                        },
+                        "method": "Thermometer"
+                    },
+                    "value": 7.1,
+                    "units": "CEL",
+                    "resolution": 0.1,
+                    "observationStatus": "Measured",
+                    "problemDetail": "Needs recalibrating"
+                }
+            ]
+        }
+    ]
+}

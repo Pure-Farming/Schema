@@ -1,0 +1,63 @@
+{
+    "description": "The feed transaction records an inventory transaction on a feed product. Calls the ICAR Feed Transaction resource",
+    "$id": "/inventory/feed-transaction",
+    "allOf": [
+        {
+            "$ref": "../inventory/icarFeedTransactionResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/inventory/feed-transaction",
+            "id": "d7516736-2370-46b5-aff5-823fa8447ebe",
+            "@self": "https://api.purefarming.com/data/inventory/feed-transaction/9033f08c-79c6-45a2-8267-3f6749117ed9",
+            "location": {
+                "scheme": "nz.nait.pica-location",
+                "id": "12345"
+            },
+            "meta": {
+                "source": "nz.co.kjhfarmsupplies",
+                "sourceId": "08c35256-388a-4b31-9f70-aee5a3c4585a",
+                "modified": "2023-04-10T09:00:00Z",
+                "created": "2023-04-10T09:00:00Z",
+                "isDeleted": false,
+                "creator": "don.wilson@kjhfarmsupplies.co.nz",
+                "validFrom": "2023-04-10T09:00:00Z",
+                "validTo": "2024-02-10T09:00:00Z"
+            },
+            "eventDateTime": "2023-03-28T11:00:00Z",
+            "responsible": "Sally Davis",
+            "remark": "Stocktake March 2023",
+            "transactionKind": "StockTake",
+            "reason": "Adjusted",
+            "quantity": 60,
+            "units": "KGM",
+            "supplierName": "KJH Farm Supplies Ltd",
+            "expiryDate": "2023-03-28T08:00:00Z",
+            "packSize": 20,
+            "numberOfPacks": 3,
+            "product": {
+                "identifier": {
+                    "scheme": "nz.co.abcstockfoods",
+                    "id": "PF1234"
+                },
+                "href": "https://www.abcstockfoods.co.nz/products/specifications/PF1234",
+                "identifiers": [
+                    {
+                        "scheme": "nz.co.kjhfarmsupplies.product",
+                        "id": "KJ472"
+                    }
+                ],
+                "family": "Animal Feeds",
+                "category": "Additives",
+                "type": {
+                    "scheme": "nz.co.abcstockfoods.type",
+                    "id": "Calf Feed"
+                },
+                "name": "Hi-Gain Calf Pellets",
+                "gtin": "012345678900",
+                "unspc": "10121500"
+            }
+        }
+    ]
+}

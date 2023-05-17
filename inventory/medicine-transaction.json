@@ -1,0 +1,62 @@
+{
+    "description": "The medicine transaction records an inventory transaction on a medicine product. Calls the ICAR Medicine Transaction resource",
+    "$id": "/inventory/medicine-transaction",
+    "allOf": [
+        {
+            "$ref": "../inventory/icarMedicineTransactionResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/inventory/medicine-transaction",
+            "id": "14fe6cfb-652a-4f86-a56b-500e1c1966e2",
+            "@self": "https://api.purefarming.com/data/inventory/medicine-transaction/1df30895-8715-449a-a646-00532bdf9941",
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABCD666"
+            },
+            "meta": {
+                "source": "au.com.defvetservices",
+                "sourceId": "376f65c8-0fb3-484c-9005-ce978d94487d",
+                "modified": "2023-04-10T09:00:00Z",
+                "created": "2023-04-10T09:00:00Z",
+                "isDeleted": false,
+                "creator": "don.wilson@defvetservices.com.au",
+                "validFrom": "2023-04-10T09:00:00Z",
+                "validTo": "2024-02-10T09:00:00Z"
+            },
+            "eventDateTime": "2023-03-28T11:00:00Z",
+            "responsible": "Gemma Smith",
+            "remark": "Drench supplied March 2023",
+            "transactionKind": "Receipt",
+            "quantity": 20,
+            "units": "LTR",
+            "supplierName": "DEF Vet Services Ltd",
+            "expiryDate": "2023-12-28T08:00:00Z",
+            "packSize": 20,
+            "numberOfPacks": 1,
+            "product": {
+                "identifier": {
+                    "id": "quad-oral-00020",
+                    "scheme": "au.com.goldenagsolutions"
+                },
+                "href": "https://www.goldenagsolutions/products/92486",
+                "identifiers": [
+                    {
+                        "scheme": "au.com.defvetservices.product",
+                        "id": "triple-0020"
+                    }
+                ],
+                "family": "Veterinary Supplies",
+                "approved": "Approved",
+                "registeredIdentifier": {
+                    "id": "92486",
+                    "scheme": "au.gov.apvma"
+                },
+                "name": "Golden Quadmax Oral 20L",
+                "gtin": "012345678944",
+                "unspc": "70122002"
+            }
+        }
+    ]
+}

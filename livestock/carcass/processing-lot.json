@@ -1,0 +1,79 @@
+{
+    "description": "A processing lot describes a group or batch of animals from a single consignment that are processed together. Embeds the ICAR resource.",
+    "$id": "/livestock/carcass/processing-lot",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/add-carcass-schemas/resources/icarProcessingLotResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/carcass/processing-lot",
+            "id": "5c0103d3-231d-45cf-8ac6-7cdb7cf9f2cd",
+            "meta": {
+                "source": "nz.processco.lot",
+                "modified": "2022-10-03T11:00:00Z"
+            },
+            "name": "11-2079",
+            "chain": {
+                "chainId": "L07",
+                "plant": {
+                    "name": "NZ Meat Processors Hamilton",
+                    "leiCode": "123412345E1234B01234",
+                    "globalLocationNumber": "9429042462125",
+                    "address": {
+                        "addressCountry": "NZ",
+                        "addressLocality": "Hamilton",
+                        "streetAddress": "2 Melody Lane"
+                    },
+                    "establishmentIdentifiers": [
+                        {
+                            "id": "747",
+                            "scheme": "nz.mpi.foodsafety"
+                        }
+                    ]
+                },
+                "chainProcess": "PostMortem"
+            },
+            "killDateTime": "2022-10-03T07:00:00Z",
+            "startBodyNumber": 205,
+            "endBodyNumber": 260,
+            "lotCount": 56,
+            "species": "Sheep",
+            "consignment": {
+                "id": {
+                    "scheme": "nz.nait.consign",
+                    "id": "ZHP55888"
+                },
+                "originLocation": {
+                    "scheme": "nz.nait.pica-location",
+                    "id": "12345"
+                },
+                "originAddress": "450 Black Road, Sunnyvale, RD3",
+                "interestedParties": [
+                    {
+                        "interests": [
+                            "Producer"
+                        ],
+                        "name": "Sunny Station",
+                        "membershipIdentifiers": [
+                            {
+                                "scheme": "nz.nprove.member",
+                                "id": "7755"
+                            }
+                        ]
+                    }
+                ],
+                "declarations": [
+                    {
+                        "declarationId": {
+                            "scheme": "nz.nzfap.standard",
+                            "id": "HGP"
+                        },
+                        "declaredValue": "Clear"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "description": "The inventory transaction records a transaction on a product. Calls the ICAR Inventory Transaction resource",
+    "$id": "/inventory/inventory-transaction",
+    "allOf": [
+        {
+            "$ref": "../inventory/icarInventoryTransactionResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/inventory/inventory-transaction",
+            "id": "3e1b7c79-ff5c-49c6-bbf8-104a72a19b54",
+            "@self": "https://api.purefarming.com/data/inventory/inventory-transaction/eeef8e09-59a6-44c0-845a-bdccd9d38860",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "08/675/0020"
+            },
+            "meta": {
+                "source": "uk.springrise.semen",
+                "sourceId": "19a3b5fe-1690-45f8-a819-1471c1a121a3",
+                "modified": "2023-02-10T09:00:00Z",
+                "created": "2023-02-10T09:00:00Z",
+                "isDeleted": false,
+                "creator": "don.wilson@springrise.co.uk",
+                "validFrom": "2023-02-10T09:00:00Z",
+                "validTo": "2023-12-10T09:00:00Z"
+            },
+            "eventDateTime": "2023-01-28T08:00:00Z",
+            "responsible": "Matt Henry",
+            "remark": "Semen from Destiny Chancellor",
+            "transactionKind": "Receipt",
+            "quantity": 100,
+            "units": "straws",
+            "supplierName": "BlackHawk",
+            "expiryDate": "2023-03-28T08:00:00Z",
+            "totalCost": 1324,
+            "currency": "GBP",
+            "product": {
+                "identifier": {
+                    "scheme": "uk.co.genus",
+                    "id": "KY123412341234"
+                },
+                "href": "https://www.genus.co.uk/products/artificial-breeding/bull/54321",
+                "identifiers": [
+                    {
+                        "scheme": "uk.springrise.productcode",
+                        "id": "BH467"
+                    }
+                ],
+                "family": "Animal Reproductive Products",
+                "name": "Semen - Destiny Chancellor",
+                "gtin": "012345678905",
+                "unspc": "11131609"
+            }
+        },
+        {
+            "resourceType": "/inventory/inventory-transaction",
+            "dataPointKey": "sample-inventory-transaction-f",
+            "id": "08c35256-388a-4b31-9f70-aee5a3c4585a",
+            "@self": "https://api.purefarming.com/data/inventory/inventory-transaction/cf90ec5a-a745-40a2-8721-da0186de1299",
+            "location": {
+                "scheme": "nz.nait.pica-location",
+                "id": "12345"
+            },
+            "meta": {
+                "source": "nz.co.kjhfarmsupplies",
+                "sourceId": "efc3da28-cc4b-4733-b5bf-2dd0b3a4beb6",
+                "modified": "2023-04-05T09:00:00Z",
+                "created": "2023-04-05T09:00:00Z",
+                "isDeleted": false,
+                "creator": "don.wilson@kjhfarmsupplies.co.nz",
+                "validFrom": "2023-04-05T09:00:00Z",
+                "validTo": "2024-02-05T09:00:00Z"
+            },
+            "eventDateTime": "2023-03-28T08:00:00Z",
+            "responsible": "Tom Wilson",
+            "remark": "Milking plant consumables replaced",
+            "transactionKind": "Use",
+            "quantity": 64,
+            "units": "liners",
+            "supplierName": "KJH Farm Supplies Ltd",
+            "expiryDate": "2025-06-28T00:00:00Z",
+            "totalCost": 2500,
+            "currency": "NZD",
+            "packSize": 4,
+            "numberOfPacks": 16,
+            "product": {
+                "identifier": {
+                    "scheme": "nz.co.rubberproducts",
+                    "id": "RPL1111"
+                },
+                "href": "https://www.rubberproducts.co.nz/products/dairy/milk-liners/1111",
+                "identifiers": [
+                    {
+                        "scheme": "nz.co.kjhfarmsupplies.productcode",
+                        "id": "LK4/678"
+                    }
+                ],
+                "family": "Milking Supplies",
+                "name": "Rubber Products Premium Square Barrelled RIX1248 Milking Liner",
+                "gtin": "012345678977",
+                "unspc": "21101916"
+            }
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "$id": "/livestock/treatment/medicine-withholding-type",
+    "type": "object",
+    "required": [
+        "species",
+        "productType"
+    ],
+    "properties": {
+        "productType": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/icarWithdrawalProductType.json",
+            "description": "Product or food item to which this withholding applies."
+        },
+        "hours": {
+            "type": "number",
+            "description": "The withholding period of the animal after being treated with the medicine (in hours)."
+        },
+        "market": {
+            "type": "string",
+            "description": "The market to which the withholding applies, using a scheme such as au.gov.apvma.esi or au.gov.apvma.whp"
+        },
+        "species": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/icarAnimalSpecieType.json",
+            "description": "The species to which this withholding applies."
+        }
+    }
+}

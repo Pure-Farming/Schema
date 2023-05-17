@@ -3,7 +3,7 @@
     "$id": "/livestock/movement/group-arrival",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarGroupMovementArrivalEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupMovementArrivalEventResource.json"
         }
     ],
     "examples": [
@@ -25,8 +25,8 @@
                 "purpose": "Movement",
                 "member": [
                     {
-                    "scheme": "uk.lis",
-                    "id": "UK1234220"
+                        "scheme": "uk.lis",
+                        "id": "UK1234220"
                     },
                     {
                         "scheme": "uk.lis",

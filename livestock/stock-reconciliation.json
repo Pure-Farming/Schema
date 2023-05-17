@@ -7,16 +7,16 @@
     ],
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarResource.json"
         }
     ],
     "properties": {
         "startDate": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
             "description": "Date of the start of the period"
         },
         "endDate": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
             "description": "Date of the end of the period"
         },
         "duration": {
@@ -24,7 +24,7 @@
             "description": "Defines the duration that the reconciliation applies to: week, month or year"
         },
         "inventoryClassification": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarInventoryClassificationType.json",
             "description": "Defines the group of animals by their characteristics to which the reconciliation refers"
         },
         "open": {

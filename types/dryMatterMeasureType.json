@@ -7,9 +7,9 @@
             "$ref": "../types/massMeasureType.json",
             "description": "The dry matter in mass units."
         },
-        "spatialMetric": {
-            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/SpatialMeasureType.json",
-            "description": "A spatial measurement to define the area units."
+        "areaMetric": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/AreaMeasureType.json",
+            "description": "The area in area units."
         }
     }
 }

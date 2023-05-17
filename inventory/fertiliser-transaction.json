@@ -1,0 +1,69 @@
+{
+    "description": "Fertiliser inventory transaction resource.",
+    "type": "object",
+    "$id": "/inventory/fertiliser-transaction",
+    "allOf": [
+        {
+            "$ref": "../types/inventoryTransactionType.json"
+        }
+    ],
+    "required": [
+        "product"
+    ],
+    "properties": {
+        "product": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/resources/ProductResource.json",
+            "description": "The fertiliser product in this inventory transaction."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/inventory/fertiliser-transaction",
+            "id": "ba574efe-4343-46fd-b8a9-45175776ad8f",
+            "meta": {
+                "sourceId": {
+                    "scheme": "nz.zaxfert.fertiliser",
+                    "id": "0034ac04-fffc-448a-8e6d-ebe285b4ecda"
+                },
+                "modified": "2023-04-03T08:00:00Z",
+                "created": "2023-04-03T08:00:00Z",
+                "creator": "zaxfert.co.nz"
+            },
+            "identifiers": [
+                {
+                    "scheme": "nz.zkyfarm.purchase",
+                    "id": "2023/fert/23"
+                }
+            ],
+            "name": "Potash Super purchase 1.7t - D. Blueman - Oak Reach, Mar 2023",
+            "observationDate": "2023-03-31T00:00:00Z",
+            "feature": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "b330510a-f665-4b5a-aa09-1c4d8d383e5b"
+                },
+                "name": "Oak Reach"
+            },
+            "responsible": "Paula West",
+            "remark": "Receipt Potash Super purchase Mar 23: Oak Reach",
+            "transactionKind": "Receipt",
+            "quantity": 1.7,
+            "units": "TNE",
+            "supplierName": "ZaxFert",
+            "expiryDate": "2025-03-31T08:00:00Z",
+            "totalCost": 1235.75,
+            "currency": "NZD",
+            "product": {
+                "contentType": "Safety Data Sheet",
+                "related": "https://ckzfert.co.nz/products/7493/safety",
+                "type": "Fertiliser",
+                "manufacturer": "CKZ Fertiliser Manufacturing Co Ltd",
+                "brand": "CKZ Gold Potash Super",
+                "form": "Granules",
+                "uri": "https://ckzfert.co.nz/products/7493",
+                "specificGravity": 1.86
+            }
+        }
+    ]
+}
