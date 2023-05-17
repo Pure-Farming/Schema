@@ -3,7 +3,7 @@
     "$id": "/livestock/movement/group-death",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarGroupMovementDeathEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupMovementDeathEventResource.json"
         }
     ],
     "examples": [
@@ -24,7 +24,8 @@
                 "sex": "MaleNeuter",
                 "birthPeriod": "2022-04-01",
                 "productionPurposes": [
-                     "Meat","Wool"
+                    "Meat",
+                    "Wool"
                 ],
                 "count": 12
             },

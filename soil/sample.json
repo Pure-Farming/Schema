@@ -1,7 +1,8 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/soil/sample",
     "description": "A general soil sampling schema.",
+    "title": "Soil Sample",
     "type": "object",
     "allOf": [
         {
@@ -17,7 +18,7 @@
             "description": "Citation or other URI to page describing the sampling method"
         },
         "samplingGeometry": {
-            "$ref": "https://geojson.org/schema/Geometry.json",
+            "$ref": "https://raw.githubusercontent.com/daniel-buchanan/rfc7946-schema/main/schema/geometry.json",
             "description": "Geometry indicating where the soil sample is taken"
         },
         "depth": {

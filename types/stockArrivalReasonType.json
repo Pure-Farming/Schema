@@ -7,7 +7,7 @@
     ],
     "properties": {
         "reason": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarArrivalReasonType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/icarArrivalReasonType.json",
             "description": "The reason for the arrival of the stock"
         },
         "count": {

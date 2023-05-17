@@ -1,0 +1,19 @@
+{
+    "description": "Agrichemical inventory transaction resource.",
+    "type": "object",
+    "$id": "/inventory/agrichemical-transaction",
+    "allOf": [
+        {
+            "$ref": "../types/inventoryTransactionType.json"
+        }
+    ],
+    "required": [
+        "product"
+    ],
+    "properties": {
+        "product": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/resources/ProductResource.json",
+            "description": "The agrichemical product in this inventory transaction."
+        }
+    }
+}

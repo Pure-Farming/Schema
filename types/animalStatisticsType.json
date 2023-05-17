@@ -1,10 +1,10 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "types/animalStatisticsType",
     "type": "object",
     "properties": {
         "metric": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/types/icarMetricType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarMetricType.json",
             "description": "The metric the stat relates to, e.g. anitbiotic.udder."
         },
         "qualifier": {
@@ -48,5 +48,4 @@
             ]
         }
     ]
-
 }

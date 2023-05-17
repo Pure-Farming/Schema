@@ -3,7 +3,7 @@
     "$id": "/livestock/movement/animal-death",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementDeathEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarMovementDeathEventResource.json"
         }
     ],
     "examples": [

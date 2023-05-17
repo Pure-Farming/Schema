@@ -1,0 +1,13 @@
+{
+    "description": "Defines the reason for the feed transaction",
+    "type": "string",
+    "enum": [
+        "Purchased",
+        "Sold",
+        "TransferIn",
+        "TransferOut",
+        "Discarded",
+        "Wasted",
+        "Adjusted"
+    ]
+}

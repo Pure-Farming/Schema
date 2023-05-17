@@ -1,0 +1,9 @@
+{
+    "description": "Provides a scheme + identifier mechanism for product types.",
+    
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json"
+        }
+    ]
+}

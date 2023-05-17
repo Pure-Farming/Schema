@@ -1,0 +1,17 @@
+{
+    "$id": "/livestock/treatment/medicine-ingredient-type",
+    "description": "This identifies an ingredient of a medicine",
+    "type": "object",
+    "required": [
+        "name"
+    ],
+    "properties": {
+        "id": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the ingredient"
+        }
+    }
+}

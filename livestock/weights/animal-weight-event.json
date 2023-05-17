@@ -3,7 +3,7 @@
     "$id": "/livestock/weights/animal-weight-event",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarWeightEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarWeightEventResource.json"
         }
     ],
     "examples": [

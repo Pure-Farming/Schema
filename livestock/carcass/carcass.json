@@ -1,0 +1,56 @@
+{
+    "description": "A carcass identifies a single animal which is processed at a plant. This embeds the ICAR carcass resource.",
+    "$id": "/livestock/carcass/carcass",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/add-carcass-schemas/resources/icarCarcassResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/carcass/carcass",
+            "id": "614d3b49-468b-42c9-9599-47af398b401c",
+            "meta": {
+                "source": "nz.processco.carcass",
+                "modified": "2023-01-03T11:00:00Z"
+            },
+            "killDateTime": "2023-01-03T07:00:00Z",
+            "bodyNo": 280,
+            "identifiers": [
+                {
+                    "id": "JFK123456",
+                    "scheme": "nz.minda"
+                }
+            ],
+            "sex": "Male",
+            "birthDate": "2021-08-16T00:00:00Z",
+            "primaryBreed": {
+                "scheme": "nz.nprove.breed",
+                "id": "81"
+            },
+            "destinationCode": "ABC12",
+            "processingLot": {
+                "name": "11-2079",
+                "chain": {
+                    "chainId": "L07",
+                    "plant": {
+                        "name": "NZ Meat Processors Hamilton",
+                        "leiCode": "123412345E1234B01234"
+                    },
+                    "chainProcess": "PostMortem"
+                },
+                "species": "Sheep",
+                "consignment": {
+                    "id": {
+                        "scheme": "nz.nait.consign",
+                        "id": "ZHP55888"
+                    },
+                    "originLocation": {
+                        "scheme": "nz.nait.pica-location",
+                        "id": "12345"
+                    }
+                }
+            }
+        }
+    ]
+}

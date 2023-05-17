@@ -1,0 +1,39 @@
+{
+    "description": "Product Reference defines a specific product.",
+    "type": "object",
+    "$id": "types/icarProductReferenceType",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarResourceReferenceType.json"
+        }
+    ],
+    "required": [
+        "identifier",
+        "family"
+    ],
+    "properties": {
+        "identifiers": {
+            "type": "array",
+            "description": "An array of product identifiers.",
+            "items": {
+                "$ref": "../types/icarProductIdentifierType.json"
+            }
+        },
+        "family": {
+            "$ref": "../enums/icarProductFamilyType.json",
+            "description": "The product family this product belongs to."
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the product."
+        },
+        "gtin": {
+            "type": "string",
+            "description": "GS1 global trade item number"
+        },
+        "unspc": {
+            "type": "string",
+            "description": "UN service and product code"
+        }
+    }
+}

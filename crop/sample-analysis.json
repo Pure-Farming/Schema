@@ -1,5 +1,4 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "/crop/sample-analysis",
     "description": "A general plant sampling schema for actual analysis",
     "allOf": [

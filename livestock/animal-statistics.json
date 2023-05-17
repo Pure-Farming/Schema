@@ -3,13 +3,11 @@
     "$id": "/livestock/animal-statistics",
     "required": [
         "startDate",
-        "endDate",
-        "duration",
         "id"
     ],
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarResource.json"
         }
     ],
     "properties": {
@@ -18,11 +16,11 @@
             "description": "Unique identifier (UUID) used within the current server to identify the resource."
         },
         "startDate": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
             "description": "Date of the start of the period"
         },
         "endDate": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarDateTimeType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
             "description": "Date of the end of the period"
         },
         "duration": {
@@ -30,10 +28,9 @@
             "description": "Defines the duration that the statistics apply to: week, month or year"
         },
         "inventoryClassification": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarInventoryClassificationType.json",
             "description": "Defines the group of animals by their characteristics to which the statistics refer"
         },
-
         "statistics": {
             "type": "array",
             "items": {
@@ -68,7 +65,7 @@
                     },
                     "qualifier": {
                         "scheme": "eu.ema",
-                        "id":"DDDVet"
+                        "id": "DDDVet"
                     },
                     "units": "DDDVet",
                     "value": 12,

@@ -1,0 +1,11 @@
+{
+    "description": "Defines the kinds of inventory transaction",
+    "type": "string",
+    "enum": [
+        "Receipt",
+        "Disposal",
+        "OnHand",
+        "StockTake",
+        "Use"
+    ]
+}

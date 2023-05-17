@@ -3,7 +3,7 @@
     "description": "Defines a group of animals in a medium-long sense (for instance, a mob or pen or batch or class or line).",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarResource.json"
         }
     ],
     "required": [
@@ -15,7 +15,7 @@
             "description": "Unique identifier (UUID) used within the current server to identify the resource."
         },
         "classification": {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarInventoryClassificationType.json",
             "description": "The set of shared characteristics that defines the group of animals"
         }
     },

@@ -1,0 +1,11 @@
+{
+    "description": "Methods for assessing pasture dry matter",
+    "type": "string",
+    "enum": [
+        "C-Dax",
+        "PastureProbe",
+        "PlateMeter",
+        "SwardStick",
+        "Visual"
+    ]
+}

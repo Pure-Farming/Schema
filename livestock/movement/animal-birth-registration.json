@@ -3,7 +3,7 @@
     "$id": "/livestock/movement/animal-birth-registration",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarMovementBirthEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarMovementBirthEventResource.json"
         }
     ],
     "examples": [

@@ -3,7 +3,7 @@
     "$id": "/livestock/animal-set-join",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/resources/icarAnimalSetJoinEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarAnimalSetJoinEventResource.json"
         }
     ]
 }

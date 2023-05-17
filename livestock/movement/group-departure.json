@@ -3,7 +3,7 @@
     "$id": "/livestock/movement/group-departure",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/resources/icarGroupMovementDepartureEventResource.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupMovementDepartureEventResource.json"
         }
     ],
     "examples": [
