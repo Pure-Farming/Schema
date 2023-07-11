@@ -1,0 +1,18 @@
+{
+    "description": "Defines the number of stock that departed of a specified departure kind.",
+    "type": "object",
+    "$id": "/types/icarStockDepartureKindType",
+    "required": [
+        "kind"
+    ],
+    "properties": {
+        "kind": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/icarDepartureKindType.json",
+            "description": "The type of departure of the stock."
+        },
+        "count": {
+            "type": "integer",
+            "description": "The number of stock that departed of the specified departure kind"
+        }
+    }
+}

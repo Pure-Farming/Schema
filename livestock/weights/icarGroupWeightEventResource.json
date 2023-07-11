@@ -1,0 +1,471 @@
+{
+    "description": "The Group Weight event records liveweight observations for a group of animals. Calls the ICAR Group Weight Event resource",
+    "$id": "/livestock/weights/group-weight-event",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupWeightEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/weights/group-weight-event",
+            "id": "d8e25339-04b1-427e-a55f-0c07f0a07fc6",
+            "dataPointKey": "sample-data-animal-weight-3",
+            "eventDateTime": "2011-10-04T00:00:00.000Z",
+            "traitLabel": {
+                "scheme": "nz.sil.trait",
+                "id": "Docking Weight"
+            },
+            "remark": "2011 docking data - ids and weights",
+            "groupMethod": "EmbeddedAnimalSet",
+            "countObserved": 4,
+            "embeddedAnimalSet": {
+                "resourceType": "/livestock/animal-set",
+                "id": "DR1KF",
+                "name": "Docking 2011",
+                "purpose": "Session",
+                "member": [
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "982 880192369311"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "982 880194000328"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "982 880194000329"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "982 880194000330"
+                    }
+                ]
+            },
+            "units": "KGM",
+            "animalWeights": [
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "982 880192369311"
+                    },
+                    "weight": 13.4
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "982 880194000328"
+                    },
+                    "weight": 14.2
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "982 880194000329"
+                    },
+                    "weight": 17.2
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "982 0880194000330"
+                    },
+                    "weight": 7.6
+                }
+            ],
+            "statistics": [
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "unit": "KGM",
+                    "aggregation": "Average",
+                    "value": 13.1
+                },
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "aggregation": "Count",
+                    "value": 4
+                }
+            ],
+            "device": {
+                "identifier": {
+                    "scheme": "iso.std.9001",
+                    "id": "TT3"
+                },
+                "model": "Tru-test 3000"
+            },
+            "timeOffFeed": 10.5
+        },
+        {
+            "resourceType": "/livestock/weights/group-weight-event",
+            "id": "4535cd95-1a6f-47da-b5e5-7433b3d25bec",
+            "traitLabel": {
+                "scheme": "nz.sil.trait",
+                "id": "MA Weight"
+            },
+            "remark": "2015 MA ewes session 72 22/07/2015 - ids and weights",
+            "dataPointKey": "sample-data-animal-weight-2",
+            "eventDateTime": "2015-07-22T00:00:00.000Z",
+            "groupMethod": "EmbeddedAnimalSet",
+            "countObserved": 10,
+            "embeddedAnimalSet": {
+                "resourceType": "/livestock/animal-set",
+                "id": "Clear E15",
+                "name": "MA ewes session 72",
+                "purpose": "Session",
+                "member": [
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A3166C9B9004010001180"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003000"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003001"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003002"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B90040100030004"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003005"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003006"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003009"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003010"
+                    },
+                    {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003011"
+                    }
+                ]
+            },
+            "units": "KGM",
+            "resolution": 0.5,
+            "animalWeights": [
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A3166C9B9004010001180"
+                    },
+                    "weight": 48
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003000"
+                    },
+                    "weight": 60
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003001"
+                    },
+                    "weight": 52.5
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003002"
+                    },
+                    "weight": 47
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003004"
+                    },
+                    "weight": 52
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003005"
+                    },
+                    "weight": 51
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003006"
+                    },
+                    "weight": 65
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003009"
+                    },
+                    "weight": 60
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003010"
+                    },
+                    "weight": 54
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003011"
+                    },
+                    "weight": 71.5
+                }
+            ],
+            "statistics": [
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "unit": "KGM",
+                    "aggregation": "Average",
+                    "value": 56.1
+                },
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "aggregation": "Count",
+                    "value": 10
+                },
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "unit": "KGM",
+                    "aggregation": "Max",
+                    "value": 71.5
+                },
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "aggregation": "StDev",
+                    "value": 7.45
+                }
+            ],
+            "device": {
+                "identifier": {
+                    "scheme": "iso.std.9001",
+                    "id": "TT3"
+                },
+                "model": "Tru-test 3000"
+            },
+            "timeOffFeed": 12.3
+        },
+        {
+            "resourceType": "/livestock/weights/group-weight-event",
+            "id": "e9419c0f-7db8-472a-95c6-95ee2bf03cf3",
+            "traitLabel": {
+                "scheme": "nz.sil.trait",
+                "id": "MA Weight"
+            },
+            "remark": "2015 MA ewes session 72 22/07/2015 - no ids",
+            "dataPointKey": "sample-data-animal-weight-3",
+            "eventDateTime": "2015-07-22T00:00:00.000Z",
+            "groupMethod": "InventoryClassification",
+            "countObserved": 10,
+            "inventoryClassification": {
+                "name": "MA ewes session 72-IC",
+                "count": 10,
+                "species": "Sheep",
+                "sex": "Female",
+                "animalWeights": [
+                    {
+                        "weight": 59.5
+                    },
+                    {
+                        "weight": 63.5
+                    },
+                    {
+                        "weight": 55
+                    },
+                    {
+                        "weight": 54
+                    },
+                    {
+                        "weight": 51
+                    },
+                    {
+                        "weight": 54.5
+                    },
+                    {
+                        "weight": 55.5
+                    },
+                    {
+                        "weight": 66
+                    },
+                    {
+                        "weight": 55
+                    },
+                    {
+                        "weight": 58.5
+                    }
+                ],
+                "statistics": [
+                    {
+                        "metric": {
+                            "scheme": "org.icar",
+                            "id": "Liveweight"
+                        },
+                        "unit": "KGM",
+                        "aggregation": "Average",
+                        "value": 57.25
+                    },
+                    {
+                        "metric": {
+                            "scheme": "org.icar",
+                            "id": "Liveweight"
+                        },
+                        "aggregation": "Count",
+                        "value": 10
+                    }
+                ],
+                "device": {
+                    "identifier": {
+                        "scheme": "iso.std.9001",
+                        "id": "TT3"
+                    },
+                    "model": "Tru-test 3000"
+                },
+                "timeOffFeed": 7
+            }
+        },
+        {
+            "resourceType": "/livestock/weights/group-weight-event",
+            "id": "bbc3781f-dee9-4742-b098-b3281ad73b75",
+            "traitLabel": {
+                "scheme": "nz.sil.trait",
+                "id": "MA Weight"
+            },
+            "remark": "2015 MA ewes session 72 22/07/2015 - IDs but no individual weights",
+            "dataPointKey": "sample-data-animal-weight-4",
+            "eventDateTime": "2015-07-22T11:00:00.000Z",
+            "groupMethod": "InventoryClassification",
+            "countObserved": 10,
+            "inventoryClassification": {
+                "name": "MA ewes ids only -IC",
+                "count": 10,
+                "species": "Sheep",
+                "sex": "Female"
+            },
+            "animalWeights": [
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003034"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003035"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003036"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003049"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003051"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003054"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003055"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003058"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003060"
+                    }
+                },
+                {
+                    "animal": {
+                        "scheme": "iso.std.11785",
+                        "id": "300 A6696C9B9004010003062"
+                    }
+                }
+            ],
+            "statistics": [
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "unit": "KGM",
+                    "aggregation": "Average",
+                    "value": 55.8
+                },
+                {
+                    "metric": {
+                        "scheme": "org.icar",
+                        "id": "Liveweight"
+                    },
+                    "aggregation": "Count",
+                    "value": 10
+                }
+            ],
+            "device": {
+                "identifier": {
+                    "scheme": "iso.std.9001",
+                    "id": "TT3"
+                },
+                "model": "Tru-test 3000"
+            },
+            "timeOffFeed": 0
+        }
+    ]
+}

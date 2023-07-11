@@ -1,0 +1,58 @@
+{
+    "description": "The assessment event records an assessment of an animal. ",
+    "$id": "/livestock/animal-assessment-event",
+    "allOf": [{
+        "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarAnimalEventCoreResource.json"
+      },
+      {
+        "type": "object",
+        "properties": {
+          "metric": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarMetricType.json",
+            "description": "The metric this assessment corresponds to."
+          },
+          "score": {
+            "type": "number",
+            "description": "Optional numeric score for this assessment."
+          },
+          "assessment": {
+            "type": "string",
+            "description": "Optional qualitative summary of assessment."
+          }
+        }
+      }
+    ],
+    "required": [
+        "metric"
+    ],
+    "anyOf": [
+        {
+            "required": [
+                "score"
+            ]
+        },
+        {
+            "required": [
+                "assessment"
+            ]
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/animal-assessment-event",
+            "id": "a4090f8d-e041-45f7-8c13-2ac414eee699",
+            "eventDateTime": "2015-10-15T07:42:00.000Z",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "982 091004503474"
+            },
+
+            "metric": {
+                    "scheme": "uk.sainsburys.assessment.collection",
+                    "id": "kinermony"
+            },
+            "assessment": "Eartag Issue"
+
+        }
+    ]
+}

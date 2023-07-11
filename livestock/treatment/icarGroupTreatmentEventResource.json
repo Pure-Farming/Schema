@@ -1,0 +1,142 @@
+{
+    "$id": "/livestock/treatment/group-treatment-event",
+    "description": "Event for recording treatment of a group of animals.  Uses ICAR schema.",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupTreatmentEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/treatment/group-treatment-event",
+            "dataPointKey": "sample-data-group-treatment-1",
+            "id": "664c6772-0343-47ef-909f-5d9e0068b02b",
+            "eventDateTime": "2022-09-13T12:46:00.000Z",
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABCD666"
+            },
+            "responsible": "Bill Smith",
+            "remark": "Docking Yellow Lambs 2022",
+            "countObserved": 385,
+            "groupMethod": "InventoryClassification",
+            "inventoryClassification": {
+                "name": "Elite Ewe Lambs 2022",
+                "species": "Sheep",
+                "sex": "Female",
+                "birthPeriod": "2022-07-15/2022-08-10"
+            },
+            "medicine": {
+                "identifier": {
+                    "scheme": "au.gov.apvma",
+                    "id": "61165"
+                },
+                "name": "COOPERS TASVAX 5IN1 VACCINE FOR SHEEP, CATTLE AND GOATS PLUS SELENIUM FOR LAMBS",
+                "registeredIdentifier": {
+                    "scheme": "au.gov.apvma",
+                    "id": "61165"
+                },
+                "approved": "Registered"
+            },
+            "procedure": "Injection",
+            "site": "Neck",
+            "positions": [
+                {
+                    "position": "Neck"
+                }
+            ],
+            "batches": [
+                {
+                    "identifier": "KPI001",
+                    "expiryDate": "2023-03-16T00:00:00.000Z"
+                }
+            ],
+            "dosePerAnimal": {
+                "doseQuantity": 100,
+                "doseUnits": "MLT"
+            },
+            "totalMedicineUsed": {
+                "doseQuantity": 39,
+                "doseUnits": "LTR"
+            }
+        },
+        {
+            "resourceType": "/livestock/treatment/group-treatment-event",
+            "dataPointKey": "sample-data-group-treatment-2",
+            "id": "a9d1f67f-fdfb-47ce-9fca-830d80f6526b",
+            "eventDateTime": "2022-10-19T17:06:00.000Z",
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABCD777"
+            },
+            "responsible": "Paola Jones",
+            "remark": "Mastitis treatment 19 October",
+            "countObserved": 3,
+            "groupMethod": "EmbeddedAnimalSet",
+            "embeddedAnimalSet": {
+                "resourceType": "/livestock/animal-set",
+                "id": "7BGK451",
+                "name": "Mastitis observed",
+                "purpose": "Health",
+                "member": [
+                    {
+                        "scheme": "au.nlis",
+                        "id": "641 123477466062"
+                    },
+                    {
+                        "scheme": "au.nlis",
+                        "id": "641 123477466871"
+                    },
+                    {
+                        "scheme": "au.nlis",
+                        "id": "641 123477466454"
+                    }
+                ]
+            },
+            "medicine": {
+                "identifier": {
+                    "scheme": "au.gov.apvma",
+                    "id": "49851"
+                },
+                "name": "MASTALONE INTRAMAMMARY SUSPENSION FOR LACTATING COWS",
+                "registeredIdentifier": {
+                    "scheme": "au.gov.apvma",
+                    "id": "49851"
+                },
+                "approved": "Registered"
+            },
+            "procedure": "Injection",
+            "site": "Intra Mammary",
+            "positions": [
+                {
+                    "position": "UdderFrontLeft"
+                }
+            ],
+            "withdrawals": [
+                {
+                    "productType": "Meat",
+                    "endDate": "2022-11-18T17:06:00.000Z",
+                    "market": "au.gov.apvma.whp"
+                },
+                {
+                    "productType": "Milk",
+                    "endDate": "2022-10-26T17:06:00.000Z"
+                }
+            ],
+            "batches": [
+                {
+                    "identifier": "DST001",
+                    "expiryDate": "2023-06-16T00:00:00.000Z"
+                }
+            ],
+            "dosePerAnimal": {
+                "doseQuantity": 10,
+                "doseUnits": "MLT"
+            },
+            "totalMedicineUsed": {
+                "doseQuantity": 30,
+                "doseUnits": "MLT"
+            }
+        }
+    ]
+}

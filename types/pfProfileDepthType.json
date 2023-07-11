@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "types/profileDepth",
+    "type": "object",
+    "properties": {
+        "lower": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/LengthMeasureType.json",
+            "description": "The lower bound"
+        },
+        "upper": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/LengthMeasureType.json",
+            "description": "The upper bound"
+        }
+    }
+}

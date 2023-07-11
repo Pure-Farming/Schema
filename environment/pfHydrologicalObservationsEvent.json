@@ -1,0 +1,185 @@
+{
+    "description": "The hydrological observations event records hydrological sensor observations for a geospatial feature and optionally references a sampled feature.",
+    "$id": "/environment/pfHydrologicalObservationsEvent",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../environment/pfSensorObservationsEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/environment/pfHydrologicalObservationsEvent",
+            "id": "ffde4189-212b-45a1-b3fc-46634350a7a4",
+            "meta": {
+                "sourceId": {
+                    "scheme": "nz.zaxfarm.hydrology",
+                    "id": "4699c420-9fd5-42f4-a716-0622c530a2d9"
+                },
+                "modified": "2022-10-21T11:31:00Z"
+            },
+            "name": "Pump Shed readings - Bliss Farm, 21 October 2022",
+            "@self": "https://api.purefarming.com/data/environment/hydrological-observations-event/ffde4189-212b-45a1-b3fc-46634350a7a4",
+            "identifiers": [
+                {
+                    "scheme": "nz.co.irrigationdb",
+                    "id": "22/JP741"
+                }
+            ],
+            "observationDate": "2022-10-21T11:15:00Z",
+            "feature": {
+                "contentType": "plot",
+                "identifier": {
+                    "scheme": "com.purefarming.plotId",
+                    "id": "ec891102-a8fd-451a-96dd-88aaa8b01c57"
+                },
+                "name": "Far Flats",
+                "uri": "https://landco.co.nz/plot/K384-24"
+            },
+            "holding": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "7b5be125-c96f-4095-89b3-1c267aa2206e"
+                },
+                "name": "Bliss Farm",
+                "uri": "https://landco.co.nz/property/K384"
+            },
+            "sampledFeature": {
+                "contentType": "irrigation",
+                "identifier": {
+                    "scheme": "com.purefarming.irrigationId",
+                    "id": "f44c65fa-9c16-4b5f-b8b3-52bd9acb49be"
+                },
+                "name": "BF-06 Pump Shed"
+            },
+            "phenomenonStartTime": "2022-10-21T11:15:00Z",
+            "phenomenonEndTime": "2022-10-14T01:00:00Z",
+            "responsible": "Aimee Clarke",
+            "remark": "Water use, soil moisture and temperature, 21 October 2022",
+            "sensorResults": [
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "Lower Soil Moisture"
+                    },
+                    "method": "Digital",
+                    "value": 20.72,
+                    "units": "%",
+                    "resolution": 0.01,
+                    "duration": 1,
+                    "durationUnits": "HUR"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "Upper Soil Moisture"
+                    },
+                    "method": "Digital",
+                    "value": 33.93,
+                    "units": "%",
+                    "resolution": 0.01,
+                    "duration": 1,
+                    "durationUnits": "HUR"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "DailyRainfall"
+                    },
+                    "method": "Digital",
+                    "value": 4.5,
+                    "units": "MMT",
+                    "resolution": 0.1,
+                    "aggregation": "Sum",
+                    "duration": 1,
+                    "durationUnits": "DAY"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "SoilTemperature"
+                    },
+                    "method": "Digital",
+                    "value": 5.9,
+                    "units": "CEL",
+                    "resolution": 0.1,
+                    "duration": 1,
+                    "durationUnits": "HUR"
+                }
+            ],
+            "device": {
+                "id": "KV-8",
+                "name": "KV-8 Farm Irrigation Monitor",
+                "description": "KV-8 smart farm irrigation monitoring integrated system",
+                "deviceCategory": "IrrigationMonitor"
+            }
+        },
+        {
+            "resourceType": "/environment/pfHydrologicalObservationsEvent",
+            "id": "c35dd615-a82c-4238-b7ae-2b5ddfbe7698",
+            "meta": {
+                "sourceId": {
+                    "scheme": "nz.zaxfarm.hydrology",
+                    "id": "4699c420-9fd5-42f4-a716-0622c530a2d9"
+                },
+                "modified": "2023-06-14T18:30:00Z"
+            },
+            "name": "Potable water readings - Bliss Farm, 14 June 2023",
+            "@self": "https://api.purefarming.com/data/environment/hydrological-observations-event/c35dd615-a82c-4238-b7ae-2b5ddfbe7698",
+            "observationDate": "2023-06-14T15:30:00Z",
+            "feature": {
+                "contentType": "waterSupply",
+                "identifier": {
+                    "scheme": "com.purefarming.waterSupplyId",
+                    "id": "9749dbf7-d3ae-4377-b84e-d4f5e239b405"
+                },
+                "name": "Water meter supplying houses, sheds, stock"
+            },
+            "holding": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "7b5be125-c96f-4095-89b3-1c267aa2206e"
+                },
+                "name": "Bliss Farm",
+                "uri": "https://landco.co.nz/property/K384"
+            },
+            "phenomenonStartTime": "2023-06-14T15:15:00Z",
+            "phenomenonEndTime": "2023-06-14T15:30:00Z",
+            "responsible": "Josie Watts",
+            "remark": "Water flow and cumulative usage, 14 June 2023",
+            "sensorResults": [
+                {
+                    "phenomenon": {
+                        "scheme": "nz.co.xxxxx.waterSupply",
+                        "id": "FlowRate"
+                    },
+                    "method": "Electromagnetic",
+                    "value": 4.944,
+                    "units": "l/s",
+                    "resolution": 0.001,
+                    "duration": 15,
+                    "durationUnits": "MIN"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "nz.co.xxxxx.waterSupply",
+                        "id": "Volume"
+                    },
+                    "method": "Electromagnetic",
+                    "value": 193010.791,
+                    "units": "MTQ",
+                    "resolution": 0.001,
+                    "aggregation": "Sum"
+                }
+            ],
+            "device": {
+                "id": "XXX-65-974",
+                "name": "XXX Smart Water Meter",
+                "description": "XXXX Electromagnetic Flow Meter 80mm",
+                "deviceCategory": "WaterMeter"
+            }
+        }
+    ]
+}

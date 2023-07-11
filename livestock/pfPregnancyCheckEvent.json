@@ -1,0 +1,82 @@
+{
+    "description": "Event for recording pregnancy diagnosis or check",
+    "$id": "/livestock/pregnancy-check-event",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarReproPregnancyCheckEventResource.json"
+        }
+    ],
+    "properties": {
+        "expectedParturitionDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Date parturition is expected."
+        },
+        "impliedInseminationDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Insemination date implied by foetal age."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/livestock/pregnancy-check-event",
+            "id": "1a06bae6-d4b9-4c34-ab91-43db8cbc0b38",
+            "meta": {
+                "source": "uk.fmapp.farm",
+                "modified": "2023-02-10T15:00:00Z"
+            },
+            "@self": "https://fmapp.co.uk/farms",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "01/001/00001"
+            },
+            "eventDateTime": "2023-02-10T13:00:00Z",
+            "traitlabel": {
+                "scheme": "uk.fmapp.trait",
+                "id": "PregnancyCheck"
+            },
+            "responsible": "Ben Stokes",
+            "animal": {
+                "scheme": "uk.cts.eartag",
+                "id": "UK001001001001"
+            },
+            "method": "Echography",
+            "result": "Pregnant",
+            "foetalAge": 65,
+            "foetusCount": 1,
+            "foetusCountMale": 0,
+            "foetusCountFemale": 1,
+            "expectedParturitionDate": "2023-09-14T00:00:00Z",
+            "impliedInseminationDate": "2022-12-07T00:00:00Z"
+        },
+        {
+            "resourceType": "/livestock/pregnancy-check-event",
+            "id": "83efc388-4729-433a-ae8d-5b2cc4c5de7c",
+            "meta": {
+                "source": "au.mla.nvd",
+                "sourceId": "4497a16f-4aaa-4cdb-927c-075cf5f498e8",
+                "modified": "2023-06-17T16:00:00Z",
+                "creator": "don.wilson@newco.com"
+            },
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABZF222"
+            },
+            "eventDateTime": "2023-06-17T13:00:00Z",
+            "traitlabel": {
+                "scheme": "au.farmco.trait",
+                "id": "PregnancyCheck"
+            },
+            "responsible": "KL Smith",
+            "contemporaryGroup": "Elite ewe hoggets",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "982 000194000328"
+            },
+            "method": "Palpation",
+            "result": "Multiple",
+            "foetalAge": 90,
+            "foetusCount": 2,
+            "expectedParturitionDate": "2023-08-18T00:00:00Z"
+        }
+    ]
+}

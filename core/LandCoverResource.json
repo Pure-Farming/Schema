@@ -1,0 +1,9 @@
+{
+    "$id": "/core/land-cover",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/resources/LandCoverResource.json"
+        }
+    ]
+}

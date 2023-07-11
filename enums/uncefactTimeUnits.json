@@ -1,0 +1,13 @@
+{
+    "description": "Units of time from UN/CEFACT. In order: second, minute, hour, day, week, month, year. ",
+    "type": "string",
+    "enum": [
+        "SEC",
+        "MIN",
+        "HUR",
+        "DAY",
+        "WEE",
+        "MON",
+        "ANN"
+    ]
+}

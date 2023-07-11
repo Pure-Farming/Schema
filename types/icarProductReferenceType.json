@@ -16,7 +16,7 @@
             "type": "array",
             "description": "An array of product identifiers.",
             "items": {
-                "$ref": "../types/icarProductIdentifierType.json"
+                "$ref": "icarProductIdentifierType.json"
             }
         },
         "family": {

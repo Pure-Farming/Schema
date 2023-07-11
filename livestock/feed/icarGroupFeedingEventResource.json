@@ -1,0 +1,156 @@
+{
+    "$id": "/livestock/feed/icarGroupFeedingEventResource",
+    "description": "Event for recording feeding of a group of animals where individual animal feeding has not been recorded.  Individual animal feed intake should be recorded using icarFeedIntakeEventResource.json.",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupFeedingEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/feed/group-feeding-event",
+            "id": "1aebae37-8524-4da3-8638-db96a7ef0b74",
+            "meta": {
+                "source": "au.bzagri.app",
+                "sourceId": "2a44c35d-e458-4347-85c7-3c440ef58cbd",
+                "modified": "2023-05-14T14:00:00Z"
+            },
+            "@self": "https://api.purefarming.com/data/livestock/feed/group-feeding-event/1aebae37-8524-4da3-8638-db96a7ef0b74",
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABCD777"
+            },
+            "eventDateTime": "2023-05-13T09:06:00.000Z",
+            "responsible": "Jane Thorpe",
+            "remark": "Blue mob feeding 12 May 2023",
+            "groupMethod": "InventoryClassification",
+            "countObserved": 73,
+            "inventoryClassification": {
+                "name": "Rising 2Yr elite bulls",
+                "species": "Cattle",
+                "sex": "Male",
+                "birthPeriod": "2021-07-01/2021-12-31"
+            },
+            "feedingStartingDateTime": "2023-05-12T10:15:00.000Z",
+            "feedVisitDuration": {
+                "unitCode": "MIN",
+                "value": 1389.0
+            },
+            "feedPerAnimal": [
+                {
+                    "feedId": {
+                        "scheme": "au.com.sf.feed",
+                        "id": "Pasture"
+                    },
+                    "entitlement": {
+                        "unitCode": "KGM",
+                        "value": 21.3
+                    },
+                    "feedConsumption": {
+                        "unitCode": "KGM",
+                        "value": 19.1
+                    }
+                },
+                {
+                    "feedId": {
+                        "scheme": "au.com.sf.feed",
+                        "id": "CattleMineralBlock"
+                    },
+                    "entitlement": {
+                        "unitCode": "GRM",
+                        "value": 1027
+
+                    },
+                    "feedConsumption": {
+                        "unitCode": "GRM",
+                        "value": 863
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/livestock/feed/group-feeding-event",
+            "dataPointKey": "sample-group-feeding-2",
+            "id": "58b4a328-f802-446c-a366-d9c3a50d9294",
+            "meta": {
+                "source": "nz.bzagri.app",
+                "sourceId": "5291984b-fc0c-424b-904a-9a2c2970aa90",
+                "modified": "2022-08-24T09:00:00Z"
+            },
+            "@self": "https://api.purefarming.com/data/livestock/feed/group-feeding-event/0411489b-f2a6-4ab8-8c7b-58d6a516a831",
+            "location": {
+                "scheme": "nz.govt.farmsonline",
+                "id": "11111"
+            },
+            "eventDateTime": "2022-08-23T07:50:00.000Z",
+            "responsible": "Pip Pink",
+            "remark": "New calves feeding 23 August 2022",
+            "groupMethod": "EmbeddedAnimalSet",
+            "countObserved": 3,
+            "embeddedAnimalSet": {
+                "resourceType": "/livestock/animal-set",
+                "id": "7BGM333",
+                "name": "Calves born 18 August 2022",
+                "purpose": "Feeding",
+                "member": [
+                    {
+                        "id": "ABK779345",
+                        "scheme": "nz.minda"
+                    },
+                    {
+                        "id": "ABK779345",
+                        "scheme": "nz.minda"
+                    },
+                    {
+                        "id": "ABK779345",
+                        "scheme": "nz.minda"
+                    }
+                ]
+            },
+            "feedingStartingDateTime": "2022-08-23T07:15:00.000Z",
+            "feedVisitDuration": {
+                "unitCode": "MIN",
+                "value": 35.5
+            },
+            "feedPerAnimal": [
+                {
+                    "feedId": {
+                        "scheme": "nz.co.stockandstation.feeds",
+                        "id": "BJ Calf Milk Replacer"
+                    },
+                    "entitlement": {
+                        "unitCode": "GRM",
+                        "value": 250
+                    },
+                    "feedConsumption": {
+                        "unitCode": "GRM",
+                        "value": 250
+                    }
+                }
+            ],
+            "rationPerAnimal": [
+                {
+                    "rationId": "Jacks Calf Pellets",
+                    "entitlement": {
+                        "unitCode": "GRM",
+                        "value": 200
+                    },
+                    "feedConsumption": {
+                        "unitCode": "GRM",
+                        "value": 195
+                    }
+                }
+            ],
+            "device": {
+                "model": "Milk Easy 6 Teat Milk Feeder",
+                "serial": "K15-8964-386",
+                "identifier": {
+                    "scheme": "nz.co.stockandstation.feeders",
+                    "id": "#923654"
+                },
+                "reltype": "TechSheet",
+                "href": "https://stockandstation.co.nz/catalog/milk-easy-6-teat-milk-feeder/923654"
+            }
+        }
+    ]
+}

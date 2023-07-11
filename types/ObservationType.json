@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/types/observation",
+    "description": "Abstract class that supports any observation or activity on a geospatial feature or crop",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/ObservationType.json"
+        }
+    ],
+    "examples": [
+        {
+            "id": "e2882618-2c46-449f-8741-d48d0d089734",
+            "description": "my internal representation of an observation",
+            "meta": {
+                "sourceId": {
+                    "id": "123456789",
+                    "scheme": "observationIdentifyingScheme"
+                },
+                "modified": "2021-09-15T12:34:56.000Z"
+            },
+            "observationDate": "2021-01-01T00:00:00.000Z",
+            "holdingId": "8f1714a3-71a8-4f18-9e2b-4c074007eeae",
+            "featureId": "10054b68-e039-49db-b079-686bff60b669"
+        },
+        {
+            "id": "e2882618-2c46-449f-8741-d48d0d089734",
+            "description": "my external representation of an observation",
+            "meta": {
+                "sourceId": {
+                    "id": "123456789",
+                    "scheme": "observationIdentifyingScheme"
+                },
+                "modified": "2021-09-15T12:34:56.000Z"
+            },
+            "observationDate": "2021-01-01T00:00:00.000Z",
+            "holding": {
+                "contentType": "vineyard",
+                "identifier": {
+                    "id": "44444444",
+                    "scheme": "holdingIdentifierScheme"
+                },
+                "name": "my holding name"
+            },
+            "feature": {
+                "contentType": "subblock",
+                "identifier": {
+                    "id": "333333333333",
+                    "scheme": "subblockIdentifierSchema"
+                },
+                "name": "my feature name"
+            }
+        }
+    ]
+}

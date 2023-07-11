@@ -1,0 +1,27 @@
+{
+    "description": "The SensorObservationEventResource records observations by a sensor on a geospatial feature for a given date-time.",
+    "$id": "/environment/SensorObservationEventResource",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ObservationType.json"
+        }
+    ],
+    "properties": {
+        "sampledFeature": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/FeatureReferenceType.json",
+            "description": "Optional, a reference to the feature being sampled such as a river."
+        },
+        "sensorObservations": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfSensorResultType.json"
+            },
+            "description": "Observations performed by the sensor at this event."
+        },
+        "device": {
+            "$ref": "../types/pfDeviceType.json",
+            "description": "The device used for performing the sensor observations in this event."
+        }
+    }
+}

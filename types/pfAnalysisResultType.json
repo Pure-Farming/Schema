@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "types/analysisResult",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Human readable description of the test result"
+        },
+        "status": {
+            "enum": [
+                "completed",
+                "belowLimit",
+                "aboveLimit",
+                "failed",
+                "scheduled",
+                "inProgress"
+            ],
+            "description": "One of a set of enumerated values"
+        },
+        "abbreviation": {
+            "type": "string",
+            "description": "The abbreviation of the analysis"
+        },
+        "metric": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI to the test"
+        },
+        "method": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI to the method employed"
+        },
+        "rawValue": {
+            "type": "string",
+            "description": "Value of the test result as supplied from the lab"
+        },
+        "rawUnit": {
+            "type": "string",
+            "description": "Units of the test result"
+        },
+        "value": {
+            "type": "number",
+            "description": "Value of the test result converted to standard units"
+        },
+        "unit": {
+            "type": "string",
+            "description": "Units of the test result"
+        },
+        "resolution": {
+            "type": "number",
+            "description": "Resolution of numeric metrics"
+        },
+        "errorStatistic": {
+            "type": "number",
+            "description": "Error statistics (see OGC QR)"
+        },
+        "qualitativeGrade": {
+            "type": "string",
+            "description": "A textual or descriptive grade for the result."
+        },
+        "limit": {
+            "type": "number",
+            "description": "Numeric threshold of limit used with statuses 'belowLimit' and 'aboveLimit'"
+        }
+    },
+    "required": [
+        "name",
+        "status"
+    ]
+}

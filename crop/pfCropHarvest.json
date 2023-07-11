@@ -1,0 +1,29 @@
+{
+    "$id": "/crop/harvest",
+    "description": "This is a very simple WorkItem derivative that captures the harvest of a crop from a feature.",
+    "allOf": [
+        {
+            "$ref": "../types/pfWorkItemType.json"
+        }
+    ],
+    "properties": {
+        "operation": {
+            "const": "Harvest"
+        },
+        "crops": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/CropType.json"
+            }
+        },
+        "loads": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfLoadResourceType.json"
+            }
+        }
+    },
+    "required": [
+        "operation"
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "description": "The observed result (measurement or assessment) of a phenomenon.  The result may have a numeric or a qualitative value.",
+    "required": [
+        "phenomenon"
+    ],
+    "properties": {
+        "phenomenon": {
+            "description": "The phenomenon observed.",
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/IdentifierType.json"
+        },
+        "method": {
+            "description": "The standard method used to determine the value of the phenomenon",
+            "type": "string"
+        },
+        "value": {
+            "description": "The observed value of the phenomenon if it is numeric.",
+            "type": "number"
+        },
+        "units": {
+            "description": "The units in which the value is measured. UN/CEFACT units SHOULD be used where these are applicable.",
+            "type": "string"
+        },
+        "aggregation": {
+            "$ref": "../enums/aggregationType.json",
+            "description": "The aggregation that has been applied in this phenomenon"
+        },
+        "resolution": {
+            "description": "The smallest measurement difference that can be discriminated. Specified in the units, for instance 0.5 (kilograms).",
+            "type": "number"
+        },
+        "duration": {
+            "description": "The length of time over which this phenomenon was measured.",
+            "type": "number"
+        },
+        "durationUnits": {
+            "description": "The time units in which the duration is expressed.",
+            "$ref": "../enums/uncefactTimeUnits.json"
+        },
+        "qualitativeValue": {
+            "description": "The observed value of the phenomenon if it is a string.",
+            "type": "string"
+        },
+        "observationStatus": {
+            "description": "The status of the observation.",
+            "$ref": "../enums/observationStatusType.json"
+        },
+        "problemDetail": {
+            "description": "The reason if there is an issue with the observation",
+            "type": "string"
+        }
+    }
+}

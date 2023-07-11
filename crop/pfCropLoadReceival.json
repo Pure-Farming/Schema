@@ -1,0 +1,23 @@
+{
+    "$id": "/crop/load-receival",
+    "description": "This is a very simple WorkItem derivative that captures a record of a load being received.",
+    "allOf": [
+        {
+            "$ref": "../types/pfWorkItemType.json"
+        }
+    ],
+    "properties": {
+        "operation": {
+            "const": "LoadReceival"
+        },
+        "loads": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfCropLoadResourceType.json"
+            }
+        }
+    },
+    "required": [
+        "operation"
+    ]
+}
