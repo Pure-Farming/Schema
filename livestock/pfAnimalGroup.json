@@ -1,0 +1,66 @@
+{
+    "$id": "/livestock/animal-group",
+    "description": "Defines a group of animals in a medium-long sense (for instance, a mob or pen or batch or class or line).",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarResource.json"
+        }
+    ],
+    "required": [
+        "id"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier (UUID) used within the current server to identify the resource."
+        },
+        "classification": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "description": "The set of shared characteristics that defines the group of animals"
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/livestock/animal-group",
+            "dataPointKey": "sample-data-animal-group-1",
+            "id": "a73bf1c8-577f-42b4-840f-f3cd432f4e57",
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABCD666"
+            },
+            "classification": {
+                "name": "Bob autumn sale replacement ewes",
+                "species": "Sheep",
+                "sex": "Female",
+                "birthPeriod": "2020-08-01",
+                "reproductiveStatus": "Pregnant",
+                "count": 46
+            }
+        },
+        {
+            "resourceType": "/livestock/animal-group",
+            "dataPointKey": "sample-data-animal-group-2",
+            "id": "94a223c2-d942-47e7-92ff-b51aa33cee4e",
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABCD777"
+            },
+            "classification": {
+                "name": "Milking herd 2022",
+                "count": 410,
+                "species": "Cattle",
+                "sex": "Female",
+                "primaryBreed": {
+                    "scheme": "au.nlis.breed",
+                    "id": "FF"
+                },
+                "birthPeriod": "2016-07-01/2020-08-31",
+                "reproductiveStatus": "Pregnant",
+                "lactationStatus": "Lactating",
+                "productionPurposes": [
+                    "Milk"
+                ]
+            }
+        }
+    ]
+}

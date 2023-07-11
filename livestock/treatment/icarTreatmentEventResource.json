@@ -1,0 +1,138 @@
+{
+    "description": "Defines a single animal health treatment, which may be medication or procedure.  Extends the ICAR resource.",
+    "$id": "/livestock/treatment/animal-treatment-event",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarTreatmentEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/treatment/animal-treatment-event",
+            "id": "b66a37a3-6fe4-4a77-9089-9b129c12a968",
+            "meta": {
+                "source": "au.bzagri.app",
+                "sourceId": "78328ab6-b79b-41ed-b177-6d0b59caa047",
+                "modified": "2023-02-10T14:00:00Z"
+            },
+            "@self": "https://api.purefarming.com/data/livestock/treatment/animal-treatment-event/b4169d0f-231d-4c28-851e-844f2621a752",
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABCD777"
+            },
+            "eventDateTime": "2023-02-10T09:06:00.000Z",
+            "responsible": "John Bishop",
+            "remark": "Mastitis treatment 10 February 2023",
+            "animal": {
+                "scheme": "au.nlis",
+                "id": "641 123456789012"
+            },
+            "procedure": "Injection",
+            "site": "Intra Mammary",
+            "comment": "Severe inflammation",
+            "medicine": {
+                "identifier": {
+                    "scheme": "au.gov.apvma",
+                    "id": "49851"
+                },
+                "name": "MASTALONE INTRAMAMMARY SUSPENSION FOR LACTATING COWS",
+                "registeredIdentifier": {
+                    "scheme": "au.gov.apvma",
+                    "id": "49851"
+                },
+                "approved": "Registered"
+            },
+            "dose": {
+                "doseQuantity": 10,
+                "doseUnits": "MLT"
+            },
+            "positions": [
+                {
+                    "position": "UdderFrontLeft"
+                }
+            ],
+            "batches": [
+                {
+                    "identifier": "DST001",
+                    "expiryDate": "2023-06-16T00:00:00.000Z"
+                }
+            ],
+            "withdrawals": [
+                {
+                    "productType": "Meat",
+                    "endDate": "2022-11-18T17:06:00.000Z",
+                    "market": "au.gov.apvma.whp"
+                },
+                {
+                    "productType": "Milk",
+                    "endDate": "2022-10-26T17:06:00.000Z"
+                }
+            ]
+        },
+        {
+            "resourceType": "/livestock/treatment/animal-treatment-event",
+            "id": "e2ffabd0-8687-4843-b21a-8526569dac4b",
+            "meta": {
+                "source": "nz.sheepmanager.app",
+                "sourceId": "91a2517b-30d6-43ef-ac60-1b699568e61e",
+                "modified": "2022-11-14T11:00:00Z"
+            },
+            "@self": "https://api.purefarming.com/data/livestock/treatment/animal-treatment-event/c9aab2fd-70e4-4f7e-b4cd-f4b453e0dae0",
+            "location": {
+                "scheme": "nz.govt.farmsonline",
+                "id": "11111"
+            },
+            "eventDateTime": "2022-11-14T09:06:00.000Z",
+            "responsible": "Roslyn Brown",
+            "contemporaryGroup": "Elite ewe lambs",
+            "remark": "Triple combination drench 14 November 2022",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "E280116060000214E5F0FA20"
+            },
+            "procedure": "Drench",
+            "site": "Oral",
+            "comment": "Nematode infection",
+            "medicine": {
+                "identifier": {
+                    "scheme": "nz.govt.acvm",
+                    "id": "A009390"
+                },
+                "reltype": "ProductFactSheet",
+                "href": "https://www.futureproducers.co.nz/media/op4jla24/matrix_fact-sheet.pdf#",
+                "name": "Matrix Hi-Mineral",
+                "registeredIdentifier": {
+                    "scheme": "nz.govt.acvm",
+                    "id": "A009390"
+                },
+                "approved": "Registered"
+            },
+            "dose": {
+                "doseQuantity": 11,
+                "doseUnits": "MLT"
+            },
+            "positions": [
+                {
+                    "position": "Mouth"
+                }
+            ],
+            "batches": [
+                {
+                    "identifier": "BI001/345/67",
+                    "expiryDate": "2023-06-16T00:00:00.000Z"
+                }
+            ],
+            "withdrawals": [
+                {
+                    "productType": "Meat",
+                    "endDate": "2022-11-28T09:06:00.000Z",
+                    "market": "nz.govt.acvm.whp"
+                },
+                {
+                    "productType": "Milk",
+                    "endDate": "2022-12-19T09:06:00.000Z"
+                }
+            ]
+        }
+    ]
+}

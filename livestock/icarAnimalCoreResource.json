@@ -1,0 +1,237 @@
+{
+    "$id": "/livestock/animal",
+    "type": "object",
+    "description": "Core schema for representing animal - uses ICAR schema",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarAnimalCoreResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/animal",
+            "id": "f01bc1df-d5e7-4c3b-bab4-5ebd5c4629f4",
+            "dataPointKey": "sample-animal-core-1",
+            "identifier": {
+                "scheme": "au.nlis",
+                "id": "982 523477466062"
+            },
+            "alternativeIdentifiers": [
+                {
+                    "scheme": "au.nlis.visual",
+                    "id": "3ABAB111"
+                }
+            ],
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABZF222"
+            },
+            "specie": "Cattle",
+            "gender": "Female",
+            "birthDate": "2020-07-10T00:00:00Z",
+            "primaryBreed": {
+                "scheme": "au.nlis.breed",
+                "id": "FF"
+            },
+            "breedFractions": {
+                "denominator": 16,
+                "fractions": [
+                    {
+                        "breed": {
+                            "scheme": "au.nlis.breed",
+                            "id": "FF"
+                        },
+                        "fraction": 15
+                    },
+                    {
+                        "breed": {
+                            "scheme": "au.nlis.breed",
+                            "id": "JJ"
+                        },
+                        "fraction": 1
+                    }
+                ]
+            },
+            "name": "Sally",
+            "officialName": "Waringa Supreme Sally",
+            "productionPurpose": "Milk",
+            "status": "Alive",
+            "reproductionStatus": "Open",
+            "lactationStatus": "Lactating",
+            "healthStatus": "Healthy"
+        },
+        {
+            "resourceType": "/livestock/animal",
+            "id": "5a0bf814-ce8d-48cb-9b56-91ada187d355",
+            "dataPointKey": "sample-animal-core-2",
+            "identifier": {
+                "scheme": "au.nlis",
+                "id": "931 123477466011"
+            },
+            "alternativeIdentifiers": [
+                {
+                    "scheme": "au.nlis.visual",
+                    "id": "3ABAB111"
+                }
+            ],
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "3ABZF222"
+            },
+            "specie": "Cattle",
+            "gender": "Female",
+            "birthDate": "2020-07-10T00:00:00Z",
+            "primaryBreed": {
+                "scheme": "au.nlis.breed",
+                "id": "JJ"
+            },
+            "breedFractions": {
+                "denominator": 16,
+                "fractions": [
+                    {
+                        "breed": {
+                            "scheme": "au.nlis.breed",
+                            "id": "FF"
+                        },
+                        "fraction": 4
+                    },
+                    {
+                        "breed": {
+                            "scheme": "au.nlis.breed",
+                            "id": "JJ"
+                        },
+                        "fraction": 12
+                    }
+                ]
+            },
+            "parentage": [
+                {
+                    "parentOf": {
+                        "scheme": "au.nlis",
+                        "id": "931 123477466011"
+                    },
+                    "gender": "Male",
+                    "identifier": {
+                        "scheme": "au.nlis",
+                        "id": "911 111111"
+                    },
+                    "relation": "Genetic",
+                    "officialName": "mock name sire"
+                },
+                {
+                    "parentOf": {
+                        "scheme": "au.nlis",
+                        "id": "931 123477466011"
+                    },
+                    "gender": "Female",
+                    "identifier": {
+                        "scheme": "au.nlis",
+                        "id": "911 222222"
+                    },
+                    "relation": "Genetic",
+                    "officialName": "mock name dam"
+                },
+                {
+                    "parentOf": {
+                        "scheme": "au.nlis",
+                        "id": "911 222222"
+                    },
+                    "gender": "Female",
+                    "identifier": {
+                        "scheme": "au.nlis",
+                        "id": "911 333333"
+                    },
+                    "relation": "Genetic",
+                    "officialName": "mock name dam of dam"
+                }
+            ],
+            "name": "Gertruda",
+            "officialName": "Waringa Supreme Gertruda",
+            "productionPurpose": "Milk",
+            "status": "Alive",
+            "reproductionStatus": "Open",
+            "lactationStatus": "Lactating",
+            "healthStatus": "Healthy"
+        },
+        {
+            "resourceType": "/livestock/animal",
+            "id": "2fe602ff-c281-428d-8744-ae5b4021d220",
+            "dataPointKey": "sample-animal-core-3",
+            "identifier": {
+                "scheme": "uk.cts.eartag",
+                "id": "UK123456200768"
+            },
+            "location": {
+                "scheme": "uk.cph",
+                "id": "43/675/0020"
+            },
+            "specie": "Cattle",
+            "gender": "Female",
+            "birthDate": "2016-09-24T00:00:00Z",
+            "primaryBreed": {
+                "scheme": "uk.cts.breed",
+                "id": "HF"
+            },
+            "parentage": [
+                {
+                    "parentOf": {
+                        "id": "UK123456200768",
+                        "scheme": "uk.cts.eartag"
+                    },
+                    "gender": "Female",
+                    "relation": "Genetic",
+                    "identifier": {
+                        "id": "UK123456400630",
+                        "scheme": "uk.cts.eartag"
+                    }
+                },
+                {
+                    "parentOf": {
+                        "id": "UK1123456200768",
+                        "scheme": "uk.cts.eartag"
+                    },
+                    "gender": "Male",
+                    "relation": "Genetic",
+                    "identifier": {
+                        "id": "UK12345603454",
+                        "scheme": "uk.cts.eartag"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/livestock/animal",
+            "id": "238cfa15-308f-45ad-9154-ad43b15d9eec",
+            "dataPointKey": "sample-animal-core-5",
+            "identifier": {
+                "scheme": "uk.cts.eartag",
+                "id": "UK123456701172"
+            },
+            "location": {
+                "scheme": "uk.cph",
+                "id": "08/675/0020"
+            },
+            "specie": "Cattle",
+            "gender": "Male",
+            "birthDate": "2022-06-26T00:00:00Z",
+            "primaryBreed": {
+                "scheme": "uk.cts.breed",
+                "id": "HF"
+            },
+            "parentage": [
+                {
+                    "parentOf": {
+                        "id": "UK123456701172",
+                        "scheme": "uk.cts.eartag"
+                    },
+                    "gender": "Female",
+                    "relation": "Genetic",
+                    "identifier": {
+                        "id": "UK123456700927",
+                        "scheme": "uk.cts.eartag"
+                    }
+                }
+            ]
+        }
+    ]
+}

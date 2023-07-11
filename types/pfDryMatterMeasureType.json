@@ -1,0 +1,15 @@
+{
+    "description": "Specifies the dry matter yield in terms of a mass measurement and a spatialMetric.",
+    "$id": "types/dryMatterMeasureType",
+    "type": "object",
+    "properties": {
+        "measure": {
+            "$ref": "MassOrVolumeMeasurementType.json",
+            "description": "The dry matter in mass units."
+        },
+        "areaMetric": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/AreaMeasureType.json",
+            "description": "The area in area units."
+        }
+    }
+}

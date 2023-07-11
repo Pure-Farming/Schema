@@ -1,0 +1,42 @@
+{
+    "description": "Defines a device.",
+    "$id": "/types/deviceType",
+    "type": "object",
+    "required": [
+        "id"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier on location level in the source system for this device."
+        },
+        "serial": {
+            "type": "string",
+            "description": "The serial number of the device."
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the device."
+        },
+        "description": {
+            "type": "string",
+            "description": "Description of the device."
+        },
+        "softwareVersion": {
+            "type": "string",
+            "description": "Version of the software installed on the device."
+        },
+        "hardwareVersion": {
+            "type": "string",
+            "description": "Version of the hardware installed in the device."
+        },
+        "manufacturer": {
+            "type": "string",
+            "description": "Unique id of the manufacturer using DNS notation. For example lely.com."
+        },
+        "deviceCategory": {
+            "type": "string",
+            "description": "The category of device."
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "$id": "types/pfAnimalComplianceType",
+    "allOf": [
+        {
+            "$ref": "./pfAnimalStatisticsType.json"
+        }
+    ],
+    "properties": {
+        "status": {
+            "type": "string",
+            "description": "Text assessment of this compliance, e,g, Major non compliant, Compliant etc."
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the compliance being assessed"
+        }
+    }
+}

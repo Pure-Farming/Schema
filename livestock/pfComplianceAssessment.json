@@ -1,0 +1,84 @@
+{
+    "description": "Holds animal scheme compliance assessment data.",
+    "$id": "/livestock/pfComplianceAssessment",
+    "required": [
+        "eventDateTime",
+        "id"
+    ],
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupEventCoreResource.json"
+        }
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier (UUID) used within the current server to identify the resource."
+        },
+        "reason": {
+            "type": "string",
+            "description": "Reason for the compliance assessment"
+        },
+        "assessmentSummary": {
+            "type": "string",
+            "description": "Overall qualitative summary of the compliance assessment"
+        },
+
+        "complianceProgramme":{
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
+            "description": "The authority or organisation requesting the compliance assesmnent"
+        },
+        "assessor":{
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
+            "description": "The person or or organisation conducting the compliance assesmnent"
+        },
+
+        "compliances": {
+            "type": "array",
+
+            "items": {
+                "$ref": "../types/pfAnimalComplianceType.json"
+            },
+            "description": "The array of compliance results."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/livestock/pfComplianceAssessment",
+            "id": "53d69761-0ed3-4e95-9a49-77804f1dea57",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "33/444/5555"
+            },
+            "eventDateTime": "2022-09-01T00:00:00.000Z",
+            "reason": "XYZ supermarket dairy scheme compliance v2.1",
+            "assessmentSummary": "Compliant",
+            "complianceProgramme": {
+                "scheme": "uk.xyzsupermarket.dairy",
+                "id": "v2.1"
+            },
+            "assessor": {
+                "scheme": "uk.governingbody.vetregistration",
+                "id": "1234"
+            },
+            "groupMethod": "InventoryClassification",
+            "inventoryClassification": {
+                "name": "Dairy",
+                "species": "Cattle",
+                "sex": "Female",
+                "birthPeriod": "2016-01-01/2021-12-31",
+                "count": 375
+            },
+            "compliances": [
+                {
+                    "metric": {
+                        "scheme": "uk.xyzsupermarket.dairy",
+                        "id": "4.08"
+                    },
+                    "name": "antibiotic usage",
+                    "status": "Compliant"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "description": "Event for recording group deaths - uses ICAR schema",
+    "$id": "/livestock/movement/group-death",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupMovementDeathEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/movement/group-death",
+            "id": "98f10494-97d4-4c58-898d-563dbb61d2cc",
+            "dataPointKey": "sample-data-movement-group-death-1",
+            "eventDateTime": "2022-09-21T08:05:00.000Z",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "98/123/7831"
+            },
+            "groupMethod": "InventoryClassification",
+            "countObserved": 12,
+            "inventoryClassification": {
+                "name": "First batch of wether lambs 2022",
+                "species": "Sheep",
+                "sex": "MaleNeuter",
+                "birthPeriod": "2022-04-01",
+                "productionPurposes": [
+                    "Meat",
+                    "Wool"
+                ],
+                "count": 12
+            },
+            "deathReason": "Consumption",
+            "explanation": "Drafted at 80 pounds",
+            "disposalMethod": "ApprovedService",
+            "disposalReference": "65XX471",
+            "deathMethod": "Slaughter",
+            "consignment": {
+                "id": {
+                    "scheme": "uk.lis.consign",
+                    "id": "JFF73893"
+                },
+                "originLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/123/7831"
+                },
+                "destinationLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/128/4959"
+                },
+                "loadingDateTime": "2022-09-21T07:00:00.000Z",
+                "unloadingDateTime": "2022-09-21T09:40:00.000Z",
+                "expectedDuration": 2,
+                "transportOperator": "Jeff Livestock Haulage",
+                "vehicle": "PQ49XG",
+                "transportReference": "BJJ1980"
+            }
+        }
+    ]
+}

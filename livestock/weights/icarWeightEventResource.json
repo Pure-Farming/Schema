@@ -1,0 +1,72 @@
+{
+    "description": "The Weight event records a live weight observation of an animal. Calls the ICAR Weight Event resource",
+    "$id": "/livestock/weights/animal-weight-event",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarWeightEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/weights/animal-weight-event",
+            "id": "a4090f8d-e041-45f7-8c13-2ac414eee699",
+            "dataPointKey": "sample-data-animal-weight-1",
+            "eventDateTime": "2015-10-15T07:42:00.000Z",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "982 091004503474"
+            },
+            "weight": {
+                "measurement": 164,
+                "units": "KGM",
+                "method": "LoadCell"
+            },
+            "device": {
+                "identifier": {
+                    "scheme": "iso.std.9001",
+                    "id": "XKF142"
+                },
+                "model": "T10"
+            },
+            "timeOffFeed": 3.5
+        },
+        {
+            "resourceType": "/livestock/weights/animal-weight-event",
+            "id": "a39932c0-7f93-467b-9db6-7d5457144968",
+            "dataPointKey": "sample-data-animal-weight-4",
+            "eventDateTime": "2016-01-02T00:00:00.000Z",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "951000016310802"
+            },
+            "weight": {
+                "measurement": 200.5,
+                "units": "KGM",
+                "method": "LoadCell"
+            },
+            "device": {
+                "identifier": {
+                    "scheme": "iso.std.9001",
+                    "id": "TT3"
+                },
+                "model": "Tru-test 3000"
+            },
+            "timeOffFeed": 12
+        },
+        {
+            "resourceType": "/livestock/weights/animal-weight-event",
+            "id": "a4090f8d-e041-45f7-8c13-2ac414eee699",
+            "dataPointKey": "sample-data-animal-weight-2",
+            "eventDateTime": "2015-10-15T07:56:00.000Z",
+            "animal": {
+                "scheme": "iso.std.11785",
+                "id": "942 000077347221"
+            },
+            "weight": {
+                "measurement": 114,
+                "units": "KGM"
+            },
+            "timeOffFeed": 3.5
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "$id": "/crop/analysis",
+    "description": "The analyis result for plant sampling",
+    "properties": {
+        "analysis": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfLaboratoryAnalysisType.json"
+            }
+        }
+    }
+}

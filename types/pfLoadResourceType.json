@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/types/loadResource",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/ResourceType.json"
+        }
+    ],
+    "properties": {
+        "source": {
+            "$ref": "pfConsignmentEndPointType.json",
+            "description": "Source endpoint of the load"
+        },
+        "destination": {
+            "$ref": "pfConsignmentEndPointType.json",
+            "description": "Destination endpoint of the load"
+        },
+        "logisticUnit": {
+            "$ref": "../enums/pfLogisticsUnit.json"
+        },
+        "quantity": {
+            "type": "number",
+            "description": "Quantity in the load"
+        },
+        "units": {
+            "type": "string",
+            "description": "Units for the quantity metric"
+        },
+        "rawQuantity": {
+            "type": "number",
+            "description": "Raw quantity before standardisation"
+        },
+        "rawUnits": {
+            "type": "string",
+            "description": "Units for the raw quantity before standardisation"
+        },
+        "analysis": {
+            "type": "array",
+            "items": {
+                "$ref": "./pfLaboratoryAnalysisType.json"
+            }
+        },
+        "status": {
+            "$ref": "../enums/pfLoadStatus.json"
+        }
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "description": "Event for recording group movement departure - uses ICAR schema",
+    "$id": "/livestock/movement/group-departure",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupMovementDepartureEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/movement/group-departure",
+            "id": "b6df1a3e-a5e2-4f40-868f-4d97b0c444b3",
+            "dataPointKey": "sample-data-movement-group-departure-1",
+            "eventDateTime": "2022-09-14T08:30:00.000Z",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "98/443/55545"
+            },
+            "groupMethod": "EmbeddedAnimalSetAndInventoryClassification",
+            "countObserved": 2,
+            "embeddedAnimalSet": {
+                "resourceType": "/livestock/animal-set",
+                "id": "PAY55895",
+                "name": "Test LIS departure set",
+                "purpose": "Movement",
+                "member": [
+                    {
+                        "scheme": "uk.lis",
+                        "id": "UK9994111"
+                    },
+                    {
+                        "scheme": "uk.lis",
+                        "id": "UK9998483"
+                    }
+                ]
+            },
+            "inventoryClassification": {
+                "name": "September sale",
+                "species": "Cattle",
+                "reproductiveStatus": "Pregnant"
+            },
+            "departureKind": "Sale",
+            "departureReason": "Superfluous",
+            "consignment": {
+                "id": {
+                    "scheme": "uk.lis.consign",
+                    "id": "QPR51513"
+                },
+                "originLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/443/55545"
+                },
+                "destinationLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/444/5555"
+                },
+                "loadingDateTime": "2022-09-14T09:14:00.000Z",
+                "unloadingDateTime": "2022-09-14T13:20:00.000Z",
+                "expectedDuration": 4.1,
+                "transportOperator": "Strong Livestock Ltd",
+                "vehicle": "DKF444",
+                "transportReference": "TLL22358"
+            }
+        },
+        {
+            "resourceType": "/livestock/movement/group-departure",
+            "id": "e3bb38fa-8659-473e-a233-ec011fc8ab48",
+            "dataPointKey": "sample-data-movement-group-departure-2",
+            "eventDateTime": "2022-09-20T10:30:00.000Z",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "98/837/22263"
+            },
+            "groupMethod": "EmbeddedAnimalSet",
+            "countObserved": 2,
+            "embeddedAnimalSet": {
+                "resourceType": "/livestock/animal-set",
+                "id": "APH4466875",
+                "name": "Fictitious APHIS test departure set",
+                "purpose": "Movement",
+                "member": [
+                    {
+                        "scheme": "uk.aphis",
+                        "id": "UK 9 999999 0464 6"
+                    },
+                    {
+                        "scheme": "uk.aphis",
+                        "id": "UK 7 999999 0739 9"
+                    }
+                ]
+            },
+            "departureKind": "SaleReturn",
+            "departureReason": "Production",
+            "consignment": {
+                "id": {
+                    "scheme": "uk.aphis.consign",
+                    "id": "HP71567"
+                },
+                "originLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/837/22263"
+                },
+                "destinationLocation": {
+                    "scheme": "uk.cph",
+                    "id": "98/849/35637"
+                },
+                "loadingDateTime": "2022-09-20T10:14:00.000Z",
+                "unloadingDateTime": "2022-09-20T18:20:00.000Z",
+                "expectedDuration": 8.1,
+                "transportOperator": "Bliss & Son",
+                "vehicle": "SRX754",
+                "transportReference": "LEW599749"
+            }
+        }
+    ]
+}

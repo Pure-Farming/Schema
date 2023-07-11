@@ -1,0 +1,9 @@
+{
+    "$id": "/core/site",
+    "description": "A resource type for a site",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/resources/SiteResource.json"
+        }
+    ]
+}

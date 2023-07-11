@@ -1,0 +1,159 @@
+{
+    "$id": "/livestock/treatment/medicine-resource",
+    "description": "Defines a medicine and its withholding requirements within a scheme.  This extends the ICAR schema.",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarMedicineResource.json"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "form": {
+            "$ref": "pfMedicineForm.json"
+        },
+        "registrant": {
+            "type": "string",
+            "description": "The registering company or manufacturer of the medicine."
+        },
+        "registrationDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateType.json",
+            "description": "The date the medicine was registered in the scheme."
+        },
+        "expiryDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateType.json",
+            "description": "The date the registration of the medicine in the scheme expires."
+        },
+        "classification": {
+            "$ref": "pfMedicineClassification.json"
+        },
+        "species": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/icarAnimalSpecieType.json"
+            },
+            "description": "The species that may be treated by this medicine."
+        },
+        "activeIngredients": {
+            "type": "array",
+            "items": {
+                "$ref": "pfMedicineIngredientType.json"
+            },
+            "description": "The active ingredients in the medicine."
+        },
+        "withholdings": {
+            "type": "array",
+            "items": {
+                "$ref": "pfMedicineWithholdingType.json"
+            },
+            "description": "The withholding periods defined for this medicine for a species for a particular product or food item."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/livestock/treatment/medicine-resource",
+            "dataPointKey": "sample-data-medicine-resource-1",
+            "name": "Backstop Combination Drench For Sheep",
+            "approved": "Registered",
+            "registeredID": {
+                "id": "77777",
+                "scheme": "au.gov.apvma"
+            },
+            "form": "OralSolution/Suspension",
+            "registrant": "Backstop Limited",
+            "registrationDate": "2022-09-16",
+            "expiryDate": "2023-06-30",
+            "classification": "Parasiticides",
+            "species": [
+                "Sheep"
+            ],
+            "withholdings": [
+                {
+                    "productType": "Meat",
+                    "hours": 336,
+                    "market": "au.gov.apvma.whp",
+                    "species": "Sheep"
+                },
+                {
+                    "productType": "Meat",
+                    "hours": 1008,
+                    "market": "au.gov.apvma.esi",
+                    "species": "Sheep"
+                }
+            ],
+            "activeIngredients": [
+                {
+                    "name": "Abamectin"
+                },
+                {
+                    "name": "Levamisole as Levamisole Hydrochloride"
+                },
+                {
+                    "name": "Albendazole"
+                },
+                {
+                    "name": "Cobalt as Cobalt EDTA"
+                },
+                {
+                    "name": "Selenium as Sodium Selenate"
+                }
+            ]
+        },
+        {
+            "resourceType": "/livestock/treatment/medicine-resource",
+            "dataPointKey": "sample-data-medicine-resource-2",
+            "name": "Backstop 300mg/mL Injection",
+            "approved": "Registered",
+            "registeredID": {
+                "id": "999999",
+                "scheme": "au.gov.apvma"
+            },
+            "form": "ParenteralLiquid/Solution/Suspension",
+            "registrant": "Backstop Pty Ltd",
+            "registrationDate": "2022-09-07",
+            "expiryDate": "2023-06-30",
+            "classification": "Antibiotic+Related",
+            "species": [
+                "Cattle",
+                "Sheep",
+                "Pig"
+            ],
+            "withholdings": [
+                {
+                    "productType": "Meat",
+                    "hours": 672,
+                    "market": "au.gov.apvma.whp",
+                    "species": "Sheep"
+                },
+                {
+                    "productType": "Meat",
+                    "hours": 672,
+                    "market": "au.gov.apvma.whp",
+                    "species": "Pig"
+                },
+                {
+                    "productType": "Meat",
+                    "hours": 840,
+                    "market": "au.gov.apvma.whp",
+                    "species": "Cattle"
+                },
+                {
+                    "productType": "Milk",
+                    "hours": 168,
+                    "market": "au.gov.apvma.whp",
+                    "species": "Cattle"
+                },
+                {
+                    "productType": "Milk",
+                    "hours": 192,
+                    "market": "au.gov.apvma.whp",
+                    "species": "Sheep"
+                }
+            ],
+            "activeIngredients": [
+                {
+                    "name": "Oxytetracycline as the Dihydrate"
+                }
+            ]
+        }
+    ]
+}

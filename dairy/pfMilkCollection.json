@@ -1,0 +1,12 @@
+{
+    "$id": "/dairy/milk-collection",
+    "description": "This is a very simple WorkItem derivative that captures a record of milk being collected.",
+    "allOf": [
+        {
+            "$ref": "../types/ObservationType.json"
+        },
+        {
+            "$ref": "../types/pfLoadResourceType.json"
+        }
+    ]
+}

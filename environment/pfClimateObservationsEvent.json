@@ -1,0 +1,180 @@
+{
+    "description": "The climate observations event records climate sensor observations for a geospatial feature and optionally references a sampled feature.",
+    "$id": "/environment/pfClimateObservationsEvent",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../environment/pfSensorObservationsEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/environment/pfClimateObservationsEvent",
+            "id": "2c70fc24-bbd6-4732-a24f-d8fa52b402e1",
+            "meta": {
+                "sourceId": {
+                    "scheme": "nz.zaxfarm.climate",
+                    "id": "4243e3f4-de19-4289-a3e7-ad1814766b0f"
+                },
+                "modified": "2023-04-03T08:00:00Z",
+                "created": "2023-04-03T08:00:00Z",
+                "creator": "zaxfarm.co.nz"
+            },
+            "name": "Temperature readings - Bliss Farm, 2 Apr 2023",
+            "observationDate": "2023-04-02T00:00:00Z",
+            "feature": {
+                "contentType": "plot",
+                "identifier": {
+                    "scheme": "com.purefarming.plotId",
+                    "id": "bc38ad95-ca77-4f34-a0dd-1e02d7cf0b85"
+                },
+                "name": "Far Flats"
+            },
+            "holding": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "4c481ac8-d7a9-40d1-a0e4-bcbca15f03d1"
+                },
+                "name": "Bliss Farm"
+            },
+            "phenomenonStartTime": "2023-04-02T00:00:00Z",
+            "phenomenonEndTime": "2023-04-03T00:00:00Z",
+            "responsible": "Aimee Clarke",
+            "remark": "Temperatures - Far Flats weather station, 2 Apr 2023",
+            "sensorResults": [
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "AirTemperature"
+                    },
+                    "method": "Digital",
+                    "value": 11.3,
+                    "units": "CEL",
+                    "aggregation": "Min",
+                    "resolution": 0.1,
+                    "duration": 1,
+                    "durationUnits": "DAY"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "AirTemperature"
+                    },
+                    "method": "Digital",
+                    "value": 23.4,
+                    "units": "CEL",
+                    "aggregation": "Max",
+                    "resolution": 0.1,
+                    "duration": 1,
+                    "durationUnits": "DAY"
+                }
+            ],
+            "device": {
+                "id": "GX420-1",
+                "name": "GX420 Farm Temperature Station",
+                "manufacturer": "GX Weather Devices Ltd",
+                "deviceCategory": "TemperatureStation"
+            }
+        },
+        {
+            "resourceType": "/environment/pfClimateObservationsEvent",
+            "id": "102c7d6c-3184-4ff1-afd0-73b2997a6c38",
+            "meta": {
+                "sourceId": {
+                    "scheme": "nz.zaxfarm.climate",
+                    "id": "bfcd081b-a875-4392-b7fe-25460d8463e0"
+                },
+                "modified": "2022-10-15T08:00:00Z"
+            },
+            "name": "Environmental monitoring - Bliss Farm, 14 October 2022",
+            "@self": "https://api.purefarming.com/data/environment/climate-observations-event/102c7d6c-3184-4ff1-afd0-73b2997a6c38",
+            "identifiers": [
+                {
+                    "scheme": "nz.co.climatedb",
+                    "id": "23/34567"
+                }
+            ],
+            "observationDate": "2022-10-14T00:00:00Z",
+            "feature": {
+                "contentType": "plot",
+                "identifier": {
+                    "scheme": "com.purefarming.plotId",
+                    "id": "ec891102-a8fd-451a-96dd-88aaa8b01c57"
+                },
+                "name": "Far Flats",
+                "uri": "https://landco.co.nz/plot/K384-24"
+            },
+            "holding": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "7b5be125-c96f-4095-89b3-1c267aa2206e"
+                },
+                "name": "Bliss Farm",
+                "uri": "https://landco.co.nz/property/K384"
+            },
+            "phenomenonStartTime": "2022-10-14T00:00:00Z",
+            "phenomenonEndTime": "2022-10-14T01:00:00Z",
+            "responsible": "Aimee Clarke",
+            "remark": "Testing environmental monitoring, October 2022",
+            "sensorResults": [
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "Lower Soil Moisture"
+                    },
+                    "method": "Digital",
+                    "value": 20.72,
+                    "units": "%",
+                    "resolution": 0.01,
+                    "duration": 1,
+                    "durationUnits": "HUR"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "Upper Soil Moisture"
+                    },
+                    "method": "Digital",
+                    "value": 33.93,
+                    "units": "%",
+                    "resolution": 0.01,
+                    "duration": 1,
+                    "durationUnits": "HUR"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "DailyRainfall"
+                    },
+                    "method": "Digital",
+                    "value": 4.5,
+                    "units": "MMT",
+                    "aggregation": "Sum",
+                    "resolution": 0.1,
+                    "duration": 1,
+                    "durationUnits": "DAY"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "com.metdata.phenomena",
+                        "id": "SoilTemperature"
+                    },
+                    "method": "Digital",
+                    "value": 5.9,
+                    "units": "CEL",
+                    "resolution": 0.1,
+                    "duration": 1,
+                    "durationUnits": "HUR"
+                }
+            ],
+            "device": {
+                "id": "GX4777-8",
+                "name": "GX4777 Farm Environment Monitor",
+                "description": "Farm environment monitoring integrated system",
+                "deviceCategory": "EnvironmentMonitor"
+            }
+        }
+    ]
+}

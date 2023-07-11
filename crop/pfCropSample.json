@@ -1,0 +1,31 @@
+{
+    "$id": "/crop/sample",
+    "description": "A general plant sampling schema - a combination of WorkItemType and AnalysisSampleResource given we can't actually override in a json schema.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/ObservationType.json"
+        }
+    ],
+    "properties": {
+        "priority": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/WorkItemPriorityType.json"
+        },
+        "sampledOrganism": {
+            "type": "string",
+            "description": "Name or identifier of the plant or organism sampled"
+        },
+        "samplingMethod": {
+            "type": "string",
+            "description": "Citation or other URI to page describing the sampling method - thing",
+            "examples": [
+                "my-example-sample-method"
+            ]
+        }
+    },
+    "required": [
+        "id",
+        "meta",
+        "observationDate"
+    ]
+}

@@ -80,7 +80,7 @@
             "device": {
                 "id": "WS41",
                 "serial": "TR546-973-7",
-                "manufacturer":{
+                "manufacturer": {
                     "id": "thematicdevices.com",
                     "deviceType": "Scales",
                     "deviceName": "TR546"

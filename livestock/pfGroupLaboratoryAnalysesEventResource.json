@@ -1,0 +1,88 @@
+{
+    "description": "A general laboratory analysis schema for livestock lab tests. eventDateTime is the date of test. sampleDate is the date the sample was taken.",
+    "$id": "/livestock/group-laboratory-analyses-event",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupEventCoreResource.json"
+        }
+    ],
+    "properties": {
+        "sampleDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Date/time when the sample was taken (in RFC3339 UTC - see https://ijmacd.github.io/rfc3339-iso8601/)."
+        },
+        "sampleType": {
+                "enum": [
+                    "Milk",
+                    "Blood",
+                    "Tissue",
+                    "Fibre",
+                    "Velvet"
+                ],
+            "description": "The type of sample analysed"
+        },
+        "analyses": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfLaboratoryAnalysisType.json"
+            }
+        }
+    },
+    "required": [
+        "analyses"
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/group-laboratory-analyses-event",
+            "dataPointKey": "sample-data-animal-laboratory-analysis-1",
+            "id": "adf6fbd9-0d65-4c3b-bb53-0216de82a666",
+            "eventDateTime": "2023-01-04T12:00:00Z",
+            "sampleDate": "2023-01-03T11:00:00Z",
+            "groupMethod": "InventoryClassification",
+            "inventoryClassification": {
+                "name": "Dairy",
+                "species": "Cattle",
+                "sex": "Female",
+                "birthPeriod": "2016-01-01/2021-12-31",
+                "count": 236
+              },
+            "location": {
+                "scheme": "au.nlis.pic",
+                "id": "5TRCD542"
+            },
+            "sampleType": "Milk",
+            "analyses": [
+                {
+                    "laboratory": {
+                        "name": "BestLabs Ltd."
+                    },
+                    "laboratoryIdentifier": "MK2810/01",
+                    "results": [
+                        {
+                            "name": "BVD Anitgen",
+                            "status": "belowLimit",
+                            "rawValue": "<45",
+                            "rawUnit": "CTV",
+                            "qualitativeGrade": "Negative",
+                            "limit" : 45
+                        }
+                    ]
+                },
+                {
+                    "laboratory": {
+                        "name": "Dairy Laboratory Ltd"
+                    },
+                    "laboratoryIdentifier": "28778471",
+                    "results": [
+                        {
+                            "name": "Milk Solids",
+                            "status": "completed",
+                            "rawValue": "300",
+                            "rawUnit": "kg"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
