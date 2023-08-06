@@ -1,0 +1,15 @@
+
+{
+    "$id": "/types/pfSpatialResourceType",
+    "description": "A resource type representing spatial entites",
+    "properties": {
+        "spatialFeature": {
+            "$ref": "https://geojson.org/schema/Feature.json",
+            "description":"The geojson feature, with its geometry"
+        },
+        "centroid":{
+            "$ref": "https://geojson.org/schema/Point.json",
+            "description":"The centroid of the spatial resource. If the spatial feature is not convex, the centroid may lie outside the bounds of the spatial feature"
+        }
+    }
+}

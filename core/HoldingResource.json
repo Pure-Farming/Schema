@@ -4,6 +4,9 @@
   "allOf": [
     {
       "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/resources/HoldingResource.json"
+    },
+    {
+      "$ref": "../types/pfSpatialResourceType.json"
     }
   ],
   "examples": [

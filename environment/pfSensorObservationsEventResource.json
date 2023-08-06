@@ -12,7 +12,7 @@
             "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/FeatureReferenceType.json",
             "description": "Optional, a reference to the feature being sampled such as a river."
         },
-        "sensorObservations": {
+        "sensorResults": {
             "type": "array",
             "items": {
                 "$ref": "../types/pfSensorResultType.json"
