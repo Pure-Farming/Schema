@@ -12,14 +12,15 @@
             "description": "Date/time when the sample was taken (in RFC3339 UTC - see https://ijmacd.github.io/rfc3339-iso8601/)."
         },
         "sampleType": {
-                "enum": [
-                    "Milk",
-                    "Blood",
-                    "Tissue",
-                    "Fibre",
-                    "Velvet"
-                ],
-            "description": "The type of sample analysed"
+            "type": "string",
+            "description": "The type of sample analysed",
+            "enum": [
+                "Milk",
+                "Blood",
+                "Tissue",
+                "Fibre",
+                "Velvet"
+            ]
         },
         "analyses": {
             "type": "array",

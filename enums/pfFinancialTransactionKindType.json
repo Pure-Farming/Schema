@@ -1,0 +1,13 @@
+{
+    "description": "Defines the kinds of financial transactions",
+    "type": "string",
+    "enum": [
+        "Sale",
+        "Purchase",
+        "Death",
+        "Birth",
+        "StockTake",
+        "TransferOut",
+        "AgingOut"
+    ]
+}

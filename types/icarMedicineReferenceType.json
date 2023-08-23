@@ -2,7 +2,7 @@
     "description": "Provides basic details about a medicine and links to a medicine resource (if available).",
     "allOf": [
         {
-            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/Develop/types/icarMedicineReferenceType.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarMedicineReferenceType.json"
         }
     ]
-} 
+}
