@@ -1,9 +1,12 @@
 {
     "$id": "/core/land-cover",
-    "type": "object",
+    "description": "Represents land-covers and their classifications.",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/resources/LandCoverResource.json"
+        },
+        {
+            "$ref": "../types/pfSpatialResourceType.json"
         }
     ]
 }

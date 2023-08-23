@@ -1,0 +1,63 @@
+{
+    "description": "pfFinancialTransactionType defines a financial transaction that may be a sale, purchase, death, birth, stocktake, transfer out, aging out.",
+    "type": "object",
+    "$id": "types/pfFinancialTransactionType",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarEventCoreResource.json"
+        }
+    ],
+    "required": [
+        "transactionKind",
+        "transactionValue"
+    ],
+    "properties": {
+        "transactionKind": {
+            "$ref": "../enums/pfFinancialTransactionKindType.json",
+            "description": "Identifies the kind of transaction."
+        },
+        "accrualDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "The accrual date of the transaction."
+        },
+        "cashDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "The cash date of the transaction.  This date should be used to populate the eventDateTime."
+        },
+        "transactionQuantity": {
+            "type": "number",
+            "description": "The number of units (e.g. head, kilograms, litres) in the transaction."
+        },
+        "transactionValue": {
+            "type": "number",
+            "description": "The total value of the transaction in the currency specified."
+        },
+        "unitValue": {
+            "type": "number",
+            "description": "The value per unit of the transaction in the currency specified."
+        },
+        "currency": {
+            "type": "string",
+            "description": "The currency of the transaction expressed using the ISO 4217 3-character code such as AUD, GBP, USD, NZD."
+        },
+        "notes": {
+            "type": "string",
+            "description": "Notes recorded for the transaction."
+        },
+        "contactName": {
+            "type": "string",
+            "description": "The name of the contact for the transaction."
+        },
+        "externalReference": {
+            "type": "array",
+            "description": "The array of external references to the transaction. For example, the reference to the invoice.",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json"
+            }
+        },
+        "resourceReference": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarResourceReferenceType.json", 
+            "description": "Reference to an associated resource such as the matching inventory transaction record or livestock movement event."
+        }
+    }
+}

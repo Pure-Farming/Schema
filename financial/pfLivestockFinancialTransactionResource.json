@@ -1,0 +1,97 @@
+{
+    "description": "Defines a livestock financial transaction such as a sale, purchase, death.",
+    "$id": "/financial/pfLivestockFinancialTransactionResource",
+    "allOf": [
+        {
+            "$ref": "../types/pfFinancialTransactionType.json"
+        }
+    ], 
+    "properties": {
+        "classificationId": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
+            "description": "A reference to the classification of the livestock such as a stock class."
+        },
+        "inventoryClassification": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "description": "The classification of the livestock by factors such as sex, breed, birth period."
+        },
+        "weightPerHead": {
+            "type": "number",
+            "description": "The average weight per head of stock."
+        },
+        "units": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": ["head"]
+                },
+                {
+                    "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/uncefactMassUnitsType.json"
+                }
+            ],
+            "description": "The units of transactionQuantity.  For example, the transaction quantity may be expressed per head or per kilogram."
+        },
+        "weightType": {
+            "type": "string",
+            "enum": ["live","carcass"],
+            "description": "Indicates whether the transaction is for live animals or for carcasses."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/financial/livestock-financial-transaction",
+            "dataPointKey": "sample-livestock-financial-transaction-1",
+            "id": "bcecf36f-a571-40f5-80da-d23b4f787484",
+            "meta": {
+                "source": "com.figured.livestock.transaction",
+                "sourceId": "aa99a568-cf3c-4b36-b5dd-3288a45fd6fe",
+                "modified": "2023-03-23T09:33:00Z",
+                "created": "2023-03-23T09:33:00Z",
+                "creator": "com.figured"
+            },
+            "location": {
+                "scheme": "com.figured.farmcode",
+                "id": "0a0aa"
+            },
+            "eventDateTime": "2023-03-15T13:07:00Z",
+            "transactionKind": "Purchase",
+            "accrualDate": "2023-03-10T08:00:00Z",
+            "cashDate": "2023-03-15T13:07:00Z",
+            "transactionQuantity": 47,
+            "transactionValue": 30315,
+            "unitValue": 645,
+            "currency": "NZD",
+            "notes": "Empty Friesian heifers for wintering",
+            "resourceReference": {
+                "identifier": {
+                    "scheme": "com.purefarming.arrival",
+                    "id": "3696ff5b-cbdc-4d7b-8243-0962ae6695b5"
+                }
+            },
+            "contactName": "Bill James",
+            "externalReference": [
+                {
+                    "scheme": "nz.co.xyztraders.invoice",
+                    "id": "23/BF/0451"
+                }
+            ],
+            "classificationId": {
+                "scheme": "com.figured.stockclass",
+                "id": "2df7d655-4c6f-4020-b813-9790ef0b1bf1"
+            },
+            "inventoryClassification": {
+                "name": "R2 empty Friesian heifers",
+                "species": "Cattle",
+                "sex": "Female",
+                "primaryBreed": {
+                    "scheme": "nz.digad.breed",
+                    "id": "NZF"
+                },
+                "birthPeriod": "2021-06-01/2021-11-30",
+                "reproductiveStatus": "NotPregnant"
+            },
+            "units": "head",
+            "weightType": "live"
+        }
+    ]
+}

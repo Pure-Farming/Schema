@@ -1,0 +1,81 @@
+{
+    "description": "Defines a financial transaction for a product.  For example, a sale, purchase, or stocktake.",
+    "$id": "/financial/pfProductFinancialTransactionResource",
+    "allOf": [
+        {
+            "$ref": "../types/pfFinancialTransactionType.json"
+        }
+    ], 
+    "required": [
+        "product"
+    ],
+    "properties": {
+        "product": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarProductReferenceType.json",
+            "description": "Details of the product that is the subject of the transaction."
+        },
+        "units": {
+            "type": "string",
+            "description": "The units in which the transaction quantity is measured. UN/CEFACT units SHOULD be used where these are applicable."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/financial/product-financial-transaction",
+            "dataPointKey": "sample-product-financial-transaction-1",
+            "id": "c607ca0f-f0f1-4293-9cbb-d52435d4b624",
+            "meta": {
+                "source": "com.figured.product.transaction",
+                "sourceId": "69c0c586-70ea-47dd-a1dc-885a1a6af39c",
+                "modified": "2023-07-23T10:33:00Z",
+                "created": "2023-07-23T10:33:00Z",
+                "creator": "com.figured"
+            },
+            "location": {
+                "scheme": "com.figured.farmcode",
+                "id": "0a0aa"
+            },
+            "eventDateTime": "2023-07-14T11:00:00Z",
+            "transactionKind": "Purchase",
+            "accrualDate": "2023-06-30T08:00:00Z",
+            "cashDate": "2023-07-14T11:00:00Z",
+            "transactionQuantity": 200,
+            "transactionValue": 568,
+            "unitValue": 2.84,
+            "currency": "NZD",
+            "resourceReference": {
+                "identifier": {
+                    "scheme": "nz.co.xyzfuel.delivery",
+                    "id": "FKZ-4729"
+                },
+                "reltype": "InventoryTransaction",
+                "href": "https://api.purefarming.com/data/inventory/inventory-transaction/d104dddc-9c57-4d47-bbc7-f84517007d9f"
+            },
+            "notes": "Farm delivery 91 octane petrol",
+            "contactName": "Sharon Thomas",
+            "externalReference": [
+                {
+                    "scheme": "nz.co.xyzfuel.invoice",
+                    "id": "23-FKZ-37"
+                }
+            ],
+            "product": {
+                "identifier": {
+                    "scheme": "nz.co.saturn",
+                    "id": "KY123412341234"
+                },
+                "family": "Fuel",
+                "identifiers": [
+                    {
+                        "scheme": "nz.co.xyzfuel.product",
+                        "id": "Bulk 91"
+                    }
+                ],
+                "name": "Petrol 91",
+                "gtin": "12345678901234",
+                "unspc": "151015"
+            },
+            "units": "LTR"
+        }
+    ]
+}

@@ -18,7 +18,7 @@
             "description": "Citation or other URI to page describing the sampling method"
         },
         "samplingGeometry": {
-            "$ref": "https://raw.githubusercontent.com/daniel-buchanan/rfc7946-schema/main/schema/geometry.json",
+            "$ref": "https://raw.githubusercontent.com/daniel-buchanan/geoJsonSchema/main/schema/geoJsonGeometry.json",
             "description": "Geometry indicating where the soil sample is taken"
         },
         "depth": {

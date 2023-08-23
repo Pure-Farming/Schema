@@ -8,6 +8,8 @@
             "description": "Human readable description of the test result"
         },
         "status": {
+            "type": "string",
+            "description": "One of a set of enumerated values",
             "enum": [
                 "completed",
                 "belowLimit",
@@ -15,8 +17,7 @@
                 "failed",
                 "scheduled",
                 "inProgress"
-            ],
-            "description": "One of a set of enumerated values"
+            ]
         },
         "abbreviation": {
             "type": "string",
