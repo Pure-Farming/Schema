@@ -39,6 +39,10 @@
         "metabolisableEnergy": {
             "type": "number",
             "description": "Metabolisable energy specified as Megajoules per unit of dry matter (i.e. MJ/kgDM)."
+        },
+        "pastureState": {
+            "$ref": "../enums/pfPastureStateType.json",
+            "description": "State of the pasture."
         }
     },
     "examples": [
@@ -108,6 +112,7 @@
             "equationIntercept": 826,
             "equationSlope": 158,
             "metabolisableEnergy": 10.6,
+            "pastureState": "Growing",
             "device": {
                 "id": "JHP03",
                 "serial": "4321-GD81-1234",

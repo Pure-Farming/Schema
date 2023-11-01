@@ -1,0 +1,58 @@
+{
+    "description": "Observation to record details of a catch landing.",
+    "$id": "/fisheries/CatchLandingObservation",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/FisheriesTripObservationType.json"
+        }
+    ],
+    "properties": {
+        "processor": {
+            "type": "string",
+            "description": "The name or code of the processor."
+        },
+        "port": {
+            "type": "string",
+            "description": "The port where the catch is landed."
+        },
+        "numberShots": {
+            "type": "integer",
+            "description": "The number of shots or trawls for the catch."
+        },
+        "numberBins": {
+            "type": "integer",
+            "description": "The number of bins from the catch."
+        }, 
+        "potsPulled": {
+            "type": "integer",
+            "description": "The number of pots pulled."
+        },      
+        "numberTakeHome": {
+            "type": "integer",
+            "description": "The number taken home."
+        },
+        "tagRangeStart": {
+            "type": "string",
+            "description": "The first tag in the range applied."
+        },
+        "tagRangeEnd": {
+            "type": "string",
+            "description": "The last tag in the range applied."
+        },
+        "catch": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "The quantity landed of the species and optionally of the grade caught."
+        },
+        "bycatch": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "The quantity landed of the bycatch species and optionally of the grade caught."
+        }
+    }
+}

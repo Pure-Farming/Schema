@@ -1,0 +1,10 @@
+{
+    "description": "Observation to record the start of a fishing trip. Mainly used when data is being delivered incrementally.",
+    "$id": "/fisheries/TripStartObservation",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/FisheriesTripObservationType.json"
+        }
+    ]
+}

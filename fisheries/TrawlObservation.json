@@ -1,0 +1,102 @@
+{
+    "description": "Observation to record details of a trawl or shot.",
+    "$id": "/fisheries/TrawlObservation",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/FisheriesTripObservationType.json"
+        }
+    ],
+    "properties": {
+        "shotNumber": {
+            "type": "number",
+            "description": "The number of this shot or trawl on the trip."
+        },
+        "duration": {
+            "type": "number",
+            "description": "The length of time of the trawl or shot in the units specified."
+        },
+        "durationUnits": {
+            "type": "string",
+            "description": "The units in which the duration is measured. UN/CEFACT units SHOULD be used where these are applicable."
+        },
+        "distance": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/LengthMeasureType.json",
+            "description": "The distance and its units of the trawl."
+        },
+        "averageSpeed": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/VelocityMeasureType.json",
+            "description": "The average speed and its units of the trawl."
+        },
+        "catchRate": {
+            "type": "number",
+            "description": "The catch rate during the trawl."
+        },
+        "catchRateUnits":   {
+            "type": "string",
+            "description": "The units in which the catch rate is expressed."
+        },
+        "fishingMethod": {
+            "type": "string",
+            "description": "The fishing method employed in the trawl."
+        },
+        "targetSpecies": {
+            "type": "string",
+            "description": "The primary species being targetted."
+        },
+        "area": {
+            "type": "string",
+            "description": "The code or name of the area being trawled."
+        },
+        "meshSize": {
+            "type": "number",
+            "description": "The mesh size of the nets."
+        },
+        "bucketCount": {
+            "type": "number",
+            "description": "The number of buckets of catch in the trawl or shot."
+        },
+        "bucketWeight": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/MassMeasureType.json",
+            "description": "The total weight and units of the buckets of catch in the trawl or shot."
+        },
+        "catch": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "The quantity of the species and optionally of the grade caught in the trawl."
+        },
+        "bycatch": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "The quantity of the bycatch species and optionally of the grade caught in the trawl."
+        },
+        "wildlife": {
+            "$ref": "../types/WildlifeInteractionType.json",
+            "description": "Details of the wildlife encountered during the trawl."
+        },
+        "comments": {
+            "type": "string",
+            "description": "Comments on the trawl or shot."
+        },
+        "blocksFished": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Array of the blocks fished in this trawl or shot."
+        },
+        "summaryGeometry":{
+            "$ref": "https://raw.githubusercontent.com/daniel-buchanan/geoJsonSchema/main/schema/geoJsonFeature.json",
+            "description":"The geojson MultiPoint feature (with its geometry) that identifies the start point, end point and optionally the mid point of the trawl or shot."
+        },
+        "loggedGeometry":{
+
+            "$ref": "https://raw.githubusercontent.com/daniel-buchanan/geoJsonSchema/main/schema/geoJsonFeature.json",
+            "description":"The geojsonfeature (with its geometry) that covers the logged track of the trawl in detail."
+        }
+    }
+}

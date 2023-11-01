@@ -1,0 +1,105 @@
+{
+    "description": "FisheriesTripType records information about a fishing trip.",
+    "$id": "/fisheries/FisheriesTripType",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/ResourceType.json"
+        }
+    ],
+    "required": [
+        "tripId",
+        "startDateTime"
+    ],
+    "properties": {
+        "tripId": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json",
+            "description": "Unique identifier of the trip specified as a scheme and id."
+        },
+        "skipper": {
+            "type": "string",
+            "description": "Name of the skipper of the vessel for the trip."
+        },
+        "vessel": {
+            "type": "string",
+            "description": "The name of the vessel performing the trip."
+        },
+        "licences": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "The licence number(s) applicable to the trip."
+        },
+        "startDateTime": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/DateTimeType.json",
+            "description": "The date and time of the start of the trip recorded in UTC format."
+        },
+        "endDateTime": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/DateTimeType.json",
+            "description": "The date and time of the end of the trip recorded in UTC format."
+        },
+        "fishery": {
+            "type": "string",
+            "description": "The fishery in which the trip takes place."
+        },
+        "manDays": {
+            "type": "number",
+            "description": "The number of man days employed in the trip."
+        },
+        "effortActive": {
+            "type": "number",
+            "description": "The number of units of active effort."
+        },
+        "effortNets": {
+            "type": "number",
+            "description": "The number of units of nets effort."
+        },
+        "environmentalObservations": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/environmentalObservationType.json"
+            },
+            "description": "Array of environmental observations recorded on the trip. May be an aggregation such as Mean or Maximum."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "/fisheries/FisheriesTripType",
+            "id": "a703117a-87fb-422e-b8d4-f7fea3f6cccd",
+            "meta": {
+                "sourceId": {
+                    "scheme": "com.deckhand.report",
+                    "id": "c9b63895-c32a-4aa7-8ee8-f54aead67eb8"
+                },
+                "modified": "2023-10-03T17:20:50Z"
+            },
+            "name": "Blue Doris trip S999231004A, 3/10/2023 - 3/10/23 ",
+            "tripId": {
+                "scheme": "com.deckhand.trip",
+                "id": "S999231004A"
+            },
+            "skipper": "Jack Smith",
+            "vessel": "Blue Doris",
+            "licences": [
+                "S999"
+            ],
+            "startDateTime": "2023-10-03T13:49:28Z",
+            "endDateTime": "2023-10-03T14:20:28Z",
+            "fishery": "ABC123",
+            "manDays": 1.0,
+            "effortActive": 3.0,
+            "effortNets": 2.0,
+            "environmentalObservations": [
+                {
+                    "metric": {
+                        "scheme": "com.metdata.metric",
+                        "id": "WaterTemperature"
+                    },
+                    "value": 23.3,
+                    "units": "CEL"
+                }
+            ]
+        }
+    ]
+}

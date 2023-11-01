@@ -1,0 +1,50 @@
+{
+    "description": "Observation to record details of a pot catch.",
+    "$id": "/fisheries/PotObservation",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/FisheriesTripObservationType.json"
+        }
+    ],
+    "properties": {
+        "depthRange": {
+            "type": "string",
+            "description": "The depth range of the pot in metres."
+        },
+        "targetSpecies": {
+            "type": "string",
+            "description": "The primary species being targetted."
+        },
+        "numberSize": {
+            "type": "number",
+            "description": "The number of the target species of the required size."
+        },
+        "catch": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "The quantity of the species and optionally of the grade caught in the trawl."
+        },
+        "bycatch": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "The quantity of the bycatch species and optionally of the grade caught in the trawl."
+        },
+        "wildlife": {
+            "$ref": "../types/WildlifeInteractionType.json",
+            "description": "Details of the wildlife encountered during the trawl."
+        },
+        "comments": {
+            "type": "string",
+            "description": "Comments on the trawl or shot."
+        },
+        "location":{
+            "$ref": "https://raw.githubusercontent.com/daniel-buchanan/geoJsonSchema/main/schema/geoJsonFeature.json",
+            "description":"The location of the pot using the geojson Point feature (with its geometry)."
+        }
+    }
+}

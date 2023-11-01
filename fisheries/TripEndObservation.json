@@ -1,0 +1,10 @@
+{
+    "description": "Observation to record the end of a fishing trip.",
+    "$id": "/fisheries/TripEndObservation",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/FisheriesTripObservationType.json"
+        }
+    ]
+}

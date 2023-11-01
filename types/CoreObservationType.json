@@ -1,0 +1,37 @@
+{
+    "description": "Abstract class supporting an observation.  Has the properties of ObservationType but excludes holding and features.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/ResourceType.json"
+        }
+    ],
+    "required": [
+        "observationDate"
+    ], 
+    "properties": {
+        "observationDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "UTC Date (required) and time (optional) the observation was taken"
+        },
+        "phenomenonStartTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO UTC DateTime. The start time of the phenomenon being observed."
+        },        
+        "phenomenonEndTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO UTC DateTime.  The end time of the phenomenon being observed."
+        },
+        "responsible": {
+            "type": "string",
+            "description": "Identifier of the person responsible for the observation"
+        },
+        "remark": {
+            "type": "string",
+            "description": "Notes or remarks field"
+        }
+    }
+}
