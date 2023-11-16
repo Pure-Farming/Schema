@@ -1,0 +1,57 @@
+{
+    "description": "Observation to record the end of a fishing trip.",
+    "$id": "/fisheries/trip-end-observation",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/FisheriesTripObservationType.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "tripEndObservation",
+            "id": "5e4bb193-fadc-4dcb-a864-13b4fa95ea48",
+            "meta": {
+                "sourceId": {
+                    "scheme": "com.deckhand.report",
+                    "id": "61202dff-b8ff-48cc-9148-527cfe961c52"
+                },
+                "modified": "2023-10-31T17:51:00Z",
+                "created": "2023-10-31T17:51:00Z"
+            },
+            "name": "Blue Doris trip end, 31/10/23 17:51, Trip S999123456A",
+            "observationDate": "2023-10-31T17:51:00Z",
+            "phenomenonStartTime": "2023-10-31T12:38:00Z",
+            "phenomenonEndTime": "2023-10-31T17:51:00Z",
+            "responsible": "Fabio Capello",
+            "remark": "Inclement weather",
+            "trip": {
+                "tripId": {
+                    "scheme": "com.deckhand.trip",
+                    "id": "S999231004A"
+                },
+                "skipper": "Jack Smith",
+                "vessel": "Blue Doris",
+                "licences": [
+                    "S999"
+                ],
+                "startDateTime": "2023-10-31T12:38:00Z",
+                "fishery": "ABC123",
+                "manDays": 1.0,
+                "effortActive": 3.0,
+                "effortNets": 2.0,
+                "environmentalObservations": [
+                    {
+                        "metric": {
+                            "scheme": "com.metdata.metric",
+                            "id": "WaterTemperature"
+                        },
+                        "value": 23.3,
+                        "units": "CEL",
+                        "aggregation": "Max"
+                    }
+                ]
+            }
+        }
+    ]
+}

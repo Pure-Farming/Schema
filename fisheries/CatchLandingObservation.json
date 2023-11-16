@@ -1,0 +1,160 @@
+{
+    "description": "Observation to record details of a catch landing.",
+    "$id": "/fisheries/catch-landing-observation",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/FisheriesTripObservationType.json"
+        }
+    ],
+    "properties": {
+        "processor": {
+            "type": "string",
+            "description": "The name or code of the processor."
+        },
+        "port": {
+            "type": "string",
+            "description": "The port where the catch is landed."
+        },
+        "numberShots": {
+            "type": "integer",
+            "description": "The number of shots or trawls for the catch."
+        },
+        "numberBins": {
+            "type": "integer",
+            "description": "The number of bins from the catch."
+        }, 
+        "potsPulled": {
+            "type": "integer",
+            "description": "The number of pots pulled."
+        },      
+        "numberTakeHome": {
+            "type": "integer",
+            "description": "The number taken home."
+        },
+        "tagRangeStart": {
+            "type": "string",
+            "description": "The first tag in the range applied."
+        },
+        "tagRangeEnd": {
+            "type": "string",
+            "description": "The last tag in the range applied."
+        },
+        "catch": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "The quantity landed of the species and optionally of the grade caught."
+        },
+        "bycatch": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "The quantity landed of the bycatch species and optionally of the grade caught."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "catchLandingObservation",
+            "id": "05a3810f-57c8-463f-afe6-e1c5f7d94dcc",
+            "meta": {
+                "sourceId": {
+                    "scheme": "com.deckhand.report",
+                    "id": "a3ded5a9-1151-4b3f-8619-6ff05e85a167"
+                },
+                "modified": "2023-10-31T15:20:00Z"
+            },
+            "name": "Catch landing, 31/10/23 start 12:38, Trip S999123456A",
+            "observationDate": "2023-10-31T16:25:00Z",
+            "phenomenonStartTime": "2023-10-31T16:25:00Z",
+            "phenomenonEndTime": "2023-10-31T17:17:00Z",
+            "responsible": "Fabio Capello",
+            "remark": "Poor catch",
+            "trip": {
+                "tripId": {
+                    "scheme": "com.deckhand.trip",
+                    "id": "S999231004A"
+                },
+                "skipper": "Jack Smith",
+                "vessel": "Blue Doris",
+                "licences": [
+                    "S999"
+                ],
+                "startDateTime": "2023-10-31T11:49:28Z",
+                "fishery": "ABC123"
+            },
+            "processor": "ABC99999",
+            "port": "Gablehead West",
+            "numberShots": 5,
+            "numberBins": 5,
+            "potsPulled": 7,
+            "tagRangeStart": "XY123456",
+            "tagRangeEnd": "XY123465",
+            "numberTakeHome": 0,
+            "catch": [
+                {
+                    "species": "Rock lobster",
+                    "grade": "Size",
+                    "weight": {
+                        "measurement": 40,
+                        "units": "KGM"
+                    },
+                    "count": 20
+                },
+                {
+                    "species": "Rock lobster",
+                    "grade": "1.5-2kgs",
+                    "weight": {
+                        "measurement": 12.3,
+                        "units": "KGM"
+                    },
+                    "count": 9
+                },
+                {
+                    "species": "Rock lobster",
+                    "grade": "2-2.5kgs",
+                    "count": 11
+                },
+                {
+                    "species": "Spencer Gulf King Prawns",
+                    "grade": "Total",
+                    "weight": {
+                        "measurement": 950,
+                        "units": "KGM",
+                        "resolution": 1
+                    }
+                },
+                {
+                    "species": "Spencer Gulf King Prawns",
+                    "grade": "U10",
+                    "weight": {
+                        "measurement": 100,
+                        "units": "KGM"
+                    }
+                },
+                {
+                    "species": "Spencer Gulf King Prawns",
+                    "grade": "U10-15",
+                    "weight": {
+                        "measurement": 200,
+                        "units": "KGM"
+                    },
+                    "count": 453
+                }
+            ],
+            "bycatch": [
+                {
+                    "species": "Octopus",
+                    "grade": "High",
+                    "weight": {
+                        "measurement": 58,
+                        "units": "KGM"
+                    },
+                    "count": 20
+                }
+            ]
+        }
+    ]
+}

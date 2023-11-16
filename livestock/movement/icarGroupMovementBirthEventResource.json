@@ -1,0 +1,81 @@
+{
+    "description": "Event for recording group animal registrations (named Birth for consistency only) - uses ICAR schema extended to include details of individual animals in the group",
+    "$id": "/livestock/movement/group-birth-registration",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupMovementBirthEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "/livestock/movement/group-birth",
+            "id": "901cec63-6d3c-441a-a92b-6fb8d0507995",
+            "dataPointKey": "sample-data-movement-group-birth-1",
+            "eventDateTime": "2022-09-13T12:46:00.000Z",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "33/444/5555"
+            },
+            "groupMethod": "EmbeddedAnimalSet",
+            "countObserved": 3,
+            "embeddedAnimalSet": {
+                "resourceType": "/livestock/animal-set",
+                "id": "0ZK684",
+                "name": "Fictitious LIS test arrival set",
+                "purpose": "Movement",
+                "member": [
+                    {
+                        "scheme": "uk.lis",
+                        "id": "UK9999220"
+                    },
+                    {
+                        "scheme": "uk.lis",
+                        "id": "UK9999227"
+                    },
+                    {
+                        "scheme": "uk.lis",
+                        "id": "UK9999231"
+                    }
+                ]
+            },
+            "registrationReason": "Registered"
+        },
+        {
+            "resourceType": "/livestock/movement/group-birth",
+            "id": "b8cf007b-98ea-44ae-9369-eb7b4977821d",
+            "dataPointKey": "sample-data-movement-group-birth-2",
+            "eventDateTime": "2020-03-13T12:46:00.000Z",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "55/444/5555"
+            },
+            "traitLabel": {
+                "scheme": "uk.lis.trait",
+                "id": "Birth"
+            },
+            "responsible": "Tim Johnson",
+            "contemporaryGroup": "Elite heifers",
+            "remark": "Heifers born 13 March 2020",
+            "groupMethod": "InventoryClassification",
+            "countObserved": 3,
+            "inventoryClassification": {
+                "name": "Heifers born 13 March 2020",
+                "species": "Cattle",
+                "sex": "Female",
+                "birthPeriod": "2020-03",
+                "primaryBreed": {
+                    "scheme": "uk.lis.breed",
+                    "id": "FF"
+                },
+                "reproductiveStatus": "NotPregnant",
+                "lactationStatus": "Dry",
+                "productionPurposes": [
+                    "Milk",
+                    "Meat"
+                ],
+                "count": 3
+            },
+            "registrationReason": "Born"
+         }
+    ]
+}

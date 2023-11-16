@@ -1,0 +1,19 @@
+{
+    "description": "Base class for fisheries observation resources.",
+    "$id": "/types/FisheriesTripObservationType",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "../types/CoreObservationType.json"
+        }
+    ],
+    "required": [
+        "trip"
+    ],
+    "properties": {
+        "trip": {
+            "$ref": "../types/FisheriesTripType.json",
+            "description": "Identifies the trip on which the observations were made."
+        }
+    }
+}

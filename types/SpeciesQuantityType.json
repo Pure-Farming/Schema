@@ -1,0 +1,26 @@
+{
+    "description": "Used to record the quantity, in terms of weight and/or count, of a species and optionally for a grade.",
+    "$id": "/types/SpeciesQuantityType",
+    "type": "object",
+    "required": [
+        "species"
+    ],
+    "properties": {
+        "species": {
+            "type": "string",
+            "description": "Identifies the species being recorded."
+        },
+        "grade": {
+            "type": "string",
+            "description": "Optional. The grade of the species being recorded. May have value 'Total' indicating the total across all grades."
+        },
+        "weight": {
+            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/MassMeasureType.json",
+            "description": "The weight and units measured of this species and grade."
+        },
+        "count": {
+            "type": "integer",
+            "description": "The count observed of this species and grade."
+        }
+    }
+}

@@ -12,7 +12,7 @@
     ],
     "properties": {
         "product": {
-            "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/resources/ProductResource.json",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/resources/ProductResource.json",
             "description": "The agrichemical product in this inventory transaction."
         }
     }
