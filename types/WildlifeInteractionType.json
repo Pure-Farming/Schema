@@ -1,0 +1,32 @@
+{
+    "description": "Used to record interactions with or observations of wildlife.",
+    "$id": "/types/WildlifeInteractionType",
+    "type": "object",
+    "required": [
+        "speciesObserved"
+    ],
+    "properties": {
+        "speciesObserved": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/SpeciesQuantityType.json"
+            },
+            "description": "Identifies the wildlife species observed and optionally their quantity."
+        },
+        "animalsObserved": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/ObservedAnimal.json"
+            },
+            "description": "Records details of the individual wildlife animals observed."
+        },
+        "observer": {
+            "type": "string",
+            "description": "The observer on board."
+        },
+        "gearCode": {
+            "type": "string",
+            "description": "The code of the gear."
+        }
+    }
+}

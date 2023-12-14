@@ -1,0 +1,13 @@
+{
+    "description": "Defines values for pasture state.",
+  
+    "type": "string",
+  
+    "enum": [
+        "Growing", 
+        "PreGrazing", 
+        "PostGrazing", 
+        "PreHarvest", 
+        "PostHarvest" 
+    ]
+  }

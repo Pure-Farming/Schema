@@ -1,0 +1,9 @@
+{
+    "description": "The status of a wildlife animal.",
+  
+    "type": "string",
+  
+    "enum": [
+      "Alive"
+    ]
+  }

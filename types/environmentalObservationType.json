@@ -1,0 +1,25 @@
+{
+    "$id": "/types/environmentalObservationType",
+    "description": "Defines an environmental observation in terms of the metric, value, units and may identify an aggregation that has been applied.",
+    "required": [
+        "metric"
+    ], 
+    "properties": {
+        "metric": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json",
+            "description": "The environmental metric observed"
+        },
+        "value": {
+            "type": "number",
+            "description": "The value observed for the metric"
+        },
+        "units": {
+            "type": "string",
+            "description": "The units in which the value is measured. UN/CEFACT units SHOULD be used where these are applicable."
+        },
+        "aggregation": {
+            "$ref": "../enums/aggregationType.json",
+            "description": "The aggregation that has been applied in this metric."
+        }
+    }
+}

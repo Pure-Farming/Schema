@@ -1,0 +1,9 @@
+{
+    "description": "The fate of a wildlife animal.",
+  
+    "type": "string",
+  
+    "enum": [
+      "Injured"
+    ]
+  }

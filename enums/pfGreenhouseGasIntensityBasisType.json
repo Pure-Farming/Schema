@@ -1,0 +1,13 @@
+{
+    "description": "Defines basis for the greenhouse gas intensity metric. Most models provide one or a subset of these intensity measures.",
+    "type": "string",
+    "enum": [
+        "Area", 
+        "GrazedArea",
+        "EffectiveArea",
+        "ProductWeight",
+        "FatAndProteinCorrectedMilk",
+        "MilkSolids",
+        "Head"
+    ]
+}
