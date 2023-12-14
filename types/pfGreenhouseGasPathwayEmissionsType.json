@@ -1,0 +1,47 @@
+{
+    "description": "The details of a greenhouse gas emission or offset (negative emission) for a pathway.",
+    "$id": "types/pfGreenhouseGasPathwayEmissionsType",
+    "type": "object",
+    "required": [
+        "pathway"
+    ],
+    "properties": {
+        "pathway": {
+            "$ref": "../enums/pfGreenhouseGasPathwayType.json",
+            "description": "The pathway of this source. Use All if the emissions are for all pathways for this enterprise."
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of this emission source defined by the enterprise and pathway."
+        },
+        "scope": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3,
+            "description": "GHG emissions scope. 1 = direct emissions from owned or controlled sources, 2 = indirect from the generation of purchased energy, 3 = all other indirect emissions."
+        },
+        "CO2": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The emission of carbon dioxide by this source."
+        },
+        "N2O": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The emission of nitrous oxide by this source."
+        },
+        "CH4": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The emission of methane by this source."
+        },
+        "CO2e": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The emissions for this source expressed as carbon dioxide equivalents."
+        },
+        "CO2eIntensity": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfGreenhouseGasIntensityType.json"
+            },
+            "description": "Array of emission intensities for this emission source, each for the specified basis."
+        }
+    }
+}

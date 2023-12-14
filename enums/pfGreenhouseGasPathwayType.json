@@ -1,0 +1,25 @@
+{
+    "description": "Defines the greenhouse gas emissions pathways.",
+    "type": "string",
+    "enum": [
+        "All",
+        "Enteric", 
+        "Manure",
+        "Fertiliser",
+        "Fertiliser-NonUreaNitrogen",
+        "Fertiliser-UreaWithoutUreaseInhibitor",
+        "Fertiliser-UreaWithUreaseInhibitor",
+        "Lime",
+        "Dolomite",
+        "Pesticide",
+        "Anaerobic",
+        "Feed",
+        "Energy",
+        "Fuel",
+        "Irrigation",
+        "LandUseChange",
+        "Aforestation",
+        "Deforestation",
+        "ResidueManagement"
+    ]
+}

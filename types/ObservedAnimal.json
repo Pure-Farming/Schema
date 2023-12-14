@@ -1,0 +1,34 @@
+{
+    "description": "Used to record the observation of a wildlife animal.",
+    "$id": "/types/ObservedAnimal",
+    "type": "object",
+    "required": [
+        "species"
+    ],
+    "properties": {
+        "species": {
+            "type": "string",
+            "description": "Identifies the species being recorded."
+        },
+        "natureInteraction": {
+            "type": "string",
+            "description": "The nature of the interaction with the animal."
+        },
+        "status": {
+            "$ref": "../enums/WildlifeAnimalStatus.json",
+            "description": "The status of the observed animal."
+        },
+        "fate": {
+            "$ref": "../enums/WildlifeAnimalFate.json",
+            "description": "The fate of the observed animal."
+        },
+        "bandOrTag": {
+            "type": "string",
+            "description": "The identifier from the band or tag on the animal."
+        },
+        "comments": {
+            "type": "string",
+            "description": "Comments on the animal or the interaction with it."
+        }
+    }
+}

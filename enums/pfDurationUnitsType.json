@@ -1,8 +1,9 @@
 {
-    "description": "Defines the unit of duration from RFC3339.",
+    "description": "Defines the unit of duration from RFC3339. (T = 10 days)",
     "type": "string",
     "enum": [
         "W",
+        "T",
         "M",
         "Y"
     ]
