@@ -1,6 +1,7 @@
 {
-    "description": "Specifies the mass of the gas and its mass in CO2 equivalents.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "types/pfGreenhouseGasMassType",
+    "description": "Specifies the mass of the gas and its mass in CO2 equivalents.",
     "type": "object",
     "properties": {
         "massGas": {

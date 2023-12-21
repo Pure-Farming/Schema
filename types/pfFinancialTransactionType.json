@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/pfFinancialTransactionType",
     "description": "pfFinancialTransactionType defines a financial transaction that may be a sale, purchase, death, birth, stocktake, transfer out, aging out.",
     "type": "object",
-    "$id": "types/pfFinancialTransactionType",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarEventCoreResource.json"
@@ -56,7 +57,7 @@
             }
         },
         "resourceReference": {
-            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarResourceReferenceType.json", 
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarResourceReferenceType.json",
             "description": "Reference to an associated resource such as the matching inventory transaction record or livestock movement event."
         }
     }

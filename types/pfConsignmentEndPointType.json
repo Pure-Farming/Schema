@@ -1,18 +1,19 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "consignmentDate":{
-            "type":"string",
-            "format":"date-time",
-            "description":"The date the load/consignment was sent or received by the party"
+        "consignmentDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date the load/consignment was sent or received by the party"
         },
-        "organisation":{
+        "organisation": {
             "$ref": "pfOrganisationReferenceType.json",
-            "description":"Reference or identification of the organisation or organisation point"
+            "description": "Reference or identification of the organisation or organisation point"
         },
-        "feature":{
+        "feature": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/FeatureReferenceType.json",
-            "description":"Reference or identification of the feature (if the source or destination is a feature)."
+            "description": "Reference or identification of the feature (if the source or destination is a feature)."
         }
     }
 }

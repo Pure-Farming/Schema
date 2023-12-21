@@ -1,6 +1,7 @@
 {
-    "description": "The details of a greenhouse gas emission or offset (negative emission) for a pathway.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "types/pfGreenhouseGasPathwayEmissionsType",
+    "description": "The details of a greenhouse gas emission or offset (negative emission) for a pathway.",
     "type": "object",
     "required": [
         "pathway"

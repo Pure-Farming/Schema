@@ -1,6 +1,7 @@
 {
-    "description": "An event in which a set of observations on a carcass, side or primal are recorded by an operator at a specified date-time.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/carcass/carcass-observations-event",
+    "description": "An event in which a set of observations on a carcass, side or primal are recorded by an operator at a specified date-time.",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarCarcassObservationsEventResource.json"

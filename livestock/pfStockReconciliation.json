@@ -1,6 +1,7 @@
 {
-    "description": "The summary stock reconciliation for the specified period for a group of livestock defined by an inventory classification.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/stock-reconciliation",
+    "description": "The summary stock reconciliation for the specified period for a group of livestock defined by an inventory classification.",
     "required": [
         "startDate",
         "endDate"

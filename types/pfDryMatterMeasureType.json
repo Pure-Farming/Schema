@@ -1,6 +1,7 @@
 {
-    "description": "Specifies the dry matter yield in terms of a mass measurement and a spatialMetric.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "types/dryMatterMeasureType",
+    "description": "Specifies the dry matter yield in terms of a mass measurement and a spatialMetric.",
     "type": "object",
     "properties": {
         "measure": {

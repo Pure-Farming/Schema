@@ -1,11 +1,12 @@
 {
-    "description": "Defines a livestock financial transaction such as a sale, purchase, death.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/financial/pfLivestockFinancialTransactionResource",
+    "description": "Defines a livestock financial transaction such as a sale, purchase, death.",
     "allOf": [
         {
             "$ref": "../types/pfFinancialTransactionType.json"
         }
-    ], 
+    ],
     "properties": {
         "classificationId": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
@@ -23,7 +24,9 @@
             "oneOf": [
                 {
                     "type": "string",
-                    "enum": ["head"]
+                    "enum": [
+                        "head"
+                    ]
                 },
                 {
                     "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/uncefactMassUnitsType.json"
@@ -33,7 +36,10 @@
         },
         "weightType": {
             "type": "string",
-            "enum": ["live","carcass"],
+            "enum": [
+                "live",
+                "carcass"
+            ],
             "description": "Indicates whether the transaction is for live animals or for carcasses."
         }
     },

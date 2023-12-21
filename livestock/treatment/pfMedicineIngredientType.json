@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/treatment/medicine-ingredient-type",
     "description": "This identifies an ingredient of a medicine",
     "type": "object",

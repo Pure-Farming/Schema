@@ -1,9 +1,10 @@
 {
-    "type": "string",
-    "enum": [
-        "Location",
-        "ExistingAnimalSet",
-        "InventoryClassification"
-      ],  
-    "description": "Indicates method used to create the group referred to."
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "string",
+  "enum": [
+    "Location",
+    "ExistingAnimalSet",
+    "InventoryClassification"
+  ],
+  "description": "Indicates method used to create the group referred to."
 }

@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/treatment/medicine-classification",
     "description": "The classification or type of medicine.   Enumeration modified from the PubCRIS database.",
     "type": "string",

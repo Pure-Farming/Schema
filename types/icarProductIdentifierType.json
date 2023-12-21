@@ -1,6 +1,6 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "description": "Provides a scheme + identifier mechanism for product types.",
-    
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json"

@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "description": "The Pasture Cover event records a pasture cover observation for a geospatial feature such as a plot.",
     "$id": "/crop/pasture-cover-event",
     "type": "object",
@@ -88,8 +89,8 @@
             "remark": "Pasture cover Apr 22: Oak Reach: C-Dax",
             "methodUsed": "PastureProbe",
             "dryMatter": {
-                "measure":  { 
-                    "measurement":  1635,
+                "measure": {
+                    "measurement": 1635,
                     "resolution": 5,
                     "units": "KGM"
                 },
@@ -97,7 +98,7 @@
                     "measurement": 1,
                     "resolution": 0.01,
                     "units": "HAR"
-                }          
+                }
             },
             "pastureHeight": {
                 "measurement": 6.1,

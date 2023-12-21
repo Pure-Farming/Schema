@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/types/icarStockArrivalReasonType",
     "description": "Defines the number of stock that arrived for a specified arrival reason.",
     "type": "object",
-    "$id": "/types/icarStockArrivalReasonType",
     "required": [
         "reason"
     ],

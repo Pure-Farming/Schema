@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/treatment/medicine-resource",
     "description": "Defines a medicine and its withholding requirements within a scheme.  This extends the ICAR schema.",
     "allOf": [

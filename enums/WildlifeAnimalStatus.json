@@ -1,9 +1,8 @@
 {
-    "description": "The status of a wildlife animal.",
-  
-    "type": "string",
-  
-    "enum": [
-      "Alive"
-    ]
-  }
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "description": "The status of a wildlife animal.",
+  "type": "string",
+  "enum": [
+    "Alive"
+  ]
+}

@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/inventory/agrichemical-transaction",
     "description": "Agrichemical inventory transaction resource.",
     "type": "object",
-    "$id": "/inventory/agrichemical-transaction",
     "allOf": [
         {
             "$ref": "../types/inventoryTransactionType.json"

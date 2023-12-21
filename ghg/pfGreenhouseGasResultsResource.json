@@ -1,6 +1,7 @@
 {
-    "description": "Defines greenhouse gas emissions and offsets for a period, optionally for a feature.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/ghg/pfGreenhouseGasResultsResource",
+    "description": "Defines greenhouse gas emissions and offsets for a period, optionally for a feature.",
     "type": "object",
     "required": [
         "startDate",
@@ -11,7 +12,7 @@
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/ResourceType.json"
         }
-    ], 
+    ],
     "properties": {
         "holding": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/FeatureReferenceType.json",
@@ -104,7 +105,7 @@
             "description": "Array of greenhouse gas offsets or sequestrations by source."
         }
     },
-    "examples":[
+    "examples": [
         {
             "resourceType": "/ghg/greenhouse-gas-results",
             "dataPointKey": "sample-greenhouse-gas-results-blnz-1",
@@ -184,7 +185,6 @@
                     },
                     "denominator": "Area",
                     "denominatorUnits": "HAR"
-        
                 }
             ],
             "emissionsSources": [
@@ -236,8 +236,8 @@
                     "enterprise": "Sheep",
                     "name": "Sheep",
                     "pathwayEmissions": [
-                        {    
-                            "pathway": "All",      
+                        {
+                            "pathway": "All",
                             "scope": 1,
                             "CH4": {
                                 "measurement": 125239,
@@ -252,12 +252,12 @@
                                 "units": "KGM"
                             }
                         }
-                    ]   
+                    ]
                 },
                 {
                     "enterprise": "All",
                     "pathwayEmissions": [
-                        {            
+                        {
                             "pathway": "Fertiliser-NonUreaNitrogen",
                             "name": "Pathway non-urea nitrogen fertiliser",
                             "scope": 1,
@@ -271,7 +271,6 @@
                             }
                         },
                         {
-        
                             "pathway": "Fertiliser-UreaWithoutUreaseInhibitor",
                             "name": "Pathway Urea without urease inhibitor",
                             "scope": 1,
@@ -293,7 +292,7 @@
                 {
                     "enterprise": "ExoticForest",
                     "pathwayEmissions": [
-                        { 
+                        {
                             "pathway": "Deforestation",
                             "name": "Exotic forest deforestation",
                             "scope": 1,
@@ -309,7 +308,7 @@
                 {
                     "enterprise": "ExoticForest",
                     "pathwayEmissions": [
-                        { 
+                        {
                             "pathway": "All",
                             "name": "28 years of carbon storage, averaged per year",
                             "CO2e": {
@@ -322,7 +321,7 @@
                 {
                     "enterprise": "Shrubland",
                     "pathwayEmissions": [
-                        { 
+                        {
                             "pathway": "All",
                             "name": "Total carbon stock associated with shrubland older and younger than 30 years old",
                             "CO2e": {
@@ -697,7 +696,7 @@
                             "CH4": {
                                 "measurement": 144941.31,
                                 "units": "KGM"
-                            }, 
+                            },
                             "N2O": {
                                 "measurement": 20818.00,
                                 "units": "KGM"
@@ -759,7 +758,7 @@
                             }
                         }
                     ]
-                } 
+                }
             ]
         }
     ]

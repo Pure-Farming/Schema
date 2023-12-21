@@ -1,9 +1,10 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "description": "Defines the greenhouse gas emissions pathways.",
     "type": "string",
     "enum": [
         "All",
-        "Enteric", 
+        "Enteric",
         "Manure",
         "Fertiliser",
         "Fertiliser-NonUreaNitrogen",

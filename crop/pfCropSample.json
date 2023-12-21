@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/crop/sample",
     "description": "A general plant sampling schema - a combination of WorkItemType and AnalysisSampleResource given we can't actually override in a json schema.",
     "type": "object",

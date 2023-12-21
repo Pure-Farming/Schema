@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/inventory/icarFeedTransactionResource",
     "description": "An inventory transaction resource for a feed product.",
     "type": "object",
-    "$id": "/inventory/icarFeedTransactionResource",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarFeedTransactionResource.json"

@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/feed/icarGroupFeedingEventResource",
     "description": "Event for recording feeding of a group of animals where individual animal feeding has not been recorded.  Individual animal feed intake should be recorded using icarFeedIntakeEventResource.json.",
     "allOf": [
@@ -59,7 +60,6 @@
                     "entitlement": {
                         "unitCode": "GRM",
                         "value": 1027
-
                     },
                     "feedConsumption": {
                         "unitCode": "GRM",

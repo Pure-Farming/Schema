@@ -1,6 +1,7 @@
 {
-    "description": "The Weight event records a live weight observation of an animal. Calls the ICAR Weight Event resource",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/weights/animal-weight-event",
+    "description": "The Weight event records a live weight observation of an animal. Calls the ICAR Weight Event resource",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarWeightEventResource.json"

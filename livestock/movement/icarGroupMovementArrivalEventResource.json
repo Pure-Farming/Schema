@@ -1,6 +1,7 @@
 {
-    "description": "Event for recording group movement arrival - uses ICAR schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/movement/group-arrival",
+    "description": "Event for recording group movement arrival - uses ICAR schema",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupMovementArrivalEventResource.json"

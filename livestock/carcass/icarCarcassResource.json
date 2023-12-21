@@ -1,6 +1,7 @@
 {
-    "description": "A carcass identifies a single animal which is processed at a plant. This embeds the ICAR carcass resource.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/carcass/carcass",
+    "description": "A carcass identifies a single animal which is processed at a plant. This embeds the ICAR carcass resource.",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarCarcassResource.json"

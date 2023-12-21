@@ -1,12 +1,11 @@
 {
-    "description": "Defines how the set of animals in a group event is defined.  Differs from icarGroupEventMethodType with additional value in enum.",
-  
-    "type": "string",
-  
-    "enum": [
-      "ExistingAnimalSet",
-      "EmbeddedAnimalSet",
-      "InventoryClassification",
-      "EmbeddedAnimalSetAndInventoryClassification"
-    ]
-  }
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "description": "Defines how the set of animals in a group event is defined.  Differs from icarGroupEventMethodType with additional value in enum.",
+  "type": "string",
+  "enum": [
+    "ExistingAnimalSet",
+    "EmbeddedAnimalSet",
+    "InventoryClassification",
+    "EmbeddedAnimalSetAndInventoryClassification"
+  ]
+}
