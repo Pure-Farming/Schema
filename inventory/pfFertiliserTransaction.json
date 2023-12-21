@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/inventory/fertiliser-transaction",
     "description": "Fertiliser inventory transaction resource.",
     "type": "object",
-    "$id": "/inventory/fertiliser-transaction",
     "allOf": [
         {
             "$ref": "../types/inventoryTransactionType.json"

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "/core/holding",
   "description": "A resource type for a holding",
   "allOf": [
@@ -6,7 +7,7 @@
       "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/resources/HoldingResource.json"
     },
     {
-        "$ref": "../types/pfSpatialResourceType.json"
+      "$ref": "../types/pfSpatialResourceType.json"
     }
   ],
   "examples": [
@@ -38,11 +39,26 @@
           "type": "Polygon",
           "coordinates": [
             [
-              [100.0, 0.0],
-              [101.0, 0.0],
-              [101.0, 1.0],
-              [100.0, 1.0],
-              [100.0, 0.0]
+              [
+                100.0,
+                0.0
+              ],
+              [
+                101.0,
+                0.0
+              ],
+              [
+                101.0,
+                1.0
+              ],
+              [
+                100.0,
+                1.0
+              ],
+              [
+                100.0,
+                0.0
+              ]
             ]
           ]
         }

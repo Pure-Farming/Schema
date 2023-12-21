@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/types/icarStockDepartureKindType",
     "description": "Defines the number of stock that departed of a specified departure kind.",
     "type": "object",
-    "$id": "/types/icarStockDepartureKindType",
     "required": [
         "kind"
     ],

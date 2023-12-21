@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/soil/sample-plan",
     "description": "A general soil sampling schema for planned sampling",
     "allOf": [
@@ -16,7 +16,10 @@
             "type": "string"
         }
     },
-    "required": ["status", "operation"],
+    "required": [
+        "status",
+        "operation"
+    ],
     "examples": [
         {
             "id": "3772c0e4-f3a6-4fbf-b6cb-38c21316cf83",

@@ -1,6 +1,7 @@
 {
-  "description": "Observation to record the end of a fishing trip.",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "/fisheries/trip-end-observation",
+  "description": "Observation to record the end of a fishing trip.",
   "type": "object",
   "allOf": [
     {
@@ -36,7 +37,9 @@
           "scheme": "com.deckhand.vessel",
           "id": "V88810000A"
         },
-        "licences": ["S999"],
+        "licences": [
+          "S999"
+        ],
         "startDateTime": "2023-10-31T12:38:00Z",
         "fishery": "ABC123",
         "manDays": 1.0,

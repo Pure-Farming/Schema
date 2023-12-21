@@ -1,6 +1,7 @@
 {
-    "description": "Base class for fisheries observation resources.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/types/FisheriesTripObservationType",
+    "description": "Base class for fisheries observation resources.",
     "type": "object",
     "allOf": [
         {

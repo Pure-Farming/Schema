@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "types/organisationReference",
     "type": "object",
-    "description":"This is a linking object that is easier to understand than incorporating an entire Organization. It lets you identify and name the organisation, and provide a URI to it if needed.",
+    "description": "This is a linking object that is easier to understand than incorporating an entire Organization. It lets you identify and name the organisation, and provide a URI to it if needed.",
     "properties": {
         "leiCode": {
             "type": "string",
@@ -18,7 +18,7 @@
             "description": "Provides a URI link to the organisation"
         },
         "registration": {
-            "$ref":"https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json"
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json"
         },
         "gln": {
             "type": "string",

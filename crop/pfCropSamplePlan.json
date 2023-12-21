@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/crop/sample-plan",
     "description": "A general plant sampling schema for planned sampling",
     "allOf": [
@@ -15,7 +16,10 @@
             "type": "string"
         }
     },
-    "required": ["status", "operation"],
+    "required": [
+        "status",
+        "operation"
+    ],
     "examples": [
         {
             "id": "3772c0e4-f3a6-4fbf-b6cb-38c21316cf83",

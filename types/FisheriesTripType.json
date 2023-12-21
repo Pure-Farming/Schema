@@ -1,8 +1,13 @@
 {
-  "description": "FisheriesTripType captures the core features of a fishing trip.",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "/fisheries/FisheriesTripType",
+  "description": "FisheriesTripType captures the core features of a fishing trip.",
   "type": "object",
-  "required": ["tripId", "vesselIdentifier", "startDateTime"],
+  "required": [
+    "tripId",
+    "vesselIdentifier",
+    "startDateTime"
+  ],
   "properties": {
     "tripId": {
       "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json",
@@ -71,7 +76,9 @@
         "scheme": "com.deckhand.vessel",
         "id": "V88810000A"
       },
-      "licences": ["S999"],
+      "licences": [
+        "S999"
+      ],
       "startDateTime": "2023-10-03T13:49:28Z",
       "endDateTime": "2023-10-03T14:20:28Z",
       "fishery": "ABC123",

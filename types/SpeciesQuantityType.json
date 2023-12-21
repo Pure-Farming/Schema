@@ -1,6 +1,7 @@
 {
-    "description": "Used to record the quantity, in terms of weight and/or count, of a species and optionally for a grade.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/types/SpeciesQuantityType",
+    "description": "Used to record the quantity, in terms of weight and/or count, of a species and optionally for a grade.",
     "type": "object",
     "required": [
         "species"

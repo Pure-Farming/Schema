@@ -1,6 +1,7 @@
 {
-    "description": "Used to record the observation of a wildlife animal.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/types/ObservedAnimal",
+    "description": "Used to record the observation of a wildlife animal.",
     "type": "object",
     "required": [
         "species"

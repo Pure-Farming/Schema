@@ -1,6 +1,7 @@
 {
-    "description": "The SensorObservationEventResource records observations by a sensor on a geospatial feature for a given date-time.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/environment/SensorObservationEventResource",
+    "description": "The SensorObservationEventResource records observations by a sensor on a geospatial feature for a given date-time.",
     "type": "object",
     "allOf": [
         {

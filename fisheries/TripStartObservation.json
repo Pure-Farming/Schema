@@ -1,6 +1,7 @@
 {
-  "description": "Observation to record the start of a fishing trip. Mainly used when data is being delivered incrementally.",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "/fisheries/trip-start-observation",
+  "description": "Observation to record the start of a fishing trip. Mainly used when data is being delivered incrementally.",
   "type": "object",
   "allOf": [
     {

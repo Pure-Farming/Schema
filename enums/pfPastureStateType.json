@@ -1,13 +1,12 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "description": "Defines values for pasture state.",
-  
     "type": "string",
-  
     "enum": [
-        "Growing", 
-        "PreGrazing", 
-        "PostGrazing", 
-        "PreHarvest", 
-        "PostHarvest" 
+        "Growing",
+        "PreGrazing",
+        "PostGrazing",
+        "PreHarvest",
+        "PostHarvest"
     ]
-  }
+}

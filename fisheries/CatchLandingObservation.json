@@ -1,6 +1,7 @@
 {
-  "description": "Observation to record details of a catch landing.",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "/fisheries/catch-landing-observation",
+  "description": "Observation to record details of a catch landing.",
   "type": "object",
   "allOf": [
     {
@@ -83,7 +84,9 @@
           "scheme": "com.deckhand.vessel",
           "id": "V88810000A"
         },
-        "licences": ["S999"],
+        "licences": [
+          "S999"
+        ],
         "startDateTime": "2023-10-31T11:49:28Z",
         "fishery": "ABC123"
       },

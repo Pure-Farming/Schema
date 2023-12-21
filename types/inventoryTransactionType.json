@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/inventoryTransactionType",
     "description": "Inventory Transaction based on Geospatial defines a transaction on a product inventory where the transaction may be a receipt, disposal, on hand, stocktake, use",
     "type": "object",
-    "$id": "types/inventoryTransactionType",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/ObservationType.json"

@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/icarInventoryTransactionType",
     "description": "Inventory Transaction defines a transaction on a product inventory where the transaction may be a receipt, disposal, on hand, stocktake, use",
     "type": "object",
-    "$id": "types/icarInventoryTransactionType",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarEventCoreResource.json"

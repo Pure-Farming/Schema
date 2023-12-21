@@ -1,6 +1,7 @@
 {
-    "description": "The climate observations event records climate sensor observations for a geospatial feature and optionally references a sampled feature.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/environment/pfClimateObservationsEvent",
+    "description": "The climate observations event records climate sensor observations for a geospatial feature and optionally references a sampled feature.",
     "type": "object",
     "allOf": [
         {

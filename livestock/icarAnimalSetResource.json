@@ -1,6 +1,7 @@
 {
-    "description": "Defines a set of identified animals which may be created for a particular purpose.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/animal-set",
+    "description": "Defines a set of identified animals which may be created for a particular purpose.",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarAnimalSetResource.json"

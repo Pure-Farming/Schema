@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "description": "Abstract class supporting an observation.  Has the properties of ObservationType but excludes holding and features.",
     "type": "object",
     "allOf": [
@@ -8,7 +9,7 @@
     ],
     "required": [
         "observationDate"
-    ], 
+    ],
     "properties": {
         "observationDate": {
             "type": "string",
@@ -19,7 +20,7 @@
             "type": "string",
             "format": "date-time",
             "description": "ISO UTC DateTime. The start time of the phenomenon being observed."
-        },        
+        },
         "phenomenonEndTime": {
             "type": "string",
             "format": "date-time",
