@@ -13,7 +13,7 @@
         },
         "hours": {
             "type": "number",
-            "description": "The withholding period of the animal after being treated with the medicine (in hours)."
+            "description": "The withholding period of the animal after being treated with the medicine (in hours). Set -1 for Unlimited time."
         },
         "market": {
             "type": "string",
@@ -23,5 +23,31 @@
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/icarAnimalSpecieType.json",
             "description": "The species to which this withholding applies."
         }
-    }
+    },
+    "examples": [
+        {
+            "productType": "Meat",
+            "hours": 24,
+            "market": "au.gov.apvma.whp",
+            "species": "Sheep"
+        },
+        {
+            "productType": "Meat",
+            "hours": 168,
+            "market": "au.gov.apvma.esi",
+            "species": "Sheep"
+        },
+        {
+            "productType": "Milk",
+            "hours": 0,
+            "market": "au.gov.apvma.whp",
+            "species": "Cattle"
+        },
+        {
+            "productType": "Milk",
+            "hours": -1,
+            "market": "au.gov.apvma.whp",
+            "species": "Goat"
+        }
+    ]
 }

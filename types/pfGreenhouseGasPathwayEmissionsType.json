@@ -22,15 +22,15 @@
             "description": "GHG emissions scope. 1 = direct emissions from owned or controlled sources, 2 = indirect from the generation of purchased energy, 3 = all other indirect emissions."
         },
         "CO2": {
-            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "$ref": "../types/pfGreenhouseGasMassType.json",
             "description": "The emission of carbon dioxide by this source."
         },
         "N2O": {
-            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "$ref": "../types/pfGreenhouseGasMassType.json",
             "description": "The emission of nitrous oxide by this source."
         },
         "CH4": {
-            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "$ref": "../types/pfGreenhouseGasMassType.json",
             "description": "The emission of methane by this source."
         },
         "CO2e": {
@@ -44,5 +44,58 @@
             },
             "description": "Array of emission intensities for this emission source, each for the specified basis."
         }
-    }
+    },
+    "examples": [
+        {            
+            "pathway": "Fertiliser-NonUreaNitrogen",
+            "name": "Pathway non-urea nitrogen fertiliser",
+            "scope": 1,
+            "N2O": {
+                "massGas": {
+                    "measurement": 85,
+                    "units": "KGM"
+                }
+            },
+            "CO2e": {
+                "measurement": 25277,
+                "units": "KGM"
+            }
+        },
+        {
+            "pathway": "UrineAndDung",
+            "scope": 1,
+            "CH4": {
+                "massCO2e": {
+                    "measurement": 77655,
+                    "units": "KGM"
+                }
+            },
+            "N2O": {
+                "massCO2e": {
+                    "measurement": 284736,
+                    "units": "KGM"
+                }
+            }
+        },
+        {    
+            "pathway": "All",      
+            "scope": 1,
+            "CH4": {
+                "massGas": {
+                    "measurement": 125239,
+                    "units": "KGM"
+                }
+            },
+            "N2O": {
+                "massGas": {
+                    "measurement": 1765,
+                    "units": "KGM"
+                }
+            },
+            "CO2e": {
+                "measurement": 3656911,
+                "units": "KGM"
+            }
+        }
+    ]
 }

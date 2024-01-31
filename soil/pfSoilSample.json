@@ -30,5 +30,64 @@
         "id",
         "meta",
         "observationDate"
+    ],
+    "examples": [
+        {
+            "id": "0e952cd8-dffd-4fb5-b4fa-8a245c06c6d9",
+            "description": "Soil sampling 23/05/2024",
+            "meta": {
+                "sourceId": {
+                    "id": "123456789",
+                    "scheme": "uk.co.soilsampling.job"
+                },
+                "modified": "2024-05-24T11:16:56.000Z"
+            },
+            "observationDate": "2024-05-23T00:00:00.000Z",
+            "holdingId": "020a73a2-6b9e-451a-9984-62a458670746",
+            "featureId": "2b3df1bf-8b53-4429-a531-df6bb4cbc608",
+            "priority": "Medium",
+            "samplingMethod": "https://www.extension.purdue.edu/extmedia/AY/AY-368-w.pdf",
+            "samplingGeometry": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "MultiPoint",
+                    "coordinates": [
+                        [
+                            [
+                                175.36789819531776,
+                                -37.74521332738721
+                            ],
+                            [
+                                175.36432165382598,
+                                -37.74747616457623
+                            ],
+                            [
+                                175.36847864019472,
+                                -37.75157825727582
+                            ],
+                            [
+                                175.37224789227093,
+                                -37.74920317795343
+                            ],
+                            [
+                                175.36789819531776,
+                                -37.74521332738721
+                            ]
+                        ]
+                    ]
+                }
+            },
+            "depth": {
+                "lower": {
+                    "measurement": 75,
+                    "units": "MMT"
+                },
+                "upper": {
+                    "measurement": 0,
+                    "units": "MMT"
+                }
+            }
+        }
     ]
 }

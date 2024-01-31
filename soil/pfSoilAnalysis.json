@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/soil/analysis",
-    "description": "The analyis result for soil sampling",
+    "description": "The analysis result for soil sampling",
     "properties": {
         "analysis": {
             "type": "array",
@@ -9,5 +9,56 @@
                 "$ref": "../types/pfLaboratoryAnalysisType.json"
             }
         }
-    }
+    },
+    "examples": [
+        {
+            "analysis": [
+                {
+                    "laboratory": {
+                        "leiCode": "549300BCD1BCD12BCD12",
+                        "name": "Glen AI Laboratory Ltd",
+                        "gln": "9429042462125"
+                    },
+                    "laboratoryIdentifier": "23/391/015",
+                    "sessionIdentifier": "BS7759",
+                    "responsible": "Amy Watson",
+                    "results": [
+                        {
+                            "name": "pH",
+                            "status": "completed",
+                            "metric": "https://glenailab.co.nz/pH",
+                            "value": 6.2
+                        },
+                        {
+                            "name": "Olsen Phosphorus",
+                            "status": "completed",
+                            "metric": "https://glenailab.co.nz/test=olsenp",
+                            "value": 42.5,
+                            "unit": "M1",
+                            "errorStatistic": 0.1
+                        }
+                    ]
+                },
+                {
+                    "laboratory": {
+                        "leiCode": "650411CDE2CDE23CDE23",
+                        "name": "Soil Lab Ltd",
+                        "gln": "9530153573236"
+                    },
+                    "laboratoryIdentifier": "23-6183",
+                    "sessionIdentifier": "8GF842",
+                    "responsible": "Perry Perry",
+                    "results": [
+                        {
+                            "name": "Total N",
+                            "status": "completed",
+                            "metric": "https://soillab.co.nz/test=totalN",
+                            "value": 3.4,
+                            "unit": "P1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

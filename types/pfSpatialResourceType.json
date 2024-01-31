@@ -12,5 +12,40 @@
             "$ref": "https://raw.githubusercontent.com/daniel-buchanan/geoJsonSchema/main/schema/geoJsonPoint.json",
             "description": "The centroid of the spatial resource. If the spatial feature is not convex, the centroid may lie outside the bounds of the spatial feature"
         }
-    }
+    },
+    "examples": [
+        {
+            "spatialFeature": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [
+                                175.3059575024784,
+                                -37.779497288615744
+                            ],
+                            [
+                                175.3059575024784,
+                                -37.77961300783813
+                            ],
+                            [
+                                175.31101680818904,
+                                -37.77961300783813
+                            ],
+                            [
+                                175.31101680818904,
+                                -37.779497288615744
+                            ],
+                            [
+                                175.3059575024784,
+                                -37.779497288615744
+                            ]
+                        ]
+                    ]
+                }
+            }
+        }
+    ]
 }

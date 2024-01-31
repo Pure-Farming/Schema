@@ -39,5 +39,17 @@
             "type": "string",
             "description": "The category of device."
         }
-    }
+    },
+    "examples": [
+        {
+            "id": "LAU6",
+            "serial": "LAU-6-A3476",
+            "name": "LAU6 Flow Monitor",
+            "description": "LAU6 smart farm irrigation monitoring integrated system",
+            "softwareVersion": "2.0.5",
+            "hardwareVersion": "8.1",
+            "manufacturer": "Farmsmart Irrigation Ltd",
+            "deviceCategory": "PulseMeter"
+        }
+    ]
 }

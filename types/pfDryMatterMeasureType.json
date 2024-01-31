@@ -1,7 +1,6 @@
 {
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "types/dryMatterMeasureType",
     "description": "Specifies the dry matter yield in terms of a mass measurement and a spatialMetric.",
+    "$id": "types/dryMatterMeasureType",
     "type": "object",
     "properties": {
         "measure": {
@@ -12,5 +11,18 @@
             "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/AreaMeasureType.json",
             "description": "The area in area units."
         }
-    }
+    },
+    "examples": [
+        {
+            "measure": {
+                "measurement": 6574,
+                "resolution": 1,
+                "units": "KGM"
+            },
+            "areaMetric": {
+                "measurement": 1,
+                "units": "HAR"
+            }
+        }
+    ]
 }

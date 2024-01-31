@@ -1,0 +1,151 @@
+{
+    "description": "Holds statistics for an enterprise for the specified period. For livestock may be for a group defined by an inventory classification, animal set, or for a location.",
+    "$id": "/core/enterprise-statistics",
+    "required": [
+        "enterprise",
+        "startDate",
+        "id",
+        "groupMethod"
+    ],
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarResource.json"
+        }
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier (UUID) used within the current server to identify the resource."
+        },
+        "enterprise": {
+            "$ref": "../enums/pfEnterpriseType.json",
+            "description": "The type of enterprise from which the statistics have been derived."
+        },
+        "groupMethod": {
+            "$ref": "../enums/pfGroupMethod.json",
+            "description": "Identifies whether the statistics are for the location, an inventory classification or an animal set. For non-livestock enterprises, use 'location'."
+        },
+        "animalSetReference": { 
+            "type": "string",
+            "description": "Optional unique animal set identifier from the source system for animal set these statistics refer to."
+        },
+        "startDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Date of the start of the period to which the statistics apply"
+        },
+        "endDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
+            "description": "Date of the end of the period to which the statistics apply"
+        },
+        "duration": {
+            "$ref": "../enums/pfDurationUnitsType.json",
+            "description": "Defines the duration that the statistics apply to: week, month or year"
+        },
+        "inventoryClassification": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "description": "Optional inventory classification which defines the group of animals by their characteristics to which the statistics refer"
+        },
+        "statistics": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfEnterpriseStatisticsType.json"
+            },
+            "description": "The array of statistics."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "pfEnterpriseStatistics",
+            "id": "53d69761-0ed3-4e95-9a49-77804f1dea57",
+            "location": {
+                "scheme": "uk.cph",
+                "id": "33/444/5555"
+            },
+            "enterprise": "Sheep",
+            "startDate": "2022-09-01T00:00:00.000Z",
+            "endDate": "2022-09-30T23:59:00.000Z",
+            "duration": "M",
+            "groupMethod": "InventoryClassification",
+            "inventoryClassification": {
+                "name": "Breeding ewes",
+                "species": "Sheep",
+                "sex": "Female",
+                "birthPeriod": "2016-01-01/2021-12-31",
+                "count": 375
+            },
+            "statistics": [
+                {
+                    "metric": {
+                        "scheme": "antibioticUsage",
+                        "id": "udder"
+                    },
+                    "method": {
+                        "scheme": "eu.ema",
+                        "id": "DDDVet"
+                    },
+                    "lastKnownValue": 2,
+                    "lastKnownValueDate": "2022-08-01",
+                    "aggregation": "Count"
+                }
+            ]
+        },
+        {
+            "resourceType": "pfEnterpriseStatistics",
+            "id": "fc74058a-08d1-477b-97ec-1b10321316e3",
+            "location": {
+                "scheme": "nz.co.dairyco.supplynumber",
+                "id": "37581"
+            },
+            "meta":{
+                "source": "nz.myfarmco.dairystats",
+                "modified": "2022-07-03T11:00:00Z"     
+            },
+            "enterprise": "Dairy",
+            "startDate": "2021-06-01T00:00:00.000Z",
+            "endDate": "2022-05-31T00:00:00.000Z",
+            "duration": "Y",
+            "groupMethod": "Location",
+            "statistics": [
+                {
+                    "metric": {
+                        "scheme": "nz.co.dairyco.keyinfo",
+                        "id": "EffectiveArea"                   
+                    },
+                    "units": "HAR",
+                    "value": 160
+                },
+                {
+                    "metric": {
+                        "scheme": "nz.co.dairyco.keyinfo",
+                        "id": "PeakCows"                   
+                    },
+                    "units": "cows",
+                    "value": 558
+                },
+                {
+                    "metric": {
+                        "scheme": "nz.co.dairyco.keyinfo",
+                        "id": "StockingRate"                   
+                    },
+                    "units": "cows/ha",
+                    "value": 3.5
+                },
+                {
+                    "metric": {
+                        "scheme": "nz.co.dairyco.keyinfo",
+                        "id": "SomaticCellCount"                   
+                    },
+                    "method": {
+                        "scheme": "nz.co.dairyco.scc",
+                        "id": "BulkMilk"
+                    },
+                    "units": "cells/ml",
+                    "value": 142485,
+                    "lastKnownValue": 117358,
+                    "lastKnownValueDate": "2021-05-31",
+                    "aggregation": "Average"
+                }
+            ]
+        }
+    ]
+}

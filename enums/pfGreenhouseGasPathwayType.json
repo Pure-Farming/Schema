@@ -5,22 +5,26 @@
     "enum": [
         "All",
         "Enteric",
-        "Manure",
+        "UrineAndDung",
+        "EffluentSystem",
         "Fertiliser",
         "Fertiliser-NonUreaNitrogen",
         "Fertiliser-UreaWithoutUreaseInhibitor",
         "Fertiliser-UreaWithUreaseInhibitor",
+        "Fertiliser-Nitrogen",
         "Lime",
         "Dolomite",
         "Pesticide",
         "Anaerobic",
         "Feed",
+        "Feed-Imported",
         "Energy",
         "Fuel",
         "Irrigation",
         "LandUseChange",
         "Aforestation",
         "Deforestation",
-        "ResidueManagement"
+        "ResidueManagement",
+        "Other"
     ]
 }
