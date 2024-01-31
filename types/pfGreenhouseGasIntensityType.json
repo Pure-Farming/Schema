@@ -23,5 +23,31 @@
             ],
             "description": "The units of the denominator.  For example, HAR (hectares), KGM (kilograms) or TNE (tonnes)."
         }
-    }
+    },
+    "examples": [
+        {
+            "value": {
+                "measurement": 7.65,
+                "units": "TNE"
+            },
+            "denominator": "Area",
+            "denominatorUnits": "HAR"
+        },
+        {
+            "value": {
+                "measurement": 0.22,
+                "units": "KGM"
+            },
+            "denominator": "ProductWeight",
+            "denominatorUnits": "TNE"
+        },
+        {
+            "value": {
+                "measurement": 1.4,
+                "units": "KGM"
+            },
+            "denominator": "MilkSolids",
+            "denominatorUnits": "KGM"
+        }
+    ]
 }

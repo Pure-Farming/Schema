@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "types/pfEnterpriseStatisticsType",
+    "description": "Defines the metric, value and aggregation for an individual statistic",
+    "type": "object",
+    "properties": {
+        "metric": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarMetricType.json",
+            "description": "The metric the stat relates to, e.g. anitbiotic.udder."
+        },
+        "method": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
+            "description": "The measurement standard or process used to create the statistic."
+        },
+        "units": {
+            "type": "string",
+            "description": "The units of the statistic."
+        },
+        "value": {
+            "type": "number",
+            "description": "The value of the statistic."
+        },
+        "lastKnownValue": {
+            "type": "number",
+            "description": "The last known value for this statistics point - i.e. if no new data this is the last known data."
+        },
+        "lastKnownValueDate": {
+            "type": "string",
+            "format": "date",
+            "description": "UTC Date the last known value was observed."
+        },
+        "aggregation": {
+            "$ref": "https://raw.githubusercontent.com/adewg/ICAR/ADE-1/enums/icarAggregationType.json",
+            "description": "The type of statistic - min, max, mean etc."
+        }
+    },
+    "required": [
+        "metric"
+    ],
+    "examples": [
+        {
+            "metric": {
+                "scheme": "uk.co.dairyco.metrics",
+                "id": "MilkProduction"
+            },
+            "method": {
+                "scheme": "uk.co.dairyco.methods",
+                "id": "MilkMeter"
+            },
+            "units": "litres per cow per day",
+            "value": 25.8,
+            "lastKnownValue": 26.1,
+            "lastKnownValueDate": "2022-08-01",
+            "aggregation": "Average"
+        }
+    ]
+
+}

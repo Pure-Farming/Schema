@@ -15,5 +15,13 @@
             "type": "integer",
             "description": "The number of stock that arrived for the specified reason"
         }
-    }
+    },
+    "examples": [
+        {
+            "arrivals": {
+                "reason": "Purchase",
+                "count": 85
+            }
+        }
+    ]
 }

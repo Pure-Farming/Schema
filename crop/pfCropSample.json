@@ -28,5 +28,39 @@
         "id",
         "meta",
         "observationDate"
+    ],
+    "examples": [
+        {
+            "resourceType": "pfCropSample",
+            "id": "ab401b79-27aa-46ba-909a-133644069fdb",
+            "meta": {
+                "sourceId": {
+                    "id": "123456789",
+                    "scheme": "com.xycropconsultants.sampleid"
+                },
+                "modified": "2024-02-15T12:34:56.000Z"
+            },
+            "observationDate": "2024-02-12T00:00:00.000Z",
+            "name": "Oak Ridge maize crop sample 12 February 2024",
+            "holding": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "9a75829f-91c6-4483-baed-a93f6e74716f"
+                },
+                "name": "Bliss Farm"
+            },
+            "feature": {
+                "contentType": "plot",
+                "identifier": {
+                    "scheme": "com.purefarming.plotId",
+                    "id": "c8e3cf30-b616-4f9d-b6b9-ef10308d6721"
+                },
+                "name": "Oak Reach"
+            },
+            "priority": "Medium",
+            "sampledOrganism": "Maize variety KF342",
+            "samplingMethod": "https://onlinelibrary.wiley.com/doi/abs/10.1094/CCHEM.2002.79.6.757"
+        }
     ]
 }

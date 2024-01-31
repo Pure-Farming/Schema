@@ -108,7 +108,6 @@
     "examples": [
         {
             "resourceType": "/ghg/greenhouse-gas-results",
-            "dataPointKey": "sample-greenhouse-gas-results-blnz-1",
             "id": "a5e4c646-6c78-4965-880c-239cc4013f21",
             "identifiers": [
                 {
@@ -185,6 +184,7 @@
                     },
                     "denominator": "Area",
                     "denominatorUnits": "HAR"
+        
                 }
             ],
             "emissionsSources": [
@@ -196,12 +196,16 @@
                             "pathway": "All",
                             "scope": 1,
                             "CH4": {
-                                "measurement": 8303,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 8303,
+                                    "units": "KGM"
+                                }
                             },
                             "N2O": {
-                                "measurement": 203,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 203,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 268118,
@@ -218,12 +222,16 @@
                             "pathway": "All",
                             "scope": 1,
                             "CH4": {
-                                "measurement": 41213,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 41213,
+                                    "units": "KGM"
+                                }
                             },
                             "N2O": {
-                                "measurement": 1009,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 1009,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 1330863,
@@ -236,34 +244,40 @@
                     "enterprise": "Sheep",
                     "name": "Sheep",
                     "pathwayEmissions": [
-                        {
-                            "pathway": "All",
+                        {    
+                            "pathway": "All",      
                             "scope": 1,
                             "CH4": {
-                                "measurement": 125239,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 125239,
+                                    "units": "KGM"
+                                }
                             },
                             "N2O": {
-                                "measurement": 1765,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 1765,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 3656911,
                                 "units": "KGM"
                             }
                         }
-                    ]
+                    ]   
                 },
                 {
                     "enterprise": "All",
                     "pathwayEmissions": [
-                        {
+                        {            
                             "pathway": "Fertiliser-NonUreaNitrogen",
                             "name": "Pathway non-urea nitrogen fertiliser",
                             "scope": 1,
                             "N2O": {
-                                "measurement": 85,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 85,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 25277,
@@ -271,16 +285,21 @@
                             }
                         },
                         {
+        
                             "pathway": "Fertiliser-UreaWithoutUreaseInhibitor",
                             "name": "Pathway Urea without urease inhibitor",
                             "scope": 1,
                             "CO2": {
-                                "measurement": 15400,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 15400,
+                                    "units": "KGM"
+                                }
                             },
                             "N2O": {
-                                "measurement": 113,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 113,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 48988,
@@ -292,13 +311,15 @@
                 {
                     "enterprise": "ExoticForest",
                     "pathwayEmissions": [
-                        {
+                        { 
                             "pathway": "Deforestation",
                             "name": "Exotic forest deforestation",
                             "scope": 1,
                             "CO2e": {
-                                "measurement": 4733025,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 4733025,
+                                    "units": "KGM"
+                                }
                             }
                         }
                     ]
@@ -308,7 +329,7 @@
                 {
                     "enterprise": "ExoticForest",
                     "pathwayEmissions": [
-                        {
+                        { 
                             "pathway": "All",
                             "name": "28 years of carbon storage, averaged per year",
                             "CO2e": {
@@ -321,7 +342,7 @@
                 {
                     "enterprise": "Shrubland",
                     "pathwayEmissions": [
-                        {
+                        { 
                             "pathway": "All",
                             "name": "Total carbon stock associated with shrubland older and younger than 30 years old",
                             "CO2e": {
@@ -335,7 +356,6 @@
         },
         {
             "resourceType": "/ghg/greenhouse-gas-results",
-            "dataPointKey": "sample-greenhouse-gas-results-cft-2",
             "id": "cb671856-137c-4a5c-90e9-0a724b391acc",
             "identifiers": [
                 {
@@ -436,8 +456,10 @@
                             "pathway": "All",
                             "scope": 1,
                             "CO2": {
-                                "measurement": 163800.63,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 163800.63,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 163800.63,
@@ -467,8 +489,10 @@
                             "name": "Potato fertiliser",
                             "scope": 1,
                             "CO2": {
-                                "measurement": 67.35,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 67.35,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 67.35,
@@ -498,8 +522,10 @@
                             "name": "Potato irrigation",
                             "scope": 1,
                             "CO2": {
-                                "measurement": 2084.13,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 2084.13,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 2084.13,
@@ -529,8 +555,10 @@
                             "name": "Potato pesiticide",
                             "scope": 1,
                             "CO2": {
-                                "measurement": 1139.34,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 1139.34,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 1139.34,
@@ -560,8 +588,10 @@
                             "name": "Potato residue - Left distributed on field, OR incorporated, OR mulched",
                             "scope": 1,
                             "N2O": {
-                                "measurement": 10.05,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 10.05,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 2743.31,
@@ -591,8 +621,10 @@
                             "scope": 1,
                             "name": "Potato Waste water",
                             "CH4": {
-                                "measurement": 17.92,
-                                "units": "KGM"
+                                "massGas": {
+                                    "measurement": 17.92,
+                                    "units": "KGM"
+                                }
                             },
                             "CO2e": {
                                 "measurement": 220.97,
@@ -622,139 +654,133 @@
             ]
         },
         {
-            "resourceType": "/ghg/greenhouse-gas-results",
-            "dataPointKey": "sample-greenhouse-gas-results-fm-3",
-            "id": "57ba44e3-6a37-4868-bf28-bdb11771128d",
-            "identifiers": [
-                {
-                    "scheme": "com.farmapp.ghginput",
-                    "id": "af4f1e3e-9aaa-4054-b46f-9a9cb1b8dcd0"
-                }
-            ],
-            "name": "Clover Farm emissions April 2023",
-            "@self": "https://api.purefarming.com/data/ghg/greenhouse-gas-results/cb2bee06-6d40-42b7-81ab-a0d2cc4f184b",
+            "resourceType": "pfGreenhouseGasResultsResource",
+            "id": "4b5dbf26-d061-48c7-a015-10af41063f22",
+            "name": "Greenhouse Gas Emissions 2021/2022 for Supply Number 37581",
             "meta": {
                 "sourceId": {
-                    "scheme": "com.farmmetrics.ghg",
-                    "id": "def2513b-1862-4e2c-aee6-3a497e680ff3"
+                    "scheme": "nz.co.dairyco.ghg",
+                    "id": "2022-37581"
                 },
-                "modified": "2023-05-22T08:00:00Z",
-                "created": "2023-05-22T08:00:00Z",
-                "creator": "farmmetrics.com"
+                "modified": "2022-06-15T00:00:00.000Z"
             },
             "holding": {
                 "contentType": "holding",
                 "identifier": {
-                    "scheme": "com.purefarming.unit",
-                    "id": "4396"
-                },
-                "name": "Clover Farm"
+                    "scheme": "nz.co.dairyco.dairySupplyNumber",
+                    "id": "37581"
+                }
             },
-            "startDate": "2023-04-01T00:00:00Z",
-            "endDate": "2023-04-30T00:00:00Z",
-            "duration": "M",
-            "model": "https://xxxxx/farm-metrics/ghg-model",
-            "modelDescription": "Farmmetrics",
-            "version": "1.2.3",
-            "protocol": "GWP100",
-            "executionDate": "2023-05-22T15:00:00Z",
+            "startDate": "2021-06-01T00:00:00.000Z",
+            "endDate": "2022-05-31T00:00:00.000Z",
+            "duration": "Y",
+            "CO2eIntensity": [
+                {
+                    "value": {
+                        "measurement": 9.5,
+                        "units": "KGM"
+                    },
+                    "denominator": "MilkSolids",
+                    "denominatorUnits": "KGM"
+                },
+                {
+                    "value": {
+                        "measurement": 13938,
+                        "units": "KGM"
+                    },
+                    "denominator": "EffectiveArea",
+                    "denominatorUnits": "HAR"
+                }
+            ],
+            "CH4": {
+                "massCO2e": {
+                    "measurement": 1863727,
+                    "units": "KGM"
+                }
+            },
+            "N2O": {
+                "massCO2e": {
+                    "measurement": 362391,
+                    "units": "KGM"
+                }
+            },
+            "CO2": {
+                "massCO2e": {
+                    "measurement": 232966,
+                    "units": "KGM"
+                }
+            },
             "emissionsSources": [
                 {
                     "enterprise": "Dairy",
                     "pathwayEmissions": [
                         {
                             "pathway": "Enteric",
-                            "name": "Dairy Enteric April 2023",
                             "scope": 1,
                             "CH4": {
-                                "measurement": 865158.27,
-                                "units": "KGM"
-                            },
-                            "CO2eIntensity": [
-                                {
-                                    "value": {
-                                        "measurement": 3560.32,
-                                        "units": "KGM"
-                                    },
-                                    "denominator": "Area",
-                                    "denominatorUnits": "HAR"
-                                },
-                                {
-                                    "value": {
-                                        "measurement": 1758.31,
-                                        "units": "KGM"
-                                    },
-                                    "denominator": "MilkSolids",
-                                    "denominatorUnits": "TNE"
+                                "massCO2e": {
+                                    "measurement": 1708417,
+                                    "units": "KGM"
                                 }
-                            ]
+                            }
                         },
                         {
-                            "pathway": "Manure",
-                            "name": "Dairy Manure April 2023",
+                            "pathway": "UrineAndDung",
                             "scope": 1,
                             "CH4": {
-                                "measurement": 144941.31,
-                                "units": "KGM"
+                                "massCO2e": {
+                                    "measurement": 77655,
+                                    "units": "KGM"
+                                }
                             },
                             "N2O": {
-                                "measurement": 20818.00,
-                                "units": "KGM"
+                                "massCO2e": {
+                                    "measurement": 284736,
+                                    "units": "KGM"
+                                }
                             }
                         },
                         {
-                            "pathway": "Fertiliser",
-                            "name": "Dairy Organic fertiliser April 2023",
+                            "pathway": "Fertiliser-Nitrogen",
                             "scope": 1,
                             "N2O": {
-                                "measurement": 88989.55,
-                                "units": "KGM"
-                            }
-                        },
-                        {
-                            "pathway": "Fertiliser",
-                            "name": "Dairy Inorganic fertiliser April 2023",
-                            "scope": 1,
-                            "CO2": {
-                                "measurement": 83508.94,
-                                "units": "KGM"
+                                "massCO2e": {
+                                    "measurement": 77655,
+                                    "units": "KGM"
+                                }
                             },
+                            "CO2": {
+                                "massCO2e": {
+                                    "measurement": 77655,
+                                    "units": "KGM"
+                                }
+                            }
+                        },
+                        {
+                            "pathway": "EffluentSystem",
+                            "scope": 1,
                             "N2O": {
-                                "measurement": 164685.67,
-                                "units": "KGM"
+                                "qualitativeValue": "<0.1"
                             }
                         },
                         {
-                            "pathway": "Feed",
-                            "name": "Dairy Feed April 2023",
-                            "scope": 3,
+                            "pathway": "Feed-Imported",
+                            "scope": 1,
                             "CO2": {
-                                "measurement": 765113.94,
-                                "units": "KGM"
+                                "massCO2e": {
+                                    "measurement": 77655,
+                                    "units": "KGM"
+                                }
                             }
                         },
                         {
-                            "pathway": "Energy",
-                            "name": "Dairy Energy April 2023",
-                            "scope": 2,
+                            "pathway": "Other",
+                            "scope": 1,
                             "CO2": {
-                                "measurement": 68703.76,
-                                "units": "KGM"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "offsetSources": [
-                {
-                    "enterprise": "Dairy",
-                    "pathwayEmissions": [
-                        {
-                            "pathway": "All",
-                            "name": "Dairy Crop Sequestration April 2023",
-                            "CO2": {
-                                "measurement": 193458.91,
-                                "units": "KGM"
+                                "massCO2e": {
+                                    "measurement": 77655,
+                                    "units": "KGM"
+                                }
                             }
                         }
                     ]

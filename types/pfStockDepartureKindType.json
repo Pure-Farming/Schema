@@ -15,5 +15,13 @@
             "type": "integer",
             "description": "The number of stock that departed of the specified departure kind"
         }
-    }
+    },
+    "examples": [
+        {
+            "departures": {
+              "kind": "Sale",
+              "count": 121
+            }
+          }
+    ]
 }
