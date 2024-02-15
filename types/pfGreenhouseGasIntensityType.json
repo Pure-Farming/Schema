@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/pfGreenhouseGasIntensityType",
+    "description": "Records the intensity of the greenhouse gas emission on the specified basis.",
+    "type": "object",
+    "properties": {
+        "value": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The intensity of the greenhouse gas emission per the basis specified in denominator."
+        },
+        "denominator": {
+            "$ref": "../enums/pfGreenhouseGasIntensityBasisType.json",
+            "description": "The basis on which the greenhouse gas intensity has been determined. For example, per farmed area, per head, per product weight."
+        },
+        "denominatorUnits": {
+            "oneOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/uncefactAreaUnits.json"
+                },
+                {
+                    "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/uncefactMassUnits.json"
+                }
+            ],
+            "description": "The units of the denominator.  For example, HAR (hectares), KGM (kilograms) or TNE (tonnes)."
+        }
+    },
+    "examples": [
+        {
+            "value": {
+                "measurement": 7.65,
+                "units": "TNE"
+            },
+            "denominator": "Area",
+            "denominatorUnits": "HAR"
+        },
+        {
+            "value": {
+                "measurement": 0.22,
+                "units": "KGM"
+            },
+            "denominator": "ProductWeight",
+            "denominatorUnits": "TNE"
+        },
+        {
+            "value": {
+                "measurement": 1.4,
+                "units": "KGM"
+            },
+            "denominator": "MilkSolids",
+            "denominatorUnits": "KGM"
+        }
+    ]
+}

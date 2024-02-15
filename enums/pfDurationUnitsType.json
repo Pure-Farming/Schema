@@ -1,8 +1,10 @@
 {
-    "description": "Defines the unit of duration from RFC3339.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "Defines the unit of duration from RFC3339. (T = 10 days)",
     "type": "string",
     "enum": [
         "W",
+        "T",
         "M",
         "Y"
     ]

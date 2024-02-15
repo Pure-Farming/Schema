@@ -1,6 +1,7 @@
 {
-    "description": "The Group Weight event records liveweight observations for a group of animals. Calls the ICAR Group Weight Event resource",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/weights/group-weight-event",
+    "description": "The Group Weight event records liveweight observations for a group of animals. Calls the ICAR Group Weight Event resource",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupWeightEventResource.json"

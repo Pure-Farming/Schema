@@ -1,6 +1,7 @@
 {
-    "description": "Event for recording group animal registrations (named Birth for consistency only) - uses ICAR schema extended to include details of individual animals in the group",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/movement/group-birth-registration",
+    "description": "Event for recording group animal registrations (named Birth for consistency only) - uses ICAR schema extended to include details of individual animals in the group",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupMovementBirthEventResource.json"
@@ -76,6 +77,5 @@
                 "count": 3
             },
             "registrationReason": "Born"
-         }
     ]
 }

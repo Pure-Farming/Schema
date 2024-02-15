@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/pfFinancialTransactionType",
     "description": "pfFinancialTransactionType defines a financial transaction that may be a sale, purchase, death, birth, stocktake, transfer out, aging out.",
     "type": "object",
-    "$id": "types/pfFinancialTransactionType",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarEventCoreResource.json"
@@ -56,8 +57,33 @@
             }
         },
         "resourceReference": {
-            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarResourceReferenceType.json", 
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarResourceReferenceType.json",
             "description": "Reference to an associated resource such as the matching inventory transaction record or livestock movement event."
         }
-    }
+    },
+    "examples": [
+        {
+            "transactionKind": "Purchase",
+            "accrualDate": "2023-03-10T08:00:00Z",
+            "cashDate": "2023-03-15T13:07:00Z",
+            "transactionQuantity": 47,
+            "transactionValue": 30315,
+            "unitValue": 645,
+            "currency": "NZD",
+            "notes": "Empty Friesian heifers for wintering",
+            "resourceReference": {
+                "identifier": {
+                    "scheme": "com.purefarming.arrival",
+                    "id": "3696ff5b-cbdc-4d7b-8243-0962ae6695b5"
+                }
+            },
+            "contactName": "Bill James",
+            "externalReference": [
+                {
+                    "scheme": "nz.co.xyztraders.invoice",
+                    "id": "23/BF/0451"
+                }
+            ]
+        }
+    ]
 }

@@ -1,0 +1,160 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/pfGreenhouseGasSourceType",
+    "description": "Organises emissions for an enterprise (or All), optionally with a crop and/or livestock inventory classification, and provides an array of emissions by pathway.",
+    "type": "object",
+    "required": [
+        "enterprise"
+    ],
+    "properties": {
+        "enterprise": {
+            "$ref": "../enums/pfEnterpriseType.json",
+            "description": "The farming enterprise pertaining to this source.  Use All if the emissions are for all enterprises."
+        },
+        "inventoryClassification": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarInventoryClassificationType.json",
+            "description": "If relevant, the group of animals defining this emission source."
+        },
+        "crop": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/CropType.json",
+            "description": "If relevant, the crop defining this emission source."
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the enterprise including any inventory classification or crop defined."
+        },
+        "pathwayEmissions": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfGreenhouseGasPathwayEmissionsType.json"
+            },
+            "description": "Array of pathways for the specified enterprise with the emissions for each pathway."
+        }
+    },
+    "examples": [
+        {
+            "enterprise": "Dairy",
+            "inventory Classification": {
+                "name": "Milking cows",
+                "count": 300,
+                "species": "Cattle",
+                "sex": "Female",
+                "primaryBreed": {
+                    "scheme": "au.nlis.breed",
+                    "id": "FF"
+                },
+                "birthPeriod": "2016-07-01/2020-06-30",
+                "reproductiveStatus": "Birthed",
+                "lactationStatus": "Lactating",
+                "productionPurposes": [
+                    "Milk"
+                ]
+            },
+            "pathwayEmissions": [
+                {
+                    "pathway": "Enteric",
+                    "name": "Milking cows enteric fermentation",
+                    "scope": 1,
+                    "CH4": {
+                        "massGas": {
+                            "measurement": 27.9,
+                            "resolution": 0.1,
+                            "units": "TNE"
+                        },
+                        "massCO2e": {
+                            "measurement": 781.2,
+                            "resolution": 0.1,
+                            "units": "TNE"
+                        }
+                    },
+                    "CO2e": {
+                        "massGas": {
+                            "measurement": 698,
+                            "units": "TNE"
+                        }
+                    },
+                    "N2O": {
+                        "qualitativeValue": "<0.1"
+                    },
+                    "CO2eIntensity": [
+                        {
+                            "value": {
+                                "measurement": 3.88,
+                                "resolution": 0.01,
+                                "units": "TNE"
+                            },
+                            "denominator": "GrazedArea",
+                            "denominatorUnits": "HAR"
+                        },
+                        {
+                            "value": {
+                                "measurement": 9.2,
+                                "units": "TNE"
+                            },
+                            "denominator": "Head"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "enterprise": "Cropping",
+            "crop": {
+                "name": "Wheat",
+                "taxonomicName": "Triticum aestivum",
+                "variety": "Ascot",
+                "identifiers": [
+                    {
+                        "scheme": "au.com.banksseeds.cat",
+                        "id": "K49"
+                    }
+                ],
+                "establishmentDate": "2022-04-15T00:00:00Z",
+                "maturityDate": "2022-12-10T00:00:00Z",
+                "harvestDate": "2022-12-16T00:00:00Z"
+            },
+            "name": "Wheat crop",
+            "pathwayEmissions": [
+                {
+                    "pathway": "Fertiliser",
+                    "name": "Wheat fertiliser",
+                    "scope": 1,
+                    "N2O": {
+                        "massGas": {
+                            "measurement": 670,
+                            "units": "KGM"
+                        }
+                    },
+                    "CO2": {
+                        "massGas": {
+                            "measurement": 0,
+                            "units": "KGM"
+                        }
+                    },
+                    "CO2e": {
+                        "measurement": 199.81,
+                        "units": "TNE"
+                    },
+                    "CO2eIntensity": [
+                        {
+                            "value": {
+                                "measurement": 199.81,
+                                "units": "KGM"
+                            },
+                            "denominator": "Area",
+                            "denominatorUnits": "HAR"
+                        },
+                        {
+                            "value": {
+                                "measurement": 66,
+                                "units": "KGM"
+                            },
+                            "denominator": "ProductWeight",
+                            "denominatorUnits": "TNE"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

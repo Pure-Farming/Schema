@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/types/workItem",
     "description": "Abstract class that represents a work item - an activity that is planned, scheduled, or carried out.",
     "type": "object",
@@ -13,16 +13,15 @@
         }
     ],
     "properties": {
-        "operation":{
-            "type":"string",
-            "description":"Constant value in any concrete class for the operation type"
+        "operation": {
+            "type": "string",
+            "description": "Constant value in any concrete class for the operation type"
         },
-        "status":{
-            "$ref":"https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/WorkItemStatusType.json"
+        "status": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/WorkItemStatusType.json"
         },
-        "priority":
-        {
-            "$ref":"https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/WorkItemPriorityType.json"
+        "priority": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/WorkItemPriorityType.json"
         }
     }
 }

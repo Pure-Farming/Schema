@@ -1,6 +1,7 @@
 {
-    "description": "Holds animal scheme compliance assessment data.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/pfComplianceAssessment",
+    "description": "Holds animal scheme compliance assessment data.",
     "required": [
         "eventDateTime",
         "id"
@@ -23,19 +24,16 @@
             "type": "string",
             "description": "Overall qualitative summary of the compliance assessment"
         },
-
-        "complianceProgramme":{
+        "complianceProgramme": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
             "description": "The authority or organisation requesting the compliance assesmnent"
         },
-        "assessor":{
+        "assessor": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
             "description": "The person or or organisation conducting the compliance assesmnent"
         },
-
         "compliances": {
             "type": "array",
-
             "items": {
                 "$ref": "../types/pfAnimalComplianceType.json"
             },

@@ -15,5 +15,55 @@
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/resources/ProductResource.json",
             "description": "The agrichemical product in this inventory transaction."
         }
-    }
+    },
+    "examples": [
+        {
+            "resourceType": "pfAgrichemicalTransaction",
+            "id": "90faee0a-16ee-40c6-9543-97085f46a496",
+            "meta": {
+                "sourceId": {
+                    "scheme": "com.zaxchem.sale",
+                    "id": "351e5f1a-7c26-4015-ad6a-a2a2e38d83b2"
+                },
+                "modified": "2023-12-03T15:00:00Z",
+                "created": "2023-12-03T15:00:00Z",
+                "creator": "zaxchem.com"
+            },
+            "identifiers": [
+                {
+                    "scheme": "com.zkyfarm.purchase",
+                    "id": "2023/chem/391"
+                }
+            ],
+            "name": "Tiger 935 Herbicide purchase 200 litre - P. Greyfoot - Oak Reach, Dec 2023",
+            "observationDate": "2023-12-03T00:00:00Z",
+            "feature": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "6c8dec14-2e0b-479f-a5cb-2fdcfc13db07"
+                },
+                "name": "Oak Reach"
+            },
+            "responsible": "Petra Greyfoot",
+            "remark": "Receipt Tiger 935 Herbicide purchase Dec 23: Oak Reach",
+            "transactionKind": "Receipt",
+            "quantity": 200,
+            "units": "LTR",
+            "supplierName": "ZaxChem",
+            "expiryDate": "2028-09-24T00:00:00Z",
+            "totalCost": 1796,
+            "currency": "NZD",
+            "product": {
+                "contentType": "Safety Data Sheet",
+                "related": "https://cmgchem.com/products/a792/safety",
+                "type": "Herbicide",
+                "manufacturer": "CMG Chemical Manufacturing Group",
+                "brand": "Tiger 935 Herbicide",
+                "form": "EmulsifiableConcentrate",
+                "uri": "https://cmgchem.com/products/a792",
+                "specificGravity": 4.7
+            }
+        }
+    ]
 }

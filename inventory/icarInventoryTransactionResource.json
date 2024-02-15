@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/inventory/icarInventoryTransactionResource",
     "description": "Generic inventory transaction resource.  Some product families have specific transaction resources (e.g. medicines, feeds).",
     "type": "object",
-    "$id": "/inventory/icarInventoryTransactionResource",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarInventoryTransactionResource.json"

@@ -1,14 +1,13 @@
 {
-    "description": "The type of aggregation.",
-  
-    "type": "string",
-  
-    "enum": [
-      "Average",
-      "Sum",
-      "StDev",
-      "Min",
-      "Max",
-      "Count"
-    ]
-  }
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "description": "The type of aggregation.",
+  "type": "string",
+  "enum": [
+    "Average",
+    "Sum",
+    "StDev",
+    "Min",
+    "Max",
+    "Count"
+  ]
+}

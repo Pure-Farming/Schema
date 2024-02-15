@@ -1,6 +1,7 @@
 {
-    "description": "A general laboratory analysis schema for livestock lab tests. eventDateTime is the date of test. sampleDate is the date the sample was taken.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/group-laboratory-analyses-event",
+    "description": "A general laboratory analysis schema for livestock lab tests. eventDateTime is the date of test. sampleDate is the date the sample was taken.",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarGroupEventCoreResource.json"
@@ -46,7 +47,7 @@
                 "sex": "Female",
                 "birthPeriod": "2016-01-01/2021-12-31",
                 "count": 236
-              },
+            },
             "location": {
                 "scheme": "au.nlis.pic",
                 "id": "5TRCD542"
@@ -65,7 +66,7 @@
                             "rawValue": "<45",
                             "rawUnit": "CTV",
                             "qualitativeGrade": "Negative",
-                            "limit" : 45
+                            "limit": 45
                         }
                     ]
                 },

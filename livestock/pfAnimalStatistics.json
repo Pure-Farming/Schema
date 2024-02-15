@@ -1,6 +1,7 @@
 {
-    "description": "Holds animal statistics for the specified period for a group of livestock defined by an inventory classification, animal set, or for a location.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/animal-statistics",
+    "description": "Holds animal statistics for the specified period for a group of livestock defined by an inventory classification, animal set, or for a location.",
     "required": [
         "startDate",
         "id",
@@ -18,11 +19,11 @@
         },
         "groupMethod": {
             "$ref": "../enums/pfGroupMethod.json"
-          },
-        "animalSetReference": { 
+        },
+        "animalSetReference": {
             "type": "string",
             "description": "Optional unique animal set identifier from the source system for animal set these statistics refer to."
-          },
+        },
         "startDate": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
             "description": "Date of the start of the period to which the statistics apply"

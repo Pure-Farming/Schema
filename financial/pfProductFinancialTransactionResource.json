@@ -1,11 +1,12 @@
 {
-    "description": "Defines a financial transaction for a product.  For example, a sale, purchase, or stocktake.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/financial/pfProductFinancialTransactionResource",
+    "description": "Defines a financial transaction for a product.  For example, a sale, purchase, or stocktake.",
     "allOf": [
         {
             "$ref": "../types/pfFinancialTransactionType.json"
         }
-    ], 
+    ],
     "required": [
         "product"
     ],

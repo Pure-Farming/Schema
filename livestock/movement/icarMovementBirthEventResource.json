@@ -1,6 +1,7 @@
 {
-    "description": "Event for recording animal birth or registration - uses ICAR schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/movement/animal-birth-registration",
+    "description": "Event for recording animal birth or registration - uses ICAR schema",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarMovementBirthEventResource.json"

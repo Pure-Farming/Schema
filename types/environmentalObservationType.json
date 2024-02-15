@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/types/environmentalObservationType",
     "description": "Defines an environmental observation in terms of the metric, value, units and may identify an aggregation that has been applied.",
     "required": [

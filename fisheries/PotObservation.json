@@ -1,136 +1,141 @@
 {
-    "description": "Observation to record details of a pot catch.",
-    "$id": "/fisheries/pot-observation",
-    "type": "object",
-    "allOf": [
-        {
-            "$ref": "../types/FisheriesTripObservationType.json"
-        }
-    ],
-    "properties": {
-        "depthRange": {
-            "type": "string",
-            "description": "The depth range of the pot in metres."
-        },
-        "targetSpecies": {
-            "type": "string",
-            "description": "The primary species being targetted."
-        },
-        "numberSize": {
-            "type": "number",
-            "description": "The number of the target species of the required size."
-        },
-        "catch": {
-            "type": "array",
-            "items": {
-                "$ref": "../types/SpeciesQuantityType.json"
-            },
-            "description": "The quantity of the species and optionally of the grade caught in the trawl."
-        },
-        "bycatch": {
-            "type": "array",
-            "items": {
-                "$ref": "../types/SpeciesQuantityType.json"
-            },
-            "description": "The quantity of the bycatch species and optionally of the grade caught in the trawl."
-        },
-        "wildlife": {
-            "$ref": "../types/WildlifeInteractionType.json",
-            "description": "Details of the wildlife encountered during the trawl."
-        },
-        "comments": {
-            "type": "string",
-            "description": "Comments on the trawl or shot."
-        },
-        "location":{
-            "$ref": "https://raw.githubusercontent.com/daniel-buchanan/geoJsonSchema/main/schema/geoJsonFeature.json",
-            "description":"The location of the pot using the geojson Point feature (with its geometry)."
-        }
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "/fisheries/pot-observation",
+  "description": "Observation to record details of a pot catch.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../types/FisheriesTripObservationType.json"
+    }
+  ],
+  "properties": {
+    "depthRange": {
+      "type": "string",
+      "description": "The depth range of the pot in metres."
     },
-    "examples": [
+    "targetSpecies": {
+      "type": "string",
+      "description": "The primary species being targetted."
+    },
+    "numberSize": {
+      "type": "number",
+      "description": "The number of the target species of the required size."
+    },
+    "catch": {
+      "type": "array",
+      "items": {
+        "$ref": "../types/SpeciesQuantityType.json"
+      },
+      "description": "The quantity of the species and optionally of the grade caught in the trawl."
+    },
+    "bycatch": {
+      "type": "array",
+      "items": {
+        "$ref": "../types/SpeciesQuantityType.json"
+      },
+      "description": "The quantity of the bycatch species and optionally of the grade caught in the trawl."
+    },
+    "wildlife": {
+      "$ref": "../types/WildlifeInteractionType.json",
+      "description": "Details of the wildlife encountered during the trawl."
+    },
+    "comments": {
+      "type": "string",
+      "description": "Comments on the trawl or shot."
+    },
+    "location": {
+      "$ref": "https://raw.githubusercontent.com/daniel-buchanan/geoJsonSchema/main/schema/geoJsonFeature.json",
+      "description": "The location of the pot using the geojson Point feature (with its geometry)."
+    }
+  },
+  "examples": [
+    {
+      "resourceType": "potObservation",
+      "id": "8011287c-8061-4b0d-bd72-879149e9f088",
+      "meta": {
+        "sourceId": {
+          "scheme": "com.deckhand.report",
+          "id": "08312cfa-b1f7-4206-851d-4de7ce4da20a"
+        },
+        "modified": "2023-10-31T15:20:00Z"
+      },
+      "name": "Blue Doris pot 16, 31/10/23 start 12:38, Trip S999123456A",
+      "observationDate": "2023-10-31T13:25:00Z",
+      "responsible": "Fabio Capello",
+      "trip": {
+        "tripId": {
+          "scheme": "com.deckhand.trip",
+          "id": "S999231004A"
+        },
+        "vesselName": "Blue Doris",
+        "vesselIdentifier": {
+          "scheme": "com.deckhand.vessel",
+          "id": "V88810000A"
+        },
+        "startDateTime": "2023-10-31T11:49:28Z",
+        "fishery": "ABC123"
+      },
+      "depthRange": "34-49",
+      "targetSpecies": "Rock lobster",
+      "numberSize": 20,
+      "comments": "Good condition",
+      "catch": [
         {
-            "resourceType": "potObservation",
-            "id": "8011287c-8061-4b0d-bd72-879149e9f088",
-            "meta": {
-                "sourceId": {
-                    "scheme": "com.deckhand.report",
-                    "id": "08312cfa-b1f7-4206-851d-4de7ce4da20a"
-                },
-                "modified": "2023-10-31T15:20:00Z"
-            },
-            "name": "Blue Doris pot 16, 31/10/23 start 12:38, Trip S999123456A",
-            "observationDate": "2023-10-31T13:25:00Z",
-            "responsible": "Fabio Capello",
-            "trip": {
-                "tripId": {
-                    "scheme": "com.deckhand.trip",
-                    "id": "S999231004A"
-                },
-                "vessel": "Blue Doris",
-                "startDateTime": "2023-10-31T11:49:28Z",
-                "fishery": "ABC123"
-            },
-            "depthRange": "34-49",
-            "targetSpecies": "Rock lobster",
-            "numberSize": 20,
-            "comments": "Good condition",
-            "catch": [
-                {
-                    "species": "Rock lobster",
-                    "grade": "Size",
-                    "count": 20
-                },
-                {
-                    "species": "Rock lobster",
-                    "grade": "1.5-2kgs",
-                    "count": 9
-                },
-                {
-                    "species": "Rock lobster",
-                    "grade": "2-2.5kgs",
-                    "count": 11
-                },
-                {
-                    "species": "Rock lobster",
-                    "grade": "Undersize",
-                    "count": 2
-                },
-                {
-                    "species": "Rock lobster",
-                    "grade": "Dead",
-                    "count": 2
-                }
-            ],
-            "bycatch": [
-                {
-                    "species": "Octopus",
-                    "count": 1
-                },
-                {
-                    "species": "Leather Jacket",
-                    "count": 2
-                }
-            ],
-            "wildlife": {
-                "observer": "Nat Brown",
-                "speciesObserved": [
-                    {
-                        "species": "Short-beaked common dolphin",
-                        "count": 4
-                    }
-                ]
-            },
-            "location": {
-                "type": "Feature",
-                "properties": {},
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -122.09771,
-                        37.34013
-                    ]
-                }
-            }
+          "species": "Rock lobster",
+          "grade": "Size",
+          "count": 20
+        },
+        {
+          "species": "Rock lobster",
+          "grade": "1.5-2kgs",
+          "count": 9
+        },
+        {
+          "species": "Rock lobster",
+          "grade": "2-2.5kgs",
+          "count": 11
+        },
+        {
+          "species": "Rock lobster",
+          "grade": "Undersize",
+          "count": 2
+        },
+        {
+          "species": "Rock lobster",
+          "grade": "Dead",
+          "count": 2
         }
-    ]
+      ],
+      "bycatch": [
+        {
+          "species": "Octopus",
+          "count": 1
+        },
+        {
+          "species": "Leather Jacket",
+          "count": 2
+        }
+      ],
+      "wildlife": {
+        "observer": "Nat Brown",
+        "speciesObserved": [
+          {
+            "species": "Short-beaked common dolphin",
+            "count": 4
+          }
+        ]
+      },
+      "location": {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.09771,
+            37.34013
+          ]
+        }
+      }
+    }
+  ]
 }

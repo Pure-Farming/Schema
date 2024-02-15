@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "description": "The observed result (measurement or assessment) of a phenomenon.  The result may have a numeric or a qualitative value.",
     "required": [
         "phenomenon"
@@ -48,5 +49,31 @@
             "description": "The reason if there is an issue with the observation",
             "type": "string"
         }
-    }
+    },
+    "examples": [
+        {
+            "phenomenon": {
+                "scheme": "com.metdata.phenomena",
+                "id": "Lower Soil Moisture %"
+            },
+            "method": "Digital",
+            "value": 20.72,
+            "resolution": 0.01,
+            "duration": 1,
+            "durationUnits": "HUR"
+        },
+        {
+            "phenomenon": {
+                "scheme": "com.metdata.phenomena",
+                "id": "DailyRainfall"
+            },
+            "method": "Digital",
+            "value": 4.5,
+            "units": "MMT",
+            "resolution": 0.1,
+            "aggregation": "Sum",
+            "duration": 1,
+            "durationUnits": "DAY"
+        }
+    ]
 }

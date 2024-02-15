@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/crop/harvest",
     "description": "This is a very simple WorkItem derivative that captures the harvest of a crop from a feature.",
     "allOf": [

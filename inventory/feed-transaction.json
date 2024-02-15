@@ -1,6 +1,7 @@
 {
-    "description": "The feed transaction records an inventory transaction on a feed product. Calls the ICAR Feed Transaction resource",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/inventory/feed-transaction",
+    "description": "The feed transaction records an inventory transaction on a feed product. Calls the ICAR Feed Transaction resource",
     "allOf": [
         {
             "$ref": "../inventory/icarFeedTransactionResource.json"

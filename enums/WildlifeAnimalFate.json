@@ -1,9 +1,8 @@
 {
-    "description": "The fate of a wildlife animal.",
-  
-    "type": "string",
-  
-    "enum": [
-      "Injured"
-    ]
-  }
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "description": "The fate of a wildlife animal.",
+  "type": "string",
+  "enum": [
+    "Injured"
+  ]
+}

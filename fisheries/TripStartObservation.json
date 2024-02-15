@@ -1,39 +1,44 @@
 {
-    "description": "Observation to record the start of a fishing trip. Mainly used when data is being delivered incrementally.",
-    "$id": "/fisheries/trip-start-observation",
-    "type": "object",
-    "allOf": [
-        {
-            "$ref": "../types/FisheriesTripObservationType.json"
-        }
-    ],
-    "examples": [
-        {
-            "resourceType": "tripStartObservation",
-            "id": "e3cd80dc-2894-4b16-b19e-7daacdc070d3",
-            "meta": {
-                "sourceId": {
-                    "scheme": "com.deckhand.report",
-                    "id": "cb1d3f48-610c-4157-9bec-54387b91bbf2"
-                },
-                "modified": "2023-10-31T12:40:00Z"
-            },
-            "name": "Blue Doris trip start, 31/10/23 start 12:38, Trip S999123456A",
-            "observationDate": "2023-10-31T12:38:00Z",
-            "responsible": "Fabio Capello",
-            "trip": {
-                "tripId": {
-                    "scheme": "com.deckhand.trip",
-                    "id": "S999231004A"
-                },
-                "skipper": "Jack Smith",
-                "vessel": "Blue Doris",
-                "licences": [
-                    "S999"
-                ],
-                "startDateTime": "2023-10-31T12:38:00Z",
-                "fishery": "ABC123"
-            }
-        }
-    ]
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "/fisheries/trip-start-observation",
+  "description": "Observation to record the start of a fishing trip. Mainly used when data is being delivered incrementally.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../types/FisheriesTripObservationType.json"
+    }
+  ],
+  "examples": [
+    {
+      "resourceType": "tripStartObservation",
+      "id": "e3cd80dc-2894-4b16-b19e-7daacdc070d3",
+      "meta": {
+        "sourceId": {
+          "scheme": "com.deckhand.report",
+          "id": "cb1d3f48-610c-4157-9bec-54387b91bbf2"
+        },
+        "modified": "2023-10-31T12:40:00Z"
+      },
+      "name": "Blue Doris trip start, 31/10/23 start 12:38, Trip S999123456A",
+      "observationDate": "2023-10-31T12:38:00Z",
+      "responsible": "Fabio Capello",
+      "trip": {
+        "tripId": {
+          "scheme": "com.deckhand.trip",
+          "id": "S999231004A"
+        },
+        "skipper": "Jack Smith",
+        "vesselName": "Blue Doris",
+        "vesselIdentifier": {
+          "scheme": "com.deckhand.vessel",
+          "id": "V88810000A"
+        },
+        "licences": [
+          "S999"
+        ],
+        "startDateTime": "2023-10-31T12:38:00Z",
+        "fishery": "ABC123"
+      }
+    }
+  ]
 }

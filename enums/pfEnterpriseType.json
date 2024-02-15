@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "Defines the farming enterprise types including `All` for the whole farm. This list reflects categorisations used by several models.",
+    "type": "string",
+    "enum": [
+        "All",
+        "Dairy",
+        "Beef",
+        "Sheep",
+        "Cropping",
+        "ExoticForest",
+        "IndigenousForest",
+        "Shrubland"
+    ]
+}

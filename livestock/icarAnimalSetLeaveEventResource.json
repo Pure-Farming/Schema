@@ -1,6 +1,7 @@
 {
-    "description": "The animal set leave event is to record the removal of an animal from an animal set.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/animal-set-leave",
+    "description": "The animal set leave event is to record the removal of an animal from an animal set.",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarAnimalSetLeaveEventResource.json"

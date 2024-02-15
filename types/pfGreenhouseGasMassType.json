@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/pfGreenhouseGasMassType",
+    "description": "Specifies the mass of the gas and its mass in CO2 equivalents.",
+    "type": "object",
+    "properties": {
+        "massGas": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The mass of the gas in mass units."
+        },
+        "massCO2e": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The CO2 equivalents of the gas in mass units."
+        },
+        "qualitativeValue": {
+            "type": "string",
+            "description": "For non-numeric value for the mass.  For example '<0.1'."
+        }
+    },
+    "examples": [
+        {
+            "massGas": {
+                "measurement": 175,
+                "units": "TNE"
+            },
+            "massCO2e": {
+                "measurement": 4369,
+                "units": "TNE"
+            }
+        },
+        {
+            "qualitativeValue": "<0.1"
+        }
+    ]
+}

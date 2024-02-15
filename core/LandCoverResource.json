@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/core/land-cover",
     "description": "Represents land-covers and their classifications.",
     "allOf": [
@@ -7,6 +8,118 @@
         },
         {
             "$ref": "../types/pfSpatialResourceType.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "pfLandCoverResource",
+            "id": "0e952cd8-dffd-4fb5-b4fa-8a245c06c6d9",
+            "name": "Bayer Hill Farm, Bakkers Block land cover 21/03/2024",
+            "meta": {
+                "sourceId": {
+                    "scheme": "com.farmapp.cover",
+                    "id": "BHF4739"
+                },
+                "modified": "2024-03-24T08:00:00Z"
+            },
+            "totalArea": {
+                "measurement": 23000,
+                "units": "MTK"
+            },
+            "classifications": [
+                {
+                    "scheme": "nz.rural.classification",
+                    "primary": "rural",
+                    "secondary": "cropping"
+                },
+                {
+                    "scheme": "nz.rural.classification",
+                    "primary": "rural",
+                    "secondary": "grazing"
+                }
+            ],
+            "activities": [
+                {
+                    "id": {
+                        "id": "98765",
+                        "scheme": "nz.rural.activities"
+                    },
+                    "isPrimary": true,
+                    "name": "Maize",
+                    "productiveArea": {
+                        "measurement": 14100,
+                        "units": "MTK"
+                    }
+                },
+                {
+                    "id": {
+                        "id": "75492",
+                        "scheme": "nz.rural.activities"
+                    },
+                    "isPrimary": false,
+                    "name": "Grazing",
+                    "productiveArea": {
+                        "measurement": 8300,
+                        "units": "MTK"
+                    }
+                }
+            ],
+            "eligibility": {
+                "scheme": "nz.regcouncil.compliance",
+                "eligible": "Partial"
+            },
+            "landCoverClass": {
+                "scheme": "nz.xxxxxx.landcover",
+                "primary": "Cultivated and Managed Terrestrial Areas"
+            },
+            "speciesPresent": [
+                {
+                    "name": "Maize X4783",
+                    "taxonomicName": "Zea mays",
+                    "abundance": "Dominant"
+                },
+                {
+                    "name": "Perennial ryegrass",
+                    "taxonomicName": "Lolium perenne",
+                    "abundance": "Dominant"
+                },
+                {
+                    "name": "White clover",
+                    "taxonomicName": "Trifolium repens",
+                    "abundance": "Abundant"
+                }
+            ], 
+            "spatialFeature": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [
+                                175.36789819531776,
+                                -37.74521332738721
+                            ],
+                            [
+                                175.36432165382598,
+                                -37.74747616457623
+                            ],
+                            [
+                                175.36847864019472,
+                                -37.75157825727582
+                            ],
+                            [
+                                175.37224789227093,
+                                -37.74920317795343
+                            ],
+                            [
+                                175.36789819531776,
+                                -37.74521332738721
+                            ]
+                        ]
+                    ]
+                }
+            }
         }
     ]
 }

@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "Defines the greenhouse gas emissions pathways.",
+    "type": "string",
+    "enum": [
+        "All",
+        "Enteric",
+        "UrineAndDung",
+        "EffluentSystem",
+        "Fertiliser",
+        "Fertiliser-NonUreaNitrogen",
+        "Fertiliser-UreaWithoutUreaseInhibitor",
+        "Fertiliser-UreaWithUreaseInhibitor",
+        "Fertiliser-Nitrogen",
+        "Lime",
+        "Dolomite",
+        "Pesticide",
+        "Anaerobic",
+        "Feed",
+        "Feed-Imported",
+        "Energy",
+        "Fuel",
+        "Irrigation",
+        "LandUseChange",
+        "Aforestation",
+        "Deforestation",
+        "ResidueManagement",
+        "Other"
+    ]
+}

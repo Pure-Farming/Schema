@@ -11,5 +11,18 @@
             "$ref": "https://raw.githubusercontent.com/Datalinker-Org/Geospatial/master/types/AreaMeasureType.json",
             "description": "The area in area units."
         }
-    }
+    },
+    "examples": [
+        {
+            "measure": {
+                "measurement": 6574,
+                "resolution": 1,
+                "units": "KGM"
+            },
+            "areaMetric": {
+                "measurement": 1,
+                "units": "HAR"
+            }
+        }
+    ]
 }

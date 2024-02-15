@@ -1,6 +1,7 @@
 {
-    "description": "The SensorObservationEventResource records observations by a sensor on a geospatial feature for a given date-time.",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/environment/SensorObservationEventResource",
+    "description": "The SensorObservationEventResource records observations by a sensor on a geospatial feature for a given date-time.",
     "type": "object",
     "allOf": [
         {
@@ -23,5 +24,73 @@
             "$ref": "../types/pfDeviceType.json",
             "description": "The device used for performing the sensor observations in this event."
         }
-    }
+    },
+    "examples": [
+        {
+            "resourceType": "pfSensorObservationsEvent",
+            "id": "c35dd615-a82c-4238-b7ae-2b5ddfbe7698",
+            "meta": {
+                "sourceId": {
+                    "scheme": "nz.zaxfarm.hydrology",
+                    "id": "4699c420-9fd5-42f4-a716-0622c530a2d9"
+                },
+                "modified": "2023-06-14T18:30:00Z"
+            },
+            "name": "Potable water readings - Bliss Farm, 14 June 2023",
+            "@self": "https://api.purefarming.com/data/environment/hydrological-observations-event/c35dd615-a82c-4238-b7ae-2b5ddfbe7698",
+            "observationDate": "2023-06-14T15:30:00Z",
+            "feature": {
+                "contentType": "waterSupply",
+                "identifier": {
+                    "scheme": "com.purefarming.waterSupplyId",
+                    "id": "9749dbf7-d3ae-4377-b84e-d4f5e239b405"
+                },
+                "name": "Water meter supplying houses, sheds, stock"
+            },
+            "holding": {
+                "contentType": "holding",
+                "identifier": {
+                    "scheme": "com.purefarming.holdingId",
+                    "id": "7b5be125-c96f-4095-89b3-1c267aa2206e"
+                },
+                "name": "Bliss Farm",
+                "uri": "https://landco.co.nz/property/K384"
+            },
+            "phenomenonStartTime": "2023-06-14T15:15:00Z",
+            "phenomenonEndTime": "2023-06-14T15:30:00Z",
+            "responsible": "Josie Watts",
+            "remark": "Water flow and cumulative usage, 14 June 2023",
+            "sensorResults": [
+                {
+                    "phenomenon": {
+                        "scheme": "nz.co.xxxxx.waterSupply",
+                        "id": "FlowRate"
+                    },
+                    "method": "Electromagnetic",
+                    "value": 4.944,
+                    "units": "G51",
+                    "resolution": 0.001,
+                    "duration": 15,
+                    "durationUnits": "MIN"
+                },
+                {
+                    "phenomenon": {
+                        "scheme": "nz.co.xxxxx.waterSupply",
+                        "id": "Volume"
+                    },
+                    "method": "Electromagnetic",
+                    "value": 193010.791,
+                    "units": "MTQ",
+                    "resolution": 0.001,
+                    "aggregation": "Sum"
+                }
+            ],
+            "device": {
+                "id": "XXX-65-974",
+                "name": "XXX Smart Water Meter",
+                "description": "XXXX Electromagnetic Flow Meter 80mm",
+                "deviceCategory": "WaterMeter"
+            }
+        }
+    ]
 }

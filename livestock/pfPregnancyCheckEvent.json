@@ -1,6 +1,7 @@
 {
-    "description": "Event for recording pregnancy diagnosis or check",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/pregnancy-check-event",
+    "description": "Event for recording pregnancy diagnosis or check",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarReproPregnancyCheckEventResource.json"

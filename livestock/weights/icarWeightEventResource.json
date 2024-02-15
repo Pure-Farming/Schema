@@ -1,6 +1,7 @@
 {
-    "description": "The Weight event records a live weight observation of an animal. Calls the ICAR Weight Event resource",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "/livestock/weights/animal-weight-event",
+    "description": "The Weight event records a live weight observation of an animal. Calls the ICAR Weight Event resource",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarWeightEventResource.json"
@@ -10,11 +11,14 @@
         {
             "resourceType": "/livestock/weights/animal-weight-event",
             "id": "a4090f8d-e041-45f7-8c13-2ac414eee699",
-            "dataPointKey": "sample-data-animal-weight-1",
             "eventDateTime": "2015-10-15T07:42:00.000Z",
             "animal": {
                 "scheme": "iso.std.11785",
-                "id": "982 091004503474"
+                "id": "982 091004501874"
+            },
+            "traitLabel": {
+                "scheme": "nz.minda.trait",
+                "id": "Birth Weight"
             },
             "weight": {
                 "measurement": 164,
@@ -33,7 +37,6 @@
         {
             "resourceType": "/livestock/weights/animal-weight-event",
             "id": "a39932c0-7f93-467b-9db6-7d5457144968",
-            "dataPointKey": "sample-data-animal-weight-4",
             "eventDateTime": "2016-01-02T00:00:00.000Z",
             "animal": {
                 "scheme": "iso.std.11785",
@@ -56,11 +59,14 @@
         {
             "resourceType": "/livestock/weights/animal-weight-event",
             "id": "a4090f8d-e041-45f7-8c13-2ac414eee699",
-            "dataPointKey": "sample-data-animal-weight-2",
             "eventDateTime": "2015-10-15T07:56:00.000Z",
             "animal": {
                 "scheme": "iso.std.11785",
-                "id": "942 000077347221"
+                "id": "942 000021347221"
+            },
+            "traitLabel": {
+                "scheme": "nz.minda.trait",
+                "id": "Weaning Weight"
             },
             "weight": {
                 "measurement": 114,

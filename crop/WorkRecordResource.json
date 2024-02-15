@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "/crop/work-record",
   "description": "Record of work done on a crop",
   "allOf": [
@@ -116,24 +117,24 @@
                   "percent": 100
                 }
               ],
-                "spatialMetric": {
-                  "measurement": 60,
-                  "units": "SMI",
-                  "resolution": 0.5
-                },
-                "waterVolume": {
-                  "units": "LTR",
-                  "measurement": 100
-                },
-                "applicationRate": {
-                  "units": "LTR",
-                  "measurement": 10
-                },
-                "applicationTotal": {
-                  "units": "LTR",
-                  "measurement": 50,
-                  "resolution": 1
-                }
+              "spatialMetric": {
+                "measurement": 60,
+                "units": "SMI",
+                "resolution": 0.5
+              },
+              "waterVolume": {
+                "units": "LTR",
+                "measurement": 100
+              },
+              "applicationRate": {
+                "units": "LTR",
+                "measurement": 10
+              },
+              "applicationTotal": {
+                "units": "LTR",
+                "measurement": 50,
+                "resolution": 1
+              }
             }
           ],
           "responsible": "Daniel Peterson",
@@ -232,12 +233,38 @@
             },
             "geometry": {
               "type": "Polygon",
-              "coordinates": [  [[1, 3], [2, 4], [4, 1], [3, 3], [1, 6]]
-
+              "coordinates": [
+                [
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    4,
+                    1
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    1,
+                    6
+                  ]
+                ]
               ]
             },
             "id": 63207589,
-            "bbox": [1, 1, 4, 6]
+            "bbox": [
+              1,
+              1,
+              4,
+              6
+            ]
           },
           "phenomenonEndTime": "2022-07-16T18:20:02:00000Z",
           "holding": {

@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/inventory/icarMedicineTransactionResource",
     "description": "An inventory transaction resource for a medicine product.",
     "type": "object",
-    "$id": "/inventory/icarMedicineTransactionResource",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarMedicineTransactionResource.json"
