@@ -9,7 +9,7 @@
     ],
     "required": [
         "observationDate"
-    ], 
+    ],
     "properties": {
         "observationDate": {
             "type": "string",
@@ -20,7 +20,7 @@
             "type": "string",
             "format": "date-time",
             "description": "ISO UTC DateTime. The start time of the phenomenon being observed."
-        },        
+        },
         "phenomenonEndTime": {
             "type": "string",
             "format": "date-time",

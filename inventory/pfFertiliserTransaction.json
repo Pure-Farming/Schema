@@ -19,7 +19,7 @@
     },
     "examples": [
         {
-            "resourceType": "/inventory/fertiliser-transaction",
+            "resourceType": "pfFertiliserTransaction",
             "id": "ba574efe-4343-46fd-b8a9-45175776ad8f",
             "meta": {
                 "sourceId": {
@@ -56,11 +56,18 @@
             "totalCost": 1235.75,
             "currency": "NZD",
             "product": {
+                "name": "CKZ Gold Potash Super",
+                "identifiers": [
+                    {
+                        "scheme": "nz.co.ckzfert.product",
+                        "id": "7493"
+                    }
+                ],
                 "contentType": "Safety Data Sheet",
                 "related": "https://ckzfert.co.nz/products/7493/safety",
                 "type": "Fertiliser",
                 "manufacturer": "CKZ Fertiliser Manufacturing Co Ltd",
-                "brand": "CKZ Gold Potash Super",
+                "brand": "CKZ Gold",
                 "form": "Granules",
                 "uri": "https://ckzfert.co.nz/products/7493",
                 "specificGravity": 1.86
