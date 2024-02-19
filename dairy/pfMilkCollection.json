@@ -9,5 +9,195 @@
         {
             "$ref": "../types/pfLoadResourceType.json"
         }
+    ],
+    "properties": {
+        "productionDays": {
+            "type": "number",
+            "description": "Number of production days in this milk collection. Could be fractional (e.g. 1.5 if collection is for 3 of 4 milkings in 2 days)."
+        }
+    },
+    "examples": [
+        {
+            "id": "f6709aca-d0af-4e5b-a460-d1e5e551e833",
+            "resourceType": "pfMilkCollection",
+            "status": "Received",
+            "observationDate": "2022-11-14T12:46:00.000Z",
+            "phenomenonStartTime": "2022-11-13T12:46:00.000Z",
+            "phenomenonEndTime": "2022-11-14T12:46:00.000Z",
+            "productionDays": 1,
+            "holding": {
+                "contentType": "Holding",
+                "identifier": {
+                    "id": "CDE444",
+                    "scheme": "nz.dairyco.holding"
+                },
+                "name": "Green Valley Farm",
+                "uri": "https://greenvalleyfarm.nz"
+            },
+            "identifiers": [{
+                    "id": "70259",
+                    "scheme": "nz.dairyco.collection"
+                },
+                {
+                    "id": "AB123",
+                    "scheme": "nz.milk.collection"
+                }
+            ],
+            "links": [{
+                    "relationship": "Milk Collection Divisional Manager",
+                    "contentType": "Person",
+                    "related": "https://dairyco.com/personname"
+                },
+                {
+                    "relationship": "Parent Company",
+                    "contentType": "Organisation",
+                    "related": "https://dairyholdings.com/info"
+                }
+            ],
+            "meta": {
+                "sourceId": {
+                    "id": "7239888c-ad3c-49bb-a045-bd309fcfb5c3",
+                    "scheme": "nz.dairyco.milk.collection"
+                },
+                "modified": "2022-11-14T11:00:00Z",
+                "created": "2022-11-14T09:00:00Z",
+                "creator": "don.wilson@newco.com",
+                "validFrom": "2022-11-14T11:00:00Z",
+                "validTo": "2022-12-14T11:00:00Z"
+            },
+            "name": "Milk Collection",
+            "@self": "https://dairyco.com/collection",
+            "source": {
+                "consignmentDate": "2022-11-14T11:00:00Z",
+                "organisation": {
+                    "leiCode": "XYZ1234",
+                    "name": "Green Valley Farm Holdings",
+                    "uri": "https://greenvalleyfarm.nz",
+                    "registration": {
+                        "id": "ABC123",
+                        "scheme": "nz.dairyco.member"
+                    },
+                    "gln": "GS1X554433377"
+                },
+                "feature": {
+                    "contentType": "Herd",
+                    "identifier": {
+                        "id": "647-893",
+                        "scheme": "nz.dairyco.supplier"
+                    },
+                    "name": "Green Valley Farm Herd 1",
+                    "uri": "https://greenvalleyfarm.nz/herd1"
+                }
+            },
+            "destination": {
+                "consignmentDate": "2022-11-14T11:00:00Z",
+                "organisation": {
+                    "leiCode": "ABC333",
+                    "name": "Dairy Co Holdings Ltd",
+                    "uri": "https://dairycoholdings.nz/info",
+                    "registration": {
+                        "id": "KF1234567",
+                        "scheme": "nz.companiesregister"
+                    },
+                    "gln": "GS1X1234566521"
+                },
+                "feature": {
+                    "contentType": "Plant",
+                    "identifier": {
+                        "id": "P12",
+                        "scheme": "nz.dairyco.plant"
+                    },
+                    "name": "Hamilton",
+                    "uri": "https://dairyco.com/plant/hamilton"
+                }
+            },
+            "logisticUnit": "Truck",
+            "quantity": 12698,
+            "units": "litres",
+            "rawQuantity": 1.24,
+            "rawUnits": "tonnes",
+            "analysis": [{
+                    "laboratory": {
+                        "leiCode": "ABC444",
+                        "name": "Dairy Co Chemistry Laboratory, Hamilton",
+                        "uri": "https://dairyco.com/laboratory/hamiltonC",
+                        "registration": {
+                            "id": "CL47",
+                            "scheme": "nz.dairyco.lab"
+                        },
+                        "gln": "GS1X666777999"
+                    },
+                    "laboratoryIdentifier": "HamChem",
+                    "sessionIdentifier": "45",
+                    "responsible": "Max Henselite",
+                    "results": [{
+                            "name": "Milk Solids",
+                            "status": "completed",
+                            "abbreviation": "MS",
+                            "metric": "https://standards.nz/dairy/ms",
+                            "method": "https://standards.nz/dairy/filtration",
+                            "rawValue": "8.95",
+                            "rawUnit": "%",
+                            "value": 1429.4,
+                            "unit": "kg",
+                            "resolution": 0.5,
+                            "errorStatistic": 0,
+                            "qualitativeGrade": "KX"
+                        },
+                        {
+                            "name": "Fat",
+                            "status": "completed",
+                            "abbreviation": "FPC",
+                            "metric": "https://standards.nz/dairy/fpc",
+                            "method": "https://standards.nz/dairy/infrared",
+                            "rawValue": "3.4",
+                            "rawUnit": "%",
+                            "value": 650,
+                            "unit": "kg",
+                            "resolution": 0.1,
+                            "errorStatistic": 0,
+                            "qualitativeGrade": "XG"
+                        }
+                    ]
+                },
+                {
+                    "laboratory": {
+                        "leiCode": "ABC100",
+                        "name": "KF Milk Testing Services",
+                        "uri": "https://kfm.co.nz",
+                        "registration": {
+                            "id": "KFM",
+                            "scheme": "nz.dairyco.lab"
+                        },
+                        "gln": "GS1X666777000"
+                    },
+                    "laboratoryIdentifier": "https://kfm.co.nz/xd",
+                    "sessionIdentifier": "498",
+                    "responsible": "Logan Campbell",
+                    "results": [{
+                        "name": "DetergentResidue",
+                        "status": "belowLimit",
+                        "abbreviation": "DRX",
+                        "metric": "https://standards.nz/dairy/dr",
+                        "method": "https://standards.nz/dairy/dr",
+                        "rawValue": "<1",
+                        "rawUnit": "mg",
+                        "value": 0,
+                        "unit": "mg",
+                        "resolution": 0.01,
+                        "errorStatistic": 1,
+                        "qualitativeGrade": "A",
+                        "limit": 1
+                    }]
+                }
+            ],
+            "feature": {
+                "contentType": "Herd",
+                "identifier": {
+                    "scheme": "uk.cph",
+                    "id": "08/675/0020"
+                }
+            }
+        }
     ]
 }
