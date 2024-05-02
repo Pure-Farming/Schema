@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/pfFertiliserProductType",
+    "description": "Defines the fertiliser product.",
+    "type": "object",
+    "properties": {
+        "identifiers": {
+            "type": "array",
+            "description": "Identifiers for the product defined as a scheme and id.",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json"
+            }
+        },
+        "name": {
+            "type": "string",
+            "description": "A user-readable name for the product."
+        },
+        "kind": {
+            "$ref": "../enums/pfFertiliserKindType.json",
+            "description": "Defines the kind of fertiliser product, e.g. Standard, Blend, or Special Mix."
+        },
+        "components": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/ComponentProductType.json"
+            },
+            "description": "Defines the components of the fertiliser product. For product with one component, specify as 100%."
+        }
+    }
+}

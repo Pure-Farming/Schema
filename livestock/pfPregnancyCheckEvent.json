@@ -15,24 +15,28 @@
         "impliedInseminationDate": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarDateTimeType.json",
             "description": "Insemination date implied by foetal age."
+        },
+        "predictedSireIdentifier": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarAnimalIdentifierType.json",
+            "description": "Predicted sire if the diagnosis is pregnant."
         }
     },
     "examples": [
         {
-            "resourceType": "/livestock/pregnancy-check-event",
+            "resourceType": "pfPregnancyCheckEvent",
             "id": "1a06bae6-d4b9-4c34-ab91-43db8cbc0b38",
             "meta": {
-                "source": "uk.fmapp.farm",
+                "source": "net.farmmetrics",
                 "modified": "2023-02-10T15:00:00Z"
             },
-            "@self": "https://fmapp.co.uk/farms",
+            "@self": "https://api.purefarming.com/data/livestock/pregnancy-check-event/dfa77a0d-8977-4c70-9668-84eedab9d5ce",
             "location": {
-                "scheme": "uk.cph",
-                "id": "01/001/00001"
+                "id": "117",
+                "scheme": "net.farmmetrics.unitId"
             },
             "eventDateTime": "2023-02-10T13:00:00Z",
             "traitlabel": {
-                "scheme": "uk.fmapp.trait",
+                "scheme": "net.farmmetrics.trait",
                 "id": "PregnancyCheck"
             },
             "responsible": "Ben Stokes",
@@ -47,10 +51,14 @@
             "foetusCountMale": 0,
             "foetusCountFemale": 1,
             "expectedParturitionDate": "2023-09-14T00:00:00Z",
-            "impliedInseminationDate": "2022-12-07T00:00:00Z"
+            "impliedInseminationDate": "2022-12-07T00:00:00Z",
+            "predictedSireIdentifier": {
+                "scheme": "net.farmmetrics.sirename",
+                "id": "KENMORE TRIPLE CROWN RED ET"
+            }
         },
         {
-            "resourceType": "/livestock/pregnancy-check-event",
+            "resourceType": "pfPregnancyCheckEvent",
             "id": "83efc388-4729-433a-ae8d-5b2cc4c5de7c",
             "meta": {
                 "source": "au.mla.nvd",

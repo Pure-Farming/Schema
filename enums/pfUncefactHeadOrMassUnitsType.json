@@ -1,0 +1,18 @@
+{
+    "description": "Extension of Mass units for weight to include Head.  This is useful so a quantity can be expressed per head or per kilogram. ",
+  
+    "type": ["string", "null"],
+  
+    "enum": [
+      "HEA",
+      "KGM",
+      "GRM",
+      "LBR",
+      "TNE",
+      "LTN",
+      "MC",
+      "MGM",
+      "ONZ",
+      "PN"
+    ]
+  }

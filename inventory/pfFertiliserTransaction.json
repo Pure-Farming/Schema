@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "/inventory/fertiliser-transaction",
+    "$id": "/inventory/pfFertiliserTransaction",
     "description": "Fertiliser inventory transaction resource.",
     "type": "object",
     "allOf": [
@@ -9,11 +9,11 @@
         }
     ],
     "required": [
-        "product"
+        "fertiliserProduct"
     ],
     "properties": {
-        "product": {
-            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/resources/ProductResource.json",
+        "fertiliserProduct": {
+            "$ref": "../types/pfFertiliserProductType.json",
             "description": "The fertiliser product in this inventory transaction."
         }
     },
@@ -36,7 +36,7 @@
                     "id": "2023/fert/23"
                 }
             ],
-            "name": "Potash Super purchase 1.7t - D. Blueman - Oak Reach, Mar 2023",
+            "name": "Super Gold Mix purchase 3.832t - D. Blueman - Oak Reach, Mar 2023",
             "observationDate": "2023-03-31T00:00:00Z",
             "feature": {
                 "contentType": "holding",
@@ -47,30 +47,71 @@
                 "name": "Oak Reach"
             },
             "responsible": "Paula West",
-            "remark": "Receipt Potash Super purchase Mar 23: Oak Reach",
+            "remark": "Super Gold Mix purchase Mar 23: Oak Reach",
             "transactionKind": "Receipt",
-            "quantity": 1.7,
+            "quantity": 3.832,
             "units": "TNE",
             "supplierName": "ZaxFert",
             "expiryDate": "2025-03-31T08:00:00Z",
             "totalCost": 1235.75,
             "currency": "NZD",
-            "product": {
-                "name": "CKZ Gold Potash Super",
+            "fertiliserProduct": {
+                "name": "Super Gold Mix",
                 "identifiers": [
                     {
                         "scheme": "nz.co.ckzfert.product",
-                        "id": "7493"
+                        "id": "123456"
                     }
                 ],
-                "contentType": "Safety Data Sheet",
-                "related": "https://ckzfert.co.nz/products/7493/safety",
-                "type": "Fertiliser",
-                "manufacturer": "CKZ Fertiliser Manufacturing Co Ltd",
-                "brand": "CKZ Gold",
-                "form": "Granules",
-                "uri": "https://ckzfert.co.nz/products/7493",
-                "specificGravity": 1.86
+                "kind": "Special Mix",
+                "components": [
+                    {
+                        "product": {
+                            "name": "Gold Crop Bulk",
+                            "identifiers": [
+                                {
+                                    "scheme": "nz.co.ckzfert.product",
+                                    "id": "5670017"
+                                }
+                            ],
+                            "contentType": "Safety Data Sheet",
+                            "related": "https://ckzfert.co.nz/products/7493/safety",
+                            "type": "Fertiliser",
+                            "manufacturer": "CKZ Fertiliser Manufacturing Co Ltd",
+                            "brand": "CKZ Gold",
+                            "form": "Granules",
+                            "uri": "https://ckzfert.co.nz/products/7493",
+                            "specificGravity": 1.86
+                        },
+                        "percent": 47.6
+                    },
+                    {
+                        "product": {
+                            "name": "Super Bulk",
+                            "identifiers": [
+                                {
+                                    "scheme": "nz.co.ckzfert.product",
+                                    "id": "1515151"
+                                }
+                            ],
+                            "specificGravity": 1.40,
+                            "form": "Granules"
+                        },
+                        "percent": 47.6
+                    },
+                    {
+                        "product": {
+                            "name": "Selenium Gold",
+                            "identifiers": [
+                                {
+                                    "scheme": "nz.co.ckzfert.product",
+                                    "id": "34567"
+                                }
+                            ]
+                        },
+                        "percent": 4.8
+                    }
+                ]
             }
         }
     ]
