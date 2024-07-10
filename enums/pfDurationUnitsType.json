@@ -3,6 +3,7 @@
     "description": "Defines the unit of duration from RFC3339. (T = 10 days)",
     "type": "string",
     "enum": [
+        "D",
         "W",
         "T",
         "M",

@@ -1,0 +1,59 @@
+{
+    "$id": "icarTreatmentProgramEventResource",
+    "description": "An animal health event combining diagnosis and planned or actual treatment course or events for an individual animal.",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/resources/icarTreatmentProgramEventResource.json"
+        }
+    ],
+    "examples": [
+        {
+            "resourceType": "icarTreatmentProgramEventResource",
+            "id": "19f48abf-16f6-4af3-a475-ca6efe3c78d5",
+            "meta": {
+                "source": "net.farmmetrics",
+                "sourceId": "10+UK103458302119+2024-04-15",
+                "modified": "2024-06-16T02:30:26+00:00"
+            },
+            "eventDateTime": "2024-04-15T00:00:00", 
+            "location": {
+                "scheme": "net.farmmetrics.farmId",
+                "id": "777"
+            },
+            "animal": {
+                "scheme": "uk.cts.eartag",
+                "id": "VJ103458302480"
+            },
+            "courses": [
+                {
+                    "startDate": "2024-04-15T00:00:00",
+                    "endDate": "2024-04-17T00:00:00",
+                    "reasonForAdministration": "Udder: Clinical Mastitis",
+                    "medicine": {
+                        "name": "Diatrim 200 mg/ml + 40 mg/ml Solution for Injection"
+                    },
+                    "totalDose": {
+                        "doseQuantity": 60,
+                        "doseUnits": "MLT"
+                    },
+                    "numberOfTreatments": 3,
+                    "planOrActuals": "Actual"
+                },
+                {
+                    "startDate": "2024-04-15",
+                    "endDate": "2024-04-15",
+                    "reasonForAdministration": "Udder: Clinical Mastitis",
+                    "medicine": {
+                        "name": "Allevinix 50 mg/ml Solution for Injection for Cattle, Pigs and Horses"
+                    },
+                    "totalDose": {
+                        "doseQuantity": 25,
+                        "doseUnits": "MLT"
+                    },
+                    "numberOfTreatments": 1,
+                    "planOrActuals": "Actual"
+                }
+            ]
+        }
+    ]
+}

@@ -13,14 +13,7 @@
             "description": "The basis on which the greenhouse gas intensity has been determined. For example, per farmed area, per head, per product weight."
         },
         "denominatorUnits": {
-            "oneOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/uncefactAreaUnits.json"
-                },
-                {
-                    "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/uncefactMassUnits.json"
-                }
-            ],
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/uncefactMassOrAreaUnits.json",
             "description": "The units of the denominator.  For example, HAR (hectares), KGM (kilograms) or TNE (tonnes)."
         }
     },
