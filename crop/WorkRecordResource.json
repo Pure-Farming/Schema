@@ -10,92 +10,135 @@
   "examples": [
     {
       "resourceType": "WorkRecordResource",
-      "operation": "Spraying Product and Spreading Fertiliser",
+      "operation": "Herbicide and Fertiliser Applications",
       "status": "Complete",
-      "id": "ae08267d-7fa2-4abb-8ae1-c84b1eb19348",
+      "priority": "Low",
+      "id": "b541f0b6-9ef1-4aca-a31b-49ca307588ea",
       "meta": {
         "sourceId": {
           "scheme": "com.spreadingco.operation",
-          "id": "7239888c-ad3c-49bb-a045-bd309fcfb5c3"
+          "id": "9a9c5f28-5070-443e-bb10-dcb744e1f4a2"
         },
-        "modified": "2022-08-16T12:30:00.000Z"
+        "modified": "2022-08-16T12:30:00.000Z",
+        "created": "2022-08-16T12:30:00.000Z",
+        "creator": "D Peterson",
+        "validFrom": "2022-08-16T12:30:00.000Z",
+        "validTo": "2025-08-16T12:30:00.000Z"
       },
       "observationDate": "2022-07-16T10:18:02.000Z",
+      "identifiers": [
+        {
+          "scheme": "com.spreadingco.invoice",
+          "id": "K22-547"
+        }
+      ],
+      "name": "River field operation July 2022",
+      "@self": "https://api.purefarming.com/data/crops/work-record/7ed6fe90-c767-48d9-8899-3f4614fb24f5",
+      "links": [
+        {
+          "relationship": "Contractor",
+          "contentType": "ProofOfPlacement",
+          "related": "https://spreadingco.com/operation/22-8754"
+        }
+      ],
       "feature": {
         "contentType": "PlotResource",
         "identifier": {
           "scheme": "com.purefarming.plotId",
-          "id": "af8a3f52-8bd4-47dd-aba4-850d8a884703"
-        }
+          "id": "912e4adb-86fd-4232-aecb-512837149a5a"
+        },
+        "name": "River field",
+        "uri": "https://rural.nz/parcel/54321"
       },
-      "priority": "Low",
       "holding": {
         "contentType": "HoldingResource",
         "identifier": {
           "scheme": "com.purefarming.holdingId",
-          "id": "bf35ccbc-621f-4c2d-9035-318c504686d6"
-        }
+          "id": "93c084d6-da04-43a6-8477-eb35e91da385"
+        },
+        "name": "Florida Farm",
+        "uri": "https://farmsonline.govt.nz/XYZ123",
+        "relationship": "Primary Contact",
+        "related": "mailto:daniel.peterson@kmail.com"
+      },
+      "phenomenonStartTime": "2022-07-16T08:28:00.000Z",
+      "phenomenonEndTime": "2022-07-16T18:06:00.000Z",
+      "responsible": "Dave Peterson",
+      "remark": "Spraying pesticide and spreading fertiliser on river field",
+      "workedArea": {
+        "measurement": 864,
+        "resolution": 1,
+        "units": "MTK"
       },
       "nonOverlapWorkedArea": {
         "measurement": 864,
         "resolution": 1,
         "units": "MTK"
       },
-      "phenomenonStartTime": "2022-07-16T08:28:00.000Z",
-      "remark": "Spraying pesticide and spreading fertiliser on river field",
-      "phenomenonEndTime": "2022-07-16T18:06:00.000Z",
-
-      "workedArea": {
-        "measurement": 864,
-        "resolution": 1,
-        "units": "MTK"
-      },
-      "responsible": "Dave Peterson",
       "loggedOperations": [
         {
           "resourceType": "OperationRecordResource",
           "operation": "Spraying",
-          "id": "1dd25755-692a-480e-b8fd-8d63ef20f004",
+          "operationName": "Broad spectrum weed control",
+          "id": "f0d9f8f0-8c88-43f1-8543-95485f18d8f5",
           "meta": {
             "sourceId": {
               "scheme": "com.spreadingco.operation",
-              "id": "7239888c-ad3c-49bb-a045-bd309fcfb5c3"
+              "id": "3eac77db-0ae4-40a3-8239-e8e9ef0b56dc"
             },
-            "modified": "2022-08-16T12:30:00.000Z"
+            "modified": "2022-08-16T12:30:00.000Z",
+            "created": "2022-08-16T12:30:00.000Z",
+            "creator": "D Peterson",
+            "validFrom": "2022-08-16T12:30:00.000Z",
+            "validTo": "2025-08-16T12:30:00.000Z"
           },
           "observationDate": "2022-07-16T10:18:02.000Z",
           "feature": {
             "contentType": "PlotResource",
             "identifier": {
               "scheme": "com.purefarming.plotId",
-              "id": "af8a3f52-8bd4-47dd-aba4-850d8a884703"
-            }
+              "id": "912e4adb-86fd-4232-aecb-512837149a5a"
+            },
+            "name": "River field",
+            "uri": "https://rural.nz/parcel/54321"
           },
-          "phenomenonStartTime": "2022-07-16T08:28:02.000Z",
+          "phenomenonStartTime": "2022-07-16T08:28:00.000Z",
           "holding": {
             "contentType": "HoldingResource",
             "identifier": {
               "scheme": "com.purefarming.holdingId",
-              "id": "bf35ccbc-621f-4c2d-9035-318c504686d6"
-            }
+              "id": "93c084d6-da04-43a6-8477-eb35e91da385"
+            },
+            "name": "Florida Farm"
           },
           "remark": "Wheat weed control",
           "products": [
             {
               "components": [
                 {
+                  "mixSequence": 1,
+                  "percent": 100,
                   "product": {
                     "name": "Wheat broad spectrum weed control",
                     "identifiers": [
                       {
-                        "scheme": "com.mgpcropscience.product",
+                        "scheme": "com.valleyagrichem.product",
                         "id": "PK47"
                       }
                     ],
                     "specificGravity": 1.1,
                     "manufacturer": "Valley Agrichem International",
-                    "type": "Pesticide",
+                    "brand": "Wheat Clean",
+                    "uri": "https://valleyagrichem.com/product/PK47",
+                    "type": "Herbicide",
                     "form": "WaterSolublePowder",
+                    "matterState": "Solid",
+                    "bulkDensity": {
+                      "measurement": 0.53,
+                      "units": "GRM",
+                      "denominator": 1,
+                      "denominatorUnits": "MLT"
+                    },
                     "registrations": [
                       {
                         "scheme": "nz.govt.acvm.register",
@@ -108,17 +151,30 @@
                         "hours": 144
                       }
                     ],
+                    "activeIngredients": [
+                      {
+                        "id": {
+                          "scheme": "com.herbicidegroup.ingredient",
+                          "id": "44507"
+                        },
+                        "name": "Diflufenican"
+                      }
+                    ],
                     "crop": {
                       "establishmentDate": "2022-03-14T00:00:00.000Z",
                       "maturityDate": "2022-08-10T00:00:00.000Z",
+                      "harvestDate": "2022-08-20T00:00:00.000Z",
                       "taxonomicName": "Triticum aestivum",
                       "name": "Wheat",
                       "variety": "Extase",
-                      "harvestDate": "2022-09-10T00:00:00.000Z"
+                      "identifiers": [
+                        {
+                          "scheme": "org.fao.crops",
+                          "id": "1.1.1.2"
+                        }
+                      ]
                     }
-                  },
-                  "mixSequence": 1,
-                  "percent": 100
+                  }
                 }
               ],
               "spatialMetric": {
@@ -147,11 +203,11 @@
         {
           "resourceType": "OperationRecordResource",
           "operation": "Fertiliser Application",
-          "id": "52bb8cb5-90d9-4308-bb0f-6f050ba93bc2",
+          "id": "6c12dc1a-747d-450f-9663-8dd70e2ca6a6",
           "meta": {
             "sourceId": {
               "scheme": "com.spreadingco.operation",
-              "id": "7239888c-ad3c-49bb-a045-bd309fcfb5c3"
+              "id": "10ca0bcc-9de9-4eb3-86a8-d1ff0504a1f5"
             },
             "modified": "2022-08-16T10:18:00.000Z"
           },
@@ -166,30 +222,12 @@
           "phenomenonStartTime": "2022-07-16T10:18:02.000Z",
           "products": [
             {
-              "relationship": "Product Safety Information",
-              "contentType": "MSDS",
-              "related": "https://fertco.com/msds/753",
-              "type": "Fertiliser",
-              "manufacturer": "Fertco Agri Nutrients Pty",
-              "brand": "Maximix 500",
-              "form": "Granules",
-              "uri": "https://fertco.com/products/7932",
-              "crop": {
-                "name": "Maize silage",
-                "taxonomicName": "Zea mays",
-                "variety": "XYZ 381",
-                "identifiers": [
-                  {
-                    "scheme": "nz.co.abcseeds.maize",
-                    "id": "XYZ381"
-                  }
-                ],
-                "establishmentDate": "2022-04-15T00:00:00Z"
+              "spatialMetric": {
+                "resolution": 0.5,
+                "measurement": 46,
+                "units": "LY"
               },
-              "specificGravity": 1.77,
-              "bulkDensity": 875,
-              "matterState": "Solid",
-              "analysis": [
+              "components": [
                 {
                   "mixSequence": 1,
                   "percent": 100,
@@ -237,34 +275,16 @@
                   }
                 }
               ],
-              "activeIngredients": [
-                {
-                  "id": {
-                    "scheme": "com.fertco.product",
-                    "id": "7810"
-                  },
-                  "name": "Calcium phosphate"
-                },
-                {
-                  "id": {
-                    "scheme": "com.fertco.product",
-                    "id": "4375"
-                  },
-                  "name": "Calcium sulphate"
-                }
-              ],
-              "withdrawals": [
-                {
-                  "scheme": "nz.govt.acvm.whp",
-                  "hours": 72
-                }
-              ],
-              "registrations": [
-                {
-                  "scheme": "nz.govt.acvm.register",
-                  "id": "93091"
-                }
-              ]
+              "applicationTotal": {
+                "units": "KGM",
+                "resolution": 0.1,
+                "measurement": 10
+              },
+              "applicationRate": {
+                "measurement": 1,
+                "resolution": 0.01,
+                "units": "KGM"
+              }
             }
           ],
           "loggedGeometry": {
@@ -313,7 +333,7 @@
               "id": "bf35ccbc-621f-4c2d-9035-318c504686d6"
             }
           },
-          "operationName": "FertiliserApplication",
+          "operationName": "Fertilising",
           "environment": {
             "windSpeed": {
               "measurement": 7.1,

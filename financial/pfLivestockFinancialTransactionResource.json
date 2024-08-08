@@ -21,17 +21,7 @@
             "description": "The average weight per head of stock."
         },
         "units": {
-            "oneOf": [
-                {
-                    "type": "string",
-                    "enum": [
-                        "head"
-                    ]
-                },
-                {
-                    "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/enums/uncefactMassUnitsType.json"
-                }
-            ],
+            "$ref": "../enums/pfUncefactHeadOrMassUnitsType.json",
             "description": "The units of transactionQuantity.  For example, the transaction quantity may be expressed per head or per kilogram."
         },
         "weightType": {
@@ -96,7 +86,7 @@
                 "birthPeriod": "2021-06-01/2021-11-30",
                 "reproductiveStatus": "NotPregnant"
             },
-            "units": "head",
+            "units": "HEA",
             "weightType": "live"
         }
     ]
