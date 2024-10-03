@@ -12,15 +12,23 @@
     ],
     "examples": [
         {
-            "resourceType": "/core/plot-zone",
-            "id": "c3de387c-6460-491b-8152-1f845d16785a",
+            "resourceType": "PlotZoneResource",
+            "id": "42d55866-2583-43ac-818d-e498cf1831d2",
             "identifiers": [
                 {
-                    "scheme": "nz.milkco.plot",
-                    "id": "77345.pdk54"
+                    "scheme": "nz.milkco.zone",
+                    "id": "77345.10"
                 }
             ],
-            "name": "Far flats",
+            "name": "Far flats maize zone",
+            "parentFeature": {
+                "name": "Long Close",
+                "contentType": "PlotResource",
+                "identifier": {
+                    "id": "77345",
+                    "scheme": "nz.milkco.paddock"
+                }
+            },
             "meta": {
                 "sourceId": {
                     "id": "123456789",

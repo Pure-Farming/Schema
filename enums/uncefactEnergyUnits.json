@@ -1,0 +1,13 @@
+{
+    "description": "Units for energy from UN/CEFACT trade facilitation recommendation 20. In order joule, kilojoule, watt hour, megawatt hour, kilowatt hour",
+  
+    "type": ["string", "null"],
+  
+    "enum": [
+      "JOU",
+      "KJO",
+      "WHR",
+      "MWH",
+      "KWH"
+    ]
+  }

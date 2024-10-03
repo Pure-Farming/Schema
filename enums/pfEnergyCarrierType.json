@@ -1,0 +1,12 @@
+{
+    "description": "The form or type of energy.",
+  
+    "type": ["string", "null"],
+  
+    "enum": [
+        "Electricity",
+        "Gasoline",
+        "Diesel",
+        "NaturalGas"
+    ]
+  }

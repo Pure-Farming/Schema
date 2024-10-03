@@ -1,0 +1,112 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/energy/energy-consumption",
+    "description": "Defines the consumption of a form of energy in a period for an asset or a feature, one of which should be defined.",
+    "type": "object",
+    "required": [
+        "startDate",
+        "endDate",
+        "assetName",
+        "energyCarrier"
+    ],
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/ResourceType.json"
+        }
+    ],
+    "properties": {
+        "startDate": {
+            "description": "Start of the period to which the consumption pertains.",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/DateTimeType.json"
+        },
+        "endDate": {
+            "description": "End of the period to which the consumption pertains.",
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/DateTimeType.json"
+        },
+        "duration": {
+            "$ref": "../enums/pfDurationUnitsType.json",
+            "description": "The unit of duration of the consumption period."
+        },
+        "feature": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/FeatureReferenceType.json",
+            "description": "Identifies the feature on which the energy is consumed. The feature may be the entire holding. ( Optional)"
+        },
+        "assetIdentifiers": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json"
+            },
+            "description": "Array of identifiers that identify a specific asset consuming the energy recorded here."
+        },
+        "assetName": {
+            "description": "Unique name within the holding of the feature or asset that is the subject to which the energy consumption applies.",
+            "type": "string"
+        },
+        "energyCarrier": {
+            "description": "The form or type of energy being consumed.",
+            "$ref": "../enums/pfEnergyCarrierType.json"
+        },
+        "percentRenewable": {
+            "description": "Percentage of the energy consumed that is renewable.",
+            "type": "number"
+        },
+        "consumption": {
+            "description": "Energy of type identified consumed by this asset or feature in this period.",
+            "$ref": "../types/pfEnergyMeasureType.json"
+        },
+        "production": {
+            "description": "Energy of type identified produced by this asset or feature in this period.",
+            "$ref": "../types/pfEnergyMeasureType.json"           
+        },
+        "energyBalance": {
+            "description": "Net energy balance. Negative if production/generation exceeds production.",
+            "$ref": "../types/pfEnergyMeasureType.json"
+        },
+        "energyMeter": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfEnergyMeterType.json"
+            },
+            "description": "Array of meter readings for the period."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "pfEnergyConsumptionResource",
+            "id": "c4d27b63-78eb-4ece-9bb3-90693b5ced41",
+            "meta": {
+                "sourceId": {
+                    "scheme": "nz.powerco.invoice",
+                    "id": "1234567"
+                },
+                "modified": "2022-08-16T10:18:02.000Z"
+            },
+            "name": "Electricity consumed July 2022",
+            "startDate": "2022-07-01T00:00:00.000Z",
+            "endDate": "2022-07-31T00:00:00.000Z",
+            "duration": "M",
+            "feature": {
+                "contentType": "HoldingResource",
+                "relationship": "Holding",
+                "identifier": {
+                    "scheme": "nz.govt.farmsonline",
+                    "id": "XYZ9999"
+                }
+            },
+            "assetName": "Hillside Farm",
+            "energyCarrier": "Electricity",
+            "consumption": {
+                "value": 6158,
+                "units": "KWH"
+            },
+            "production": {
+                "value": 0,
+                "units": "KWH"
+            },
+            "energyBalance": {
+                "value": 6158,
+                "units": "KWH"
+            }
+        }
+    ]
+}

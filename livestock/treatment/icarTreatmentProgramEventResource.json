@@ -1,5 +1,5 @@
 {
-    "$id": "icarTreatmentProgramEventResource",
+    "$id": "/livestock/treatment/treatment-program-event",
     "description": "An animal health event combining diagnosis and planned or actual treatment course or events for an individual animal.",
     "allOf": [
         {
@@ -13,9 +13,9 @@
             "meta": {
                 "source": "net.farmmetrics",
                 "sourceId": "10+UK103458302119+2024-04-15",
-                "modified": "2024-06-16T02:30:26+00:00"
+                "modified": "2024-06-16T02:30:00Z"
             },
-            "eventDateTime": "2024-04-15T00:00:00", 
+            "eventDateTime": "2024-04-15T00:00:00Z", 
             "location": {
                 "scheme": "net.farmmetrics.farmId",
                 "id": "777"
@@ -26,8 +26,8 @@
             },
             "courses": [
                 {
-                    "startDate": "2024-04-15T00:00:00",
-                    "endDate": "2024-04-17T00:00:00",
+                    "startDate": "2024-04-15T00:00:00.000Z",
+                    "endDate": "2024-04-17T00:00:00.000Z",
                     "reasonForAdministration": "Udder: Clinical Mastitis",
                     "medicine": {
                         "name": "Diatrim 200 mg/ml + 40 mg/ml Solution for Injection"
@@ -40,8 +40,8 @@
                     "planOrActuals": "Actual"
                 },
                 {
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-15",
+                    "startDate": "2024-04-15T00:00:00Z",
+                    "endDate": "2024-04-15T00:00:00Z",
                     "reasonForAdministration": "Udder: Clinical Mastitis",
                     "medicine": {
                         "name": "Allevinix 50 mg/ml Solution for Injection for Cattle, Pigs and Horses"
