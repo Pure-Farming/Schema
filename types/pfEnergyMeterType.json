@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "Defines the readings for a period of an energy meter.",
+    "properties": {
+        "meterName": {
+            "description": "Name or reference of the energy meter",
+            "type": "string"
+        },
+        "startValue": {
+            "description": "Meter reading at the start of the period",
+            "type": "number"
+        },
+        "endValue": {
+            "description": "Meter reading at the end of the period",
+            "type": "number"
+        },
+        "meterUnits": {
+            "description": "Units that the meter readings are expressed in",
+            "$ref": "../enums/uncefactMassOrVolumeOrEnergyUnits.json"
+        }
+    },
+    "examples": [
+        {
+            "meterName": "Dairy Shed",
+            "startValue": 295607.3,
+            "endValue": 301758.8,
+            "meterUnits": "KWH"
+        },
+        {
+            "meterName": "Diesel Pump",
+            "startValue": 47317.2,
+            "endValue": 47971.1,
+            "meterUnits": "LTR"  
+        }
+    ]
+}

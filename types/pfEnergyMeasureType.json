@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "The value and the units of an energy measure. The units may be a volume (liquid and gas), energy (kilowatt hours, megawatt hours, etc), or mass (kilograms, for coal/biomass) ",
+    "properties": {
+        "value": {
+            "description": "The value of the measure.",
+            "type": "number"
+        },
+        "units": {
+            "description": "The volume, energy or mass units in which the energy is measured.  Uses UNCEFACT units.",
+            "$ref": "../enums/uncefactMassOrVolumeOrEnergyUnits.json"
+        }
+    },
+    "examples": [
+        {
+            "value": 81.3,
+            "units": "KWH"
+        },
+        {
+            "value": 65.7,
+            "units": "LTR"
+        }
+    ]
+}
