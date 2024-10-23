@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "Defines greenhouse gas scopes.",
+    "type": "string",
+    "enum": [
+        "All",
+        "Scope1",
+        "Scope2",
+        "Scope3"
+    ]
+}

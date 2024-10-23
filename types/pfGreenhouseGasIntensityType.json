@@ -15,6 +15,14 @@
         "denominatorUnits": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/enums/uncefactMassOrAreaUnits.json",
             "description": "The units of the denominator.  For example, HAR (hectares), KGM (kilograms) or TNE (tonnes)."
+        },
+        "product": {
+            "$ref": "../enums/pfGreenhouseGasProductType.json",
+            "description": "Name of the product associated with this greenhouse gas intensity."
+        },
+        "harmonisedCode": {
+            "type": "string",
+            "description": "The product code based on World Trade Organisation / World Customs Organisation harmonised system."
         }
     },
     "examples": [
@@ -32,14 +40,17 @@
                 "units": "KGM"
             },
             "denominator": "ProductWeight",
-            "denominatorUnits": "TNE"
+            "denominatorUnits": "TNE",
+            "product": "Maize",
+            "harmonisedCode": "10.05"
         },
         {
             "value": {
                 "measurement": 1.4,
                 "units": "KGM"
             },
-            "denominator": "MilkSolids",
+            "product": "Milk Solids",
+            "harmonisedCode": "4.01",
             "denominatorUnits": "KGM"
         }
     ]
