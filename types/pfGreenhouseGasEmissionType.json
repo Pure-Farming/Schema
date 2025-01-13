@@ -1,0 +1,136 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/pfGreenhouseGasEmissionType",
+    "description": "The details of a greenhouse gas emission or offset (negative emission) for a specific cause.",
+    "type": "object",
+    "required": [
+        "scope", "category"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of this emission source defined by the enterprise and pathway."
+        },
+        "scope": {
+            "$ref": "../enums/pfGreenhouseGasScopeType.json",
+            "description": "GHG emissions scope. 1 = direct emissions from owned or controlled sources, 2 = indirect from the generation of purchased energy, 3 = all other indirect emissions, All = when providing overall emissions for an enterprise."
+        },
+        "category": {
+            "$ref": "../enums/pfGreenhouseGasEmissionCategoryType.json",
+            "description": "The category of this source. Use All if the emissions are for all categories for this enterprise."
+        },
+        "pool": {
+            "$ref": "../enums/pfGreenhouseGasEmissionPoolType.json",
+            "description": "The pool of this source. Use All if the emissions are for all pools for this enterprise."
+        },
+        "cause": {
+            "$ref": "../enums/pfGreenhouseGasEmissionCauseType.json",
+            "description": "The cause of this source. Use All if the emissions are for all causes for this enterprise."
+        },
+        "CO2": {
+            "$ref": "../types/pfGreenhouseGasMassType.json",
+            "description": "The emission of carbon dioxide by this source."
+        },
+        "N2O": {
+            "$ref": "../types/pfGreenhouseGasMassType.json",
+            "description": "The emission of nitrous oxide by this source."
+        },
+        "CH4": {
+            "$ref": "../types/pfGreenhouseGasMassType.json",
+            "description": "The emission of methane by this source."
+        },
+        "HFC": {
+            "$ref": "../types/pfGreenhouseGasMassType.json",
+            "description": "The emission of hydrofluorocarbons by this source."
+        },
+        "CO2e": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The emissions for this source expressed as carbon dioxide equivalents."
+        },
+        "CO2eIntensity": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfGreenhouseGasIntensityType.json"
+            },
+            "description": "Array of emission intensities for this emission source, each for the specified basis."
+        },
+        "allocatedProducts": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/pfGreenhouseGasAllocationType.json"
+            },
+            "description": "Array of emission allocations to products."
+        }
+    },
+    "examples": [
+        {            
+            "name": "Excreta",
+            "scope": "Scope1",
+            "category": "Biogenic",
+            "pool": "Soil",
+            "cause": "Excreta",
+            "CH4": {
+                "massGas": {
+                    "measurement": 519.83,
+                    "units": "KGM"
+                }
+            },
+            "N2O": {
+                "massCO2e": {
+                    "measurement": 180082,
+                    "units": "KGM"
+                },
+                "massGas": {
+                    "measurement": 604.34,
+                    "units": "KGM"
+                }
+            },
+            "CO2e": {
+                "measurement": 193078,
+                "units": "KGM"
+            },
+            "allocatedProducts": [
+                {
+                    "product": "Milk Solids",
+                    "harmonisedCode": "04.01",
+                    "percentage": 80,
+                    "CO2e": {
+                        "measurement": 154462,
+                        "units": "KGM"
+                    }
+                },
+                {
+                    "product": "Cattle Liveweight",
+                    "harmonisedCode": "01.02",
+                    "percentage": 20,
+                    "CO2e": {
+                        "measurement": 38616,
+                        "units": "KGM"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Spreading",
+            "scope": "Scope3",
+            "category": "Mechanical",
+            "pool": "Contractors",
+            "cause": "Spreading",
+            "CO2e": {
+                "measurement": 6021,
+                "units": "KGM"
+            }
+        },
+        {    
+            "name": "PKE_bi_feed",
+            "scope": "Scope3",
+            "category": "Purchases",
+            "pool": "Feeds",
+            "cause": "Palm Kernel Expeller",
+            "CO2e": {
+                "measurement": 613413,
+                "units": "KGM"
+            }
+        }
+    ]
+}

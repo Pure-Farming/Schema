@@ -1,0 +1,47 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/pfGreenhouseGasAllocationType",
+    "description": "Defines the allocation of emissions (and sequestration activities) to a product by its percentage.",
+    "type": "object",
+    "required": [
+        "product"
+    ],
+    "properties": {
+        "product": {
+            "$ref": "../enums/pfGreenhouseGasProductType.json",
+            "description": "Name of the product"
+        },
+        "harmonisedCode": {
+            "type": "string",
+            "description": "The product code based on World Trade Organisation / World Customs Organisation harmonised system https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/hs-nomenclature-2022-edition.aspx"
+        },
+        "percentage": {
+            "type": "number",
+            "description": "The percentage of this product allocated to the emission it references."
+        },
+        "CO2e": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
+            "description": "The CO2 equivalents of this emission allocated to this product."
+        }
+    },
+    "examples": [
+        {
+            "product": "Milk Solids",
+            "harmonisedCode": "04.01",
+            "percentage": 80,
+            "CO2e": {
+                "measurement": 20222,
+                "units": "KGM"
+            }
+        },
+        {
+            "product": "Cattle Liveweight",
+            "harmonisedCode": "01.02",
+            "percentage": 20,
+            "CO2e": {
+                "measurement": 5055,
+                "units": "KGM"
+            }
+        }
+    ]
+}

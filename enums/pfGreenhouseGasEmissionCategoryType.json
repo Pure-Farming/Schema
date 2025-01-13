@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "Defines the categories of greenhouse gas emissions.",
+    "type": "string",
+    "enum": [
+        "All",
+        "Biogenic",
+        "Land Use Change",
+        "Mechanical",
+        "Purchases"
+    ]
+}
