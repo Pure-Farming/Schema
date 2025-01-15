@@ -20,7 +20,8 @@
                 "Blood",
                 "Tissue",
                 "Fibre",
-                "Velvet"
+                "Velvet",
+                "Unknown"
             ]
         },
         "analyses": {

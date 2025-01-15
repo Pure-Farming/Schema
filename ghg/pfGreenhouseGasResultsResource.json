@@ -73,6 +73,10 @@
         },
         "N2O": {
             "$ref": "../types/pfGreenhouseGasMassType.json",
+            "description": "The total hydrofluorocarbons HFC emitted."
+        },
+        "HFC": {
+            "$ref": "../types/pfGreenhouseGasMassType.json",
             "description": "The total nitrous oxide N2O emitted."
         },
         "CO2e": {
@@ -107,7 +111,7 @@
     },
     "examples": [
         {
-            "resourceType": "/ghg/greenhouse-gas-results",
+            "resourceType": "pfGreenhouseGasResultsResource",
             "id": "a5e4c646-6c78-4965-880c-239cc4013f21",
             "identifiers": [
                 {
@@ -183,18 +187,22 @@
                         "units": "TNE"
                     },
                     "denominator": "Area",
-                    "denominatorUnits": "HAR"
-        
+                    "denominatorUnits": "HAR",
+                    "product": "Milk Solids",
+                    "harmonisedCode": "4.01"
                 }
             ],
             "emissionsSources": [
                 {
-                    "enterprise": "Dairy",
+                    "enterprise": "livestock.cattle.dairy",
                     "name": "Dairy cattle (incl. grazing dairy)",
-                    "pathwayEmissions": [
+                    "species": "Cattle",
+                    "emissions": [
                         {
-                            "pathway": "All",
-                            "scope": 1,
+                            "scope": "Scope1",
+                            "category": "All",
+                            "pool": "All",
+                            "cause": "All",
                             "CH4": {
                                 "massGas": {
                                     "measurement": 8303,
@@ -210,17 +218,47 @@
                             "CO2e": {
                                 "measurement": 268118,
                                 "units": "KGM"
-                            }
+                            },
+                            "allocatedProducts": [
+                                {
+                                    "product": "Milk Solids",
+                                    "harmonisedCode": "04.01",
+                                    "percentage": 80,
+                                    "CO2e": {
+                                        "measurement": 154462,
+                                        "units": "KGM"
+                                    }
+                                },
+                                {
+                                    "product": "Cattle Liveweight",
+                                    "harmonisedCode": "01.02",
+                                    "percentage": 20,
+                                    "CO2e": {
+                                        "measurement": 38616,
+                                        "units": "KGM"
+                                    }
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "enterprise": "Beef",
+                    "enterprise": "livestock.cattle.beef.rearing",
                     "name": "Beef cattle",
-                    "pathwayEmissions": [
+                    "species": "Cattle",
+                    "emissions": [
                         {
-                            "pathway": "All",
-                            "scope": 1,
+                            "scope": "Scope1",
+                            "category": "All",
+                            "pool": "All",
+                            "cause": "All",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Cattle Liveweight",
+                                    "harmonisedCode": "01.02",
+                                    "percentage": 100
+                                }
+                            ],
                             "CH4": {
                                 "massGas": {
                                     "measurement": 41213,
@@ -241,38 +279,22 @@
                     ]
                 },
                 {
-                    "enterprise": "Sheep",
-                    "name": "Sheep",
-                    "pathwayEmissions": [
-                        {    
-                            "pathway": "All",      
-                            "scope": 1,
-                            "CH4": {
-                                "massGas": {
-                                    "measurement": 125239,
-                                    "units": "KGM"
+                    "enterprise": "fieldcrops.cereal.maize",
+                    "species": "Maize",
+                    "emissions": [
+                        {
+                            "name": "Fertiliser Soil",
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Soil",
+                            "cause": "Fertilizer",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Maize",
+                                    "harmonisedCode": "10.05",
+                                    "percent": 100
                                 }
-                            },
-                            "N2O": {
-                                "massGas": {
-                                    "measurement": 1765,
-                                    "units": "KGM"
-                                }
-                            },
-                            "CO2e": {
-                                "measurement": 3656911,
-                                "units": "KGM"
-                            }
-                        }
-                    ]   
-                },
-                {
-                    "enterprise": "All",
-                    "pathwayEmissions": [
-                        {            
-                            "pathway": "Fertiliser-NonUreaNitrogen",
-                            "name": "Pathway non-urea nitrogen fertiliser",
-                            "scope": 1,
+                            ],
                             "N2O": {
                                 "massGas": {
                                     "measurement": 85,
@@ -285,10 +307,18 @@
                             }
                         },
                         {
-        
-                            "pathway": "Fertiliser-UreaWithoutUreaseInhibitor",
-                            "name": "Pathway Urea without urease inhibitor",
-                            "scope": 1,
+                            "name": "Urea without urease inhibitor",
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Soil",
+                            "cause": "Fertilizer",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Maize",
+                                    "harmonisedCode": "10.05",
+                                    "percent": 100
+                                }
+                            ],
                             "CO2": {
                                 "massGas": {
                                     "measurement": 15400,
@@ -309,12 +339,23 @@
                     ]
                 },
                 {
-                    "enterprise": "ExoticForest",
-                    "pathwayEmissions": [
-                        { 
-                            "pathway": "Deforestation",
+                    "enterprise": "forest.plantation.softwood",
+                    "species": "Pinus radiata",
+                    "name": "Forest harvesting",
+                    "emissions": [
+                        {
                             "name": "Exotic forest deforestation",
-                            "scope": 1,
+                            "scope": "Scope1",
+                            "category": "Land Use Change",
+                            "pool": "Woodland and Forest",
+                            "cause": "Deforestation",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Wood",
+                                    "harmonisedCode": "44.03",
+                                    "percent": 100
+                                }
+                            ],
                             "CO2e": {
                                 "massGas": {
                                     "measurement": 4733025,
@@ -327,11 +368,23 @@
             ],
             "offsetSources": [
                 {
-                    "enterprise": "ExoticForest",
-                    "pathwayEmissions": [
-                        { 
-                            "pathway": "All",
+                    "enterprise": "forest.plantation.softwood",
+                    "species": "Pinus radiata",
+                    "name": "Forest growing",
+                    "emissions": [
+                        {
                             "name": "28 years of carbon storage, averaged per year",
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Woodland and Forest",
+                            "cause": "Sequestration",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Wood",
+                                    "harmonisedCode": "44.03",
+                                    "percent": 100
+                                }
+                            ],
                             "CO2e": {
                                 "measurement": 1183245,
                                 "units": "KGM"
@@ -340,11 +393,15 @@
                     ]
                 },
                 {
-                    "enterprise": "Shrubland",
-                    "pathwayEmissions": [
-                        { 
-                            "pathway": "All",
+                    "enterprise": "forest.natural.regenerating",
+                    "name": "scrub",
+                    "emissions": [
+                        {
                             "name": "Total carbon stock associated with shrubland older and younger than 30 years old",
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Woodland and Forest",
+                            "cause": "Sequestration",
                             "CO2e": {
                                 "measurement": 36183,
                                 "units": "KGM"
@@ -355,7 +412,7 @@
             ]
         },
         {
-            "resourceType": "/ghg/greenhouse-gas-results",
+            "resourceType": "pfGreenhouseGasResultsResource",
             "id": "cb671856-137c-4a5c-90e9-0a724b391acc",
             "identifiers": [
                 {
@@ -430,6 +487,8 @@
                         "measurement": 3276.01,
                         "units": "KGM"
                     },
+                    "product": "Potatoes",
+                    "harmonisedCode": "07.01",
                     "denominator": "Area",
                     "denominatorUnits": "HAR"
                 },
@@ -438,6 +497,8 @@
                         "measurement": 330.91,
                         "units": "KGM"
                     },
+                    "product": "Potatoes",
+                    "harmonisedCode": "07.01",
                     "denominator": "ProductWeight",
                     "denominatorUnits": "TNE"
                 }
@@ -445,16 +506,18 @@
             "soilOrganicCarbonPc": 2.00,
             "emissionsSources": [
                 {
-                    "enterprise": "Cropping",
+                    "enterprise": "fieldcrops.root.potato",
                     "name": "Potato harvest 2023",
                     "crop": {
                         "name": "Potato",
                         "variety": "Russet Burbank"
                     },
-                    "pathwayEmissions": [
+                    "emissions": [
                         {
-                            "pathway": "All",
-                            "scope": 1,
+                            "scope": "Scope1",
+                            "category": "All",
+                            "pool": "All",
+                            "cause": "All",
                             "CO2": {
                                 "massGas": {
                                     "measurement": 163800.63,
@@ -485,9 +548,11 @@
                             ]
                         },
                         {
-                            "pathway": "Fertiliser",
                             "name": "Potato fertiliser",
-                            "scope": 1,
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Soil",
+                            "cause": "Fertilizer",
                             "CO2": {
                                 "massGas": {
                                     "measurement": 67.35,
@@ -518,9 +583,11 @@
                             ]
                         },
                         {
-                            "pathway": "Irrigation",
                             "name": "Potato irrigation",
-                            "scope": 1,
+                            "scope": "Scope2",
+                            "category": "Mechanical",
+                            "pool": "Energy",
+                            "cause": "Electricity",
                             "CO2": {
                                 "massGas": {
                                     "measurement": 2084.13,
@@ -551,9 +618,11 @@
                             ]
                         },
                         {
-                            "pathway": "Pesticide",
-                            "name": "Potato pesiticide",
-                            "scope": 1,
+                            "name": "Potato pesticide spreading",
+                            "scope": "Scope3",
+                            "category": "Mechanical",
+                            "pool": "Contractors",
+                            "cause": "Spreading",
                             "CO2": {
                                 "massGas": {
                                     "measurement": 1139.34,
@@ -584,9 +653,11 @@
                             ]
                         },
                         {
-                            "pathway": "ResidueManagement",
-                            "name": "Potato residue - Left distributed on field, OR incorporated, OR mulched",
-                            "scope": 1,
+                            "name": "Potato residue management",
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Crops",
+                            "cause": "Residue Decomposition",
                             "N2O": {
                                 "massGas": {
                                     "measurement": 10.05,
@@ -617,9 +688,11 @@
                             ]
                         },
                         {
-                            "pathway": "Anaerobic",
-                            "scope": 1,
                             "name": "Potato Waste water",
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Soil",
+                            "cause": "Leaching and Runoff",
                             "CH4": {
                                 "massGas": {
                                     "measurement": 17.92,
@@ -680,7 +753,9 @@
                         "measurement": 9.5,
                         "units": "KGM"
                     },
-                    "denominator": "MilkSolids",
+                    "product": "Milk Solids",
+                    "harmonisedCode": "04.01",
+                    "denominator": "ProductWeight",
                     "denominatorUnits": "KGM"
                 },
                 {
@@ -688,6 +763,8 @@
                         "measurement": 13938,
                         "units": "KGM"
                     },
+                    "product": "Milk Solids",
+                    "harmonisedCode": "04.01",
                     "denominator": "EffectiveArea",
                     "denominatorUnits": "HAR"
                 }
@@ -712,11 +789,26 @@
             },
             "emissionsSources": [
                 {
-                    "enterprise": "Dairy",
-                    "pathwayEmissions": [
+                    "enterprise": "livestock.cattle.dairy",
+                    "species": "Cattle",
+                    "emissions": [
                         {
-                            "pathway": "Enteric",
-                            "scope": 1,
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Livestock",
+                            "cause": "Enteric Fermentation",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Milk Solids",
+                                    "harmonisedCode": "04.01",
+                                    "percent": 75
+                                },
+                                {
+                                    "product": "Cattle Liveweight",
+                                    "harmonisedCode": "01.02",
+                                    "percent": 25
+                                }
+                            ],
                             "CH4": {
                                 "massCO2e": {
                                     "measurement": 1708417,
@@ -725,8 +817,22 @@
                             }
                         },
                         {
-                            "pathway": "UrineAndDung",
-                            "scope": 1,
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Soil",
+                            "cause": "Excreta",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Milk Solids",
+                                    "harmonisedCode": "04.01",
+                                    "percent": 75
+                                },
+                                {
+                                    "product": "Cattle Liveweight",
+                                    "harmonisedCode": "01.02",
+                                    "percent": 25
+                                }
+                            ],
                             "CH4": {
                                 "massCO2e": {
                                     "measurement": 77655,
@@ -741,8 +847,23 @@
                             }
                         },
                         {
-                            "pathway": "Fertiliser-Nitrogen",
-                            "scope": 1,
+                            "name": "Nitrogen Fertiliser",
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Soil",
+                            "cause": "Fertilizer",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Milk Solids",
+                                    "harmonisedCode": "04.01",
+                                    "percent": 75
+                                },
+                                {
+                                    "product": "Cattle Liveweight",
+                                    "harmonisedCode": "01.02",
+                                    "percent": 25
+                                }
+                            ],
                             "N2O": {
                                 "massCO2e": {
                                     "measurement": 77655,
@@ -757,15 +878,45 @@
                             }
                         },
                         {
-                            "pathway": "EffluentSystem",
-                            "scope": 1,
+                            "name": "EffluentSystem",
+                            "scope": "Scope1",
+                            "category": "Biogenic",
+                            "pool": "Manure Management",
+                            "cause": "Storage",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Milk Solids",
+                                    "harmonisedCode": "04.01",
+                                    "percent": 75
+                                },
+                                {
+                                    "product": "Cattle Liveweight",
+                                    "harmonisedCode": "01.02",
+                                    "percent": 25
+                                }
+                            ],
                             "N2O": {
                                 "qualitativeValue": "<0.1"
                             }
                         },
                         {
-                            "pathway": "Feed-Imported",
-                            "scope": 1,
+                            "name": "Feed-Imported",
+                            "scope": "Scope3",
+                            "category": "Purchases",
+                            "pool": "Feeds",
+                            "cause": "All",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Milk Solids",
+                                    "harmonisedCode": "04.01",
+                                    "percent": 75
+                                },
+                                {
+                                    "product": "Cattle Liveweight",
+                                    "harmonisedCode": "01.02",
+                                    "percent": 25
+                                }
+                            ],
                             "CO2": {
                                 "massCO2e": {
                                     "measurement": 77655,
@@ -774,8 +925,23 @@
                             }
                         },
                         {
-                            "pathway": "Other",
-                            "scope": 1,
+                            "name": "Other sources",
+                            "scope": "Scope3",
+                            "category": "Purchases",
+                            "pool": "Other",
+                            "cause": "All",
+                            "allocatedProducts": [
+                                {
+                                    "product": "Milk Solids",
+                                    "harmonisedCode": "04.01",
+                                    "percent": 75
+                                },
+                                {
+                                    "product": "Cattle Liveweight",
+                                    "harmonisedCode": "01.02",
+                                    "percent": 25
+                                }
+                            ],
                             "CO2": {
                                 "massCO2e": {
                                     "measurement": 77655,

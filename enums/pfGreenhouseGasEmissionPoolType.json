@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "Defines the pools of greenhouse gas emissions.",
+    "type": "string",
+    "enum": [
+        "All",
+        "Other",
+        "Agrichemicals",
+        "Contractors",
+        "Crops",
+        "Energy",
+        "Feeds",
+        "Fertiliser",
+        "Horticultural Media",
+        "Lime",
+        "Livestock",
+        "Manure Management",
+        "Refrigerant",
+        "Soil",
+        "Transport",
+        "Wetlands and Peat",
+        "Woodland and Forest"
+    ]
+}

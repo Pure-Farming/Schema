@@ -11,114 +11,91 @@
             "$ref": "../enums/pfEnterpriseType.json",
             "description": "The farming enterprise pertaining to this source.  Use All if the emissions are for all enterprises."
         },
-        "inventoryClassification": {
-            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarInventoryClassificationType.json",
-            "description": "If relevant, the group of animals defining this emission source."
-        },
-        "crop": {
-            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/CropType.json",
-            "description": "If relevant, the crop defining this emission source."
-        },
         "name": {
             "type": "string",
             "description": "Name of the enterprise including any inventory classification or crop defined."
         },
-        "pathwayEmissions": {
+        "species": {
+            "type": "string",
+            "description": "The species of the animal or crop responsible for this source of emissions."
+        },
+        "emissions": {
             "type": "array",
             "items": {
-                "$ref": "../types/pfGreenhouseGasPathwayEmissionsType.json"
+                "$ref": "../types/pfGreenhouseGasEmissionType.json"
             },
-            "description": "Array of pathways for the specified enterprise with the emissions for each pathway."
+            "description": "Array of emissions for the specified enterprise."
         }
     },
     "examples": [
         {
-            "enterprise": "Dairy",
-            "inventory Classification": {
-                "name": "Milking cows",
-                "count": 300,
-                "species": "Cattle",
-                "sex": "Female",
-                "primaryBreed": {
-                    "scheme": "au.nlis.breed",
-                    "id": "FF"
-                },
-                "birthPeriod": "2016-07-01/2020-06-30",
-                "reproductiveStatus": "Birthed",
-                "lactationStatus": "Lactating",
-                "productionPurposes": [
-                    "Milk"
-                ]
-            },
-            "pathwayEmissions": [
+            "enterprise": "livestock.cattle.dairy",
+            "species": "Cattle",
+            "name": "Milking cows",
+            "emissions": [
                 {
-                    "pathway": "Enteric",
-                    "name": "Milking cows enteric fermentation",
-                    "scope": 1,
+                    "name": "Enteric fermentation",
+                    "scope": "Scope1",
+                    "category": "Biogenic",
+                    "pool": "Livestock",
+                    "cause": "Enteric Fermentation",
                     "CH4": {
                         "massGas": {
-                            "measurement": 27.9,
+                            "measurement": 53.9,
                             "resolution": 0.1,
                             "units": "TNE"
                         },
                         "massCO2e": {
-                            "measurement": 781.2,
+                            "measurement": 1349.2,
                             "resolution": 0.1,
                             "units": "TNE"
                         }
                     },
-                    "CO2e": {
-                        "massGas": {
-                            "measurement": 698,
-                            "units": "TNE"
-                        }
-                    },
-                    "N2O": {
-                        "qualitativeValue": "<0.1"
-                    },
                     "CO2eIntensity": [
                         {
                             "value": {
-                                "measurement": 3.88,
+                                "measurement": 4.61,
                                 "resolution": 0.01,
-                                "units": "TNE"
+                                "units": "KGM"
                             },
-                            "denominator": "GrazedArea",
-                            "denominatorUnits": "HAR"
+                            "denominator": "MilkSolids",
+                            "denominatorUnits": "KGM"
+                        }
+                    ],
+                    "allocatedProducts": [
+                        {
+                            "product": "Milk Solids",
+                            "harmonisedCode": "04.01",
+                            "percentage": 80,
+                            "CO2e": {
+                                "measurement": 1079.4,
+                                "units": "TNE"
+                            }
                         },
                         {
-                            "value": {
-                                "measurement": 9.2,
+                            "product": "Cattle Liveweight",
+                            "harmonisedCode": "01.02",
+                            "percentage": 20,
+                            "CO2e": {
+                                "measurement": 269.8,
                                 "units": "TNE"
-                            },
-                            "denominator": "Head"
+                            }
                         }
                     ]
                 }
             ]
         },
         {
-            "enterprise": "Cropping",
-            "crop": {
-                "name": "Wheat",
-                "taxonomicName": "Triticum aestivum",
-                "variety": "Ascot",
-                "identifiers": [
-                    {
-                        "scheme": "au.com.banksseeds.cat",
-                        "id": "K49"
-                    }
-                ],
-                "establishmentDate": "2022-04-15T00:00:00Z",
-                "maturityDate": "2022-12-10T00:00:00Z",
-                "harvestDate": "2022-12-16T00:00:00Z"
-            },
+            "enterprise": "fieldcrops.cereal.wheat",
             "name": "Wheat crop",
-            "pathwayEmissions": [
+            "species": "Wheat",
+            "emissions": [
                 {
-                    "pathway": "Fertiliser",
                     "name": "Wheat fertiliser",
-                    "scope": 1,
+                    "scope": "Scope1",
+                    "category": "Biogenic",
+                    "pool": "Soil",
+                    "cause": "Fertilizer",                    
                     "N2O": {
                         "massGas": {
                             "measurement": 670,
@@ -151,6 +128,26 @@
                             },
                             "denominator": "ProductWeight",
                             "denominatorUnits": "TNE"
+                        }
+                    ],
+                    "allocatedProducts": [
+                        {
+                            "product": "Wheat and meslin",
+                            "harmonisedCode": "10.01",
+                            "percentage": 95,
+                            "CO2e": {
+                                "measurement": 189.82,
+                                "units": "TNE"
+                            }
+                        },
+                        {
+                            "product": "Cereal straw and husks",
+                            "harmonisedCode": "12.13",
+                            "percentage": 5,
+                            "CO2e": {
+                                "measurement": 9.99,
+                                "units": "TNE"
+                            }
                         }
                     ]
                 }

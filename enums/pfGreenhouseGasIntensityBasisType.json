@@ -7,8 +7,6 @@
         "GrazedArea",
         "EffectiveArea",
         "ProductWeight",
-        "FatAndProteinCorrectedMilk",
-        "MilkSolids",
         "Head"
     ]
 }
