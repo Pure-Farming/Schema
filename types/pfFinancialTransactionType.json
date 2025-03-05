@@ -9,8 +9,7 @@
         }
     ],
     "required": [
-        "transactionKind",
-        "transactionValue"
+        "transactionKind"
     ],
     "properties": {
         "transactionKind": {
