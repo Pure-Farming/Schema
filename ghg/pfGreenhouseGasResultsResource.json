@@ -73,11 +73,11 @@
         },
         "N2O": {
             "$ref": "../types/pfGreenhouseGasMassType.json",
-            "description": "The total hydrofluorocarbons HFC emitted."
+            "description": "The total nitrous oxide N2O emitted."
         },
         "HFC": {
             "$ref": "../types/pfGreenhouseGasMassType.json",
-            "description": "The total nitrous oxide N2O emitted."
+            "description": "The total hydrofluorocarbons HFC emitted.The total nitrous oxide N2O emitted."
         },
         "CO2e": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/MassMeasureType.json",
