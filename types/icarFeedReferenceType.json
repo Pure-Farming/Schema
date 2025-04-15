@@ -5,7 +5,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarResourceReferenceType.json"
+      "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarProductReferenceType.json"
     }
   ],
   "properties": {
