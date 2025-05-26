@@ -19,6 +19,18 @@
         "predictedSireIdentifier": {
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarAnimalIdentifierType.json",
             "description": "Predicted sire if the diagnosis is pregnant."
+        },
+        "predictedSireBreed": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
+            "description": "Breed of the predicted sire."
+        },
+        "predictedSireBreedGroup":  {
+            "type": "string",
+            "enum": [
+                "beef",
+                "dairy"
+            ],
+            "description": "Breed Group of the predicted sire."
         }
     },
     "examples": [
@@ -55,7 +67,12 @@
             "predictedSireIdentifier": {
                 "scheme": "net.farmmetrics.sirename",
                 "id": "KENMORE TRIPLE CROWN RED ET"
-            }
+            },
+            "predictedSireBreed": {
+                "scheme": "uk.cts.breed",
+                "id": "HF"
+            },
+            "predictedSireBreedGroup": "dairy"
         },
         {
             "resourceType": "pfPregnancyCheckEvent",

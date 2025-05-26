@@ -21,10 +21,11 @@
             "id": "f6709aca-d0af-4e5b-a460-d1e5e551e833",
             "resourceType": "pfMilkCollection",
             "status": "Received",
-            "observationDate": "2022-11-14T12:46:00.000Z",
+            "observationDate": "2024-08-14T00:00:00.000Z",
+
             "phenomenonStartTime": "2022-11-13T12:46:00.000Z",
             "phenomenonEndTime": "2022-11-14T12:46:00.000Z",
-            "productionDays": 1,
+            "productionDays": 2,
             "holding": {
                 "contentType": "Holding",
                 "identifier": {
@@ -34,170 +35,193 @@
                 "name": "Green Valley Farm",
                 "uri": "https://greenvalleyfarm.nz"
             },
-            "identifiers": [{
-                    "id": "70259",
-                    "scheme": "nz.dairyco.collection"
-                },
-                {
-                    "id": "AB123",
-                    "scheme": "nz.milk.collection"
+            "feature": {
+                "contentType": "Supplier",
+                "identifier": {
+                  "id": "37785",
+                  "scheme": "nz.farm.dairySupplyNumber"
                 }
-            ],
-            "links": [{
-                    "relationship": "Milk Collection Divisional Manager",
-                    "contentType": "Person",
-                    "related": "https://dairyco.com/personname"
-                },
-                {
-                    "relationship": "Parent Company",
-                    "contentType": "Organisation",
-                    "related": "https://dairyholdings.com/info"
-                }
-            ],
+            },
             "meta": {
                 "sourceId": {
-                    "id": "7239888c-ad3c-49bb-a045-bd309fcfb5c3",
-                    "scheme": "nz.dairyco.milk.collection"
-                },
-                "modified": "2022-11-14T11:00:00Z",
-                "created": "2022-11-14T09:00:00Z",
-                "creator": "don.wilson@newco.com",
-                "validFrom": "2022-11-14T11:00:00Z",
-                "validTo": "2022-12-14T11:00:00Z"
+                    "id": "37785",
+                    "scheme": "nz.farm.dairySupplyNumber"
+                  },
+                  "modified": "2024-08-14T00:00:00.000Z",
+                  "created": "2024-08-14T00:00:00.000Z"
             },
             "name": "Milk Collection",
-            "@self": "https://dairyco.com/collection",
-            "source": {
-                "consignmentDate": "2022-11-14T11:00:00Z",
-                "organisation": {
-                    "leiCode": "XYZ1234",
-                    "name": "Green Valley Farm Holdings",
-                    "uri": "https://greenvalleyfarm.nz",
-                    "registration": {
-                        "id": "ABC123",
-                        "scheme": "nz.dairyco.member"
-                    },
-                    "gln": "GS1X554433377"
-                },
-                "feature": {
-                    "contentType": "Herd",
-                    "identifier": {
-                        "id": "647-893",
-                        "scheme": "nz.dairyco.supplier"
-                    },
-                    "name": "Green Valley Farm Herd 1",
-                    "uri": "https://greenvalleyfarm.nz/herd1"
-                }
-            },
-            "destination": {
-                "consignmentDate": "2022-11-14T11:00:00Z",
-                "organisation": {
-                    "leiCode": "ABC333",
-                    "name": "Dairy Co Holdings Ltd",
-                    "uri": "https://dairycoholdings.nz/info",
-                    "registration": {
-                        "id": "KF1234567",
-                        "scheme": "nz.companiesregister"
-                    },
-                    "gln": "GS1X1234566521"
-                },
-                "feature": {
-                    "contentType": "Plant",
-                    "identifier": {
-                        "id": "P12",
-                        "scheme": "nz.dairyco.plant"
-                    },
-                    "name": "Hamilton",
-                    "uri": "https://dairyco.com/plant/hamilton"
-                }
-            },
-            "logisticUnit": "Truck",
-            "quantity": 12698,
-            "units": "litres",
-            "rawQuantity": 1.24,
-            "rawUnits": "tonnes",
+            "quantity": 2149,
             "analysis": [{
                     "laboratory": {
                         "leiCode": "ABC444",
-                        "name": "Dairy Co Chemistry Laboratory, Hamilton",
-                        "uri": "https://dairyco.com/laboratory/hamiltonC",
+                        "name": "Dairy Co Laboratory, Hamilton",
+                        "uri": "https://dairyco.com/laboratory/hamilton",
                         "registration": {
                             "id": "CL47",
                             "scheme": "nz.dairyco.lab"
                         },
                         "gln": "GS1X666777999"
                     },
-                    "laboratoryIdentifier": "HamChem",
+                    "laboratoryIdentifier": "Hamilton",
                     "sessionIdentifier": "45",
                     "responsible": "Max Henselite",
-                    "results": [{
-                            "name": "Milk Solids",
-                            "status": "completed",
-                            "abbreviation": "MS",
-                            "metric": "https://standards.nz/dairy/ms",
-                            "method": "https://standards.nz/dairy/filtration",
-                            "rawValue": "8.95",
-                            "rawUnit": "%",
-                            "value": 1429.4,
-                            "unit": "kg",
-                            "resolution": 0.5,
-                            "errorStatistic": 0,
-                            "qualitativeGrade": "KX"
-                        },
+                    "results": [
                         {
+                            "name": "Deduction",
+                            "status": "completed",
+                            "value": 0.0,
+                            "unit": "%",
+                            "rawValue": "0",
+                            "rawUnit": "%"
+                          },
+                          {
+                            "name": "Demerits",
+                            "status": "completed",
+                            "value": 0.0,
+                            "unit": "count",
+                            "rawValue": "0",
+                            "rawUnit": "count"
+                          },
+                          {
                             "name": "Fat",
                             "status": "completed",
-                            "abbreviation": "FPC",
-                            "metric": "https://standards.nz/dairy/fpc",
-                            "method": "https://standards.nz/dairy/infrared",
-                            "rawValue": "3.4",
-                            "rawUnit": "%",
-                            "value": 650,
+                            "value": 108.5,
                             "unit": "kg",
-                            "resolution": 0.1,
-                            "errorStatistic": 0,
-                            "qualitativeGrade": "XG"
-                        }
+                            "rawValue": "108.5",
+                            "rawUnit": "kg"
+                          },
+                          {
+                            "name": "Fat %",
+                            "status": "completed",
+                            "value": 5.05,
+                            "unit": "%",
+                            "rawValue": "5.05",
+                            "rawUnit": "%"
+                          },
+                          {
+                            "name": "Milk Solids",
+                            "status": "completed",
+                            "value": 191.9,
+                            "unit": "kg",
+                            "rawValue": "191.9",
+                            "rawUnit": "kg"
+                          },
+                          {
+                            "name": "Milk Solids:Day",
+                            "status": "completed",
+                            "value": 95.95,
+                            "unit": "kg",
+                            "rawValue": "95.95",
+                            "rawUnit": "kg"
+                          },
+                          {
+                            "name": "Milk Solids %",
+                            "status": "completed",
+                            "value": 7.45,
+                            "unit": "%",
+                            "rawValue": "8.93",
+                            "rawUnit": "%"
+                          },
+                          {
+                            "name": "MSKG:Cow",
+                            "status": "completed",
+                            "value": 0.2,
+                            "unit": "kg/cow"
+                          },
+                          {
+                            "name": "MSKG:Cow:Day",
+                            "status": "completed",
+                            "value": 0.1,
+                            "unit": "kg/cow",
+                            "rawValue": "0.1",
+                            "rawUnit": "kg/cow"
+                          },
+                          {
+                            "name": "MS:HA",
+                            "status": "completed",
+                            "value": 0.68,
+                            "unit": "kg/ha"
+                          },
+                          {
+                            "name": "MS:HA:Day",
+                            "status": "completed",
+                            "value": 0.34,
+                            "unit": "kg/ha",
+                            "rawValue": "2.36",
+                            "rawUnit": "kg/ha"
+                          },
+                          {
+                            "name": "Protein",
+                            "status": "completed",
+                            "value": 83.4,
+                            "unit": "kg",
+                            "rawValue": "83.4",
+                            "rawUnit": "kg"
+                          },
+                          {
+                            "name": "Protein %",
+                            "status": "completed",
+                            "value": 3.88,
+                            "unit": "%",
+                            "rawValue": "3.88",
+                            "rawUnit": "%"
+                          },
+                          {
+                            "name": "SCC",
+                            "status": "completed",
+                            "value": 94,
+                            "unit": "000 cells/mL",
+                            "rawValue": "94",
+                            "rawUnit": "000 cells/mL"
+                          },
+                          {
+                            "name": "Temp (C)",
+                            "status": "completed",
+                            "value": 4.9,
+                            "unit": "C",
+                            "rawValue": "4.9",
+                            "rawUnit": "C"
+                          },
+                          {
+                            "name": "3 Day Urea",
+                            "status": "completed",
+                            "value": 12.1,
+                            "unit": "mg/dL",
+                            "rawValue": "12.1",
+                            "rawUnit": "mg/dL"
+                          },
+                          {
+                            "name": "Daily Urea",
+                            "status": "completed",
+                            "value": 19.2,
+                            "unit": "mg/dL",
+                            "rawValue": "19.2",
+                            "rawUnit": "mg/dL"
+                          },
+                          {
+                            "name": "Quality Rating",
+                            "status": "completed",
+                            "rawValue": "Excellence",
+                            "qualitativeGrade": "Excellence"
+                          },
+                          {
+                            "name": "Coliforms",
+                            "status": "completed",
+                            "value": 60,
+                            "unit": "cfu/ml",
+                            "rawValue": "60",
+                            "rawUnit": "cfu/ml"
+                          },
+                          {
+                            "name": "Bactoscan",
+                            "status": "completed",
+                            "rawValue": "A+ (3k)",
+                            "qualitativeGrade": "A+ (3k)"
+                          }
                     ]
-                },
-                {
-                    "laboratory": {
-                        "leiCode": "ABC100",
-                        "name": "KF Milk Testing Services",
-                        "uri": "https://kfm.co.nz",
-                        "registration": {
-                            "id": "KFM",
-                            "scheme": "nz.dairyco.lab"
-                        },
-                        "gln": "GS1X666777000"
-                    },
-                    "laboratoryIdentifier": "https://kfm.co.nz/xd",
-                    "sessionIdentifier": "498",
-                    "responsible": "Logan Campbell",
-                    "results": [{
-                        "name": "DetergentResidue",
-                        "status": "belowLimit",
-                        "abbreviation": "DRX",
-                        "metric": "https://standards.nz/dairy/dr",
-                        "method": "https://standards.nz/dairy/dr",
-                        "rawValue": "<1",
-                        "rawUnit": "mg",
-                        "value": 0,
-                        "unit": "mg",
-                        "resolution": 0.01,
-                        "errorStatistic": 1,
-                        "qualitativeGrade": "A",
-                        "limit": 1
-                    }]
                 }
-            ],
-            "feature": {
-                "contentType": "Herd",
-                "identifier": {
-                    "scheme": "uk.cph",
-                    "id": "08/675/0020"
-                }
-            }
+            ]
         }
     ]
 }
