@@ -13,7 +13,7 @@
     "properties": {
         "productionDays": {
             "type": "number",
-            "description": "Number of production days in this milk collection. Could be fractional (e.g. 1.5 if collection is for 3 of 4 milkings in 2 days)."
+            "description": "Number of production days in this milk collection. Integer value between 1 and 3."
         }
     },
     "examples": [

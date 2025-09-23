@@ -1,0 +1,20 @@
+{    
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/OrganizationType",
+    "description": "Organisation type, used in ResearchProjectResource.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json",
+            "description": "Id of the organisation as an id and scheme."
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the organisation"
+        },
+        "url": {
+            "type": "string",
+            "description": "URL of the organisation."
+        }
+    }
+}

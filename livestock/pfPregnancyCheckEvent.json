@@ -24,13 +24,17 @@
             "$ref": "https://raw.githubusercontent.com/Pure-Farming/ICAR/ADE-1/types/icarIdentifierType.json",
             "description": "Breed of the predicted sire."
         },
-        "predictedSireBreedGroup":  {
+        "predictedSireBreedGroup": {
             "type": "string",
             "enum": [
                 "beef",
                 "dairy"
             ],
             "description": "Breed Group of the predicted sire."
+        },
+        "predictedSireEligibility": {
+            "type": "string",
+            "description": "Eligibility of the predicted sire for a supply chain or environmental scheme."
         }
     },
     "examples": [
@@ -72,7 +76,8 @@
                 "scheme": "uk.cts.breed",
                 "id": "HF"
             },
-            "predictedSireBreedGroup": "dairy"
+            "predictedSireBreedGroup": "dairy",
+            "predictedSireEligibility": "Approved"
         },
         {
             "resourceType": "pfPregnancyCheckEvent",

@@ -1,0 +1,24 @@
+{    
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "types/ProjectContentType",
+    "description": "Statements of background, need, objectives and body of the project.",
+    "type": "object",
+    "properties": {
+        "background": {
+            "type": "string",
+            "description": "Statement of background for the project.  May be written in HTML."
+        },
+        "need": {
+            "type": "string",
+            "description": "Statement of need for the project.  May be written in HTML."
+        },
+        "objectives": {
+            "type": "string",
+            "description": "Statement of objectives of the project.  May be written in HTML."
+        },
+        "body": {
+            "type": "string",
+            "description": "Body content for the project.  May be written in HTML."
+        }
+    }
+}

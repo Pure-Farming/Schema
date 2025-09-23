@@ -1,0 +1,192 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "/project/research-project",
+    "description": "Record of research project details including title, organisation, dates, principal researcher, summary, tags.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/ResourceType.json"
+        }
+    ],
+    "properties": {
+        "projectCode": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/IdentifierType.json",
+            "description": "Project code or number for the project, in the form of a scheme and id."
+        },
+        "leadOrganization": {
+            "$ref": "../types/OrganizationType.json",
+            "description": "The lead organisation of the project record. May be the RDC and the holding."
+        },
+        "researchOrganizations": {
+            "type": "array",
+            "items": {
+                "$ref": "../types/OrganizationType.json"
+            },
+            "description": "Organisations participating in the project."
+        },
+        "principalResearcher": {
+            "type": "string",
+            "description": "The principal or lead researcher."
+        },
+        "projectStartDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/DateTimeType.json",
+            "description": "Date the project started."
+        },
+        "projectEndDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/DateTimeType.json",
+            "description": "Date the project ended."
+        },
+        "readiness": {
+            "type": "string",
+            "description": "Technology Readiness Level or range."
+        },
+        "abstract": {
+            "type": "string",
+            "description": "Abstract of project."
+        },
+        "projectContent": {
+            "$ref": "../types/ProjectContentType.json",
+            "description": "Statements of background, need, objectives and body of the project."
+        },
+        "contactEmail": {
+            "type": "string",
+            "description": "Email address of the contact for the project."
+        },
+        "commercialOpportunities": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Commercial opportunities for the project."
+        },
+        "industries": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Industries relevant to the project."
+        },
+        "focusAreas": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Project focus areas."
+        },
+        "technologyAreas": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Technology areas relevant to the project."
+        },
+        "sustainabilities": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Sustainabilities addressed by the project."
+        },
+        "publishedDate": {
+            "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/DateTimeType.json",
+            "description": "Date the project was published."
+        },
+        "locations": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Pure-Farming/DataLinker-Geospatial/master/types/PostalAddress.json"
+            },
+            "description": "Locations where the project was conducted.  Not all fields may be relevant."
+        },
+        "generatedTags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Tags auto-generated for the project."
+        },
+        "configuredTags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Tags configured or manually entered for the project."
+        },
+        "generatedAbstract": {
+            "type": "string",
+            "description": "Auto-generated abstract of project."
+        }
+    },
+    "examples": [
+        {
+            "resourceType": "ResearchProjectResource",
+            "id": "a597bf0f-5512-42ee-96eb-b7a3ae91d386",
+            "identifiers": [
+                {
+                    "scheme":"au.myrdc.project",
+                    "id": "99999"
+                }
+            ],
+            "name": "My project name",
+            "meta": {
+                "sourceId": {
+                    "scheme": "au.myrdc.projectid",
+                    "id": "99999"
+                },
+                "modified": "2025-08-03T08:00:00Z"
+            },
+            "links": [
+                {
+                    "relationship": "Database",
+                    "related": "https://www.database.com/listings/research-project/lorem-ipsum-dolor"
+                },
+                {
+                    "relationship": "Project",
+                    "related": "https://myrdc.com.au/related-projects/lorem-ipsum-dolor"
+                }
+            ],
+            "leadOrganization": {
+                "id": {
+                    "scheme": "au.leicode",
+                    "id": "123412345E1234B01234"
+                },
+                "name": "MyRDC Australia",
+                "url": "https://myrdc.com.au"
+            },
+            "researchOrganisations": [
+                {
+                    "name": "My University",
+                    "url": "https://myuni.edu.au"                    
+                }
+            ],
+            "projectCode": {
+                "scheme": "au.myrdc.projectcode",
+                "id": "PRO-000"
+            },
+            "principalResearcher": "Jane Smith",
+            "projectStartDate": "2022-04-20T00:00:00Z", 
+            "projectEndDate": "2025-05-08T00:00:00Z",
+            "readiness": "TRL 5-9",
+            "abstract": "Quisque sed urna leo. Cras ut consectetur arcu. Nam facilisis ipsum sed ante ullamcorper, nec hendrerit tortor blandit. Ut interdum, dolor sed placerat dapibus, enim urna viverra mi, at ultrices massa velit quis lectus. Aliquam pretium arcu eu convallis imperdiet. Morbi ut eros neque. Mauris porta arcu ac efficitur tempor.",
+            "projectContent": {
+                "body": "Nullam vehicula imperdiet elit et fermentum. Aenean mi eros, sollicitudin non finibus et, mollis in lacus. Nullam id eros lacus. Praesent eget eleifend eros. Proin at aliquet ligula. Curabitur at sem aliquet, scelerisque neque sit amet, fringilla nulla. Aliquam erat volutpat. Ut ut iaculis felis. Etiam vitae mauris at eros tristique varius. Nam vel arcu eu est efficitur aliquet."
+            },
+            "contactEmail": "jsmith@myuni.edu.au",
+            "commercialOpportunities": ["export market development"],
+            "industries": ["Fruits","Nuts"],
+            "focusAreas": ["Functional food & ingredients"],
+            "technologyAreas": ["Plant science","Novel ingredients"],
+            "sustainabilities": ["Crop pollination"],
+            "publishedDate": "2025-07-18T00:00:00Z",
+            "locations": [
+                {
+                    "addressCountry": "Australia",
+                    "addressRegion": "Queensland",
+                    "addressLocality": "Bundaberg",
+                    "postalCode": "4670"
+                }
+            ],
+            "generatedAbstract": "Maecenas convallis lacinia odio, sit amet pellentesque urna dictum et. In hac habitasse platea dictumst. Vivamus sodales erat eu mauris pharetra, vel hendrerit diam laoreet."
+        }
+    ]
+}
