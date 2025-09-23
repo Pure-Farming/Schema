@@ -11,7 +11,6 @@
         {
             "resourceType": "/livestock/movement/group-birth",
             "id": "901cec63-6d3c-441a-a92b-6fb8d0507995",
-            "dataPointKey": "sample-data-movement-group-birth-1",
             "eventDateTime": "2022-09-13T12:46:00.000Z",
             "location": {
                 "scheme": "uk.cph",
@@ -44,7 +43,6 @@
         {
             "resourceType": "/livestock/movement/group-birth",
             "id": "b8cf007b-98ea-44ae-9369-eb7b4977821d",
-            "dataPointKey": "sample-data-movement-group-birth-2",
             "eventDateTime": "2020-03-13T12:46:00.000Z",
             "location": {
                 "scheme": "uk.cph",
